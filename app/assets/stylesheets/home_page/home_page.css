@@ -1,0 +1,15 @@
+header {
+    text-align: justify;
+    letter-spacing: 1px;
+    height: 64;
+    padding: 1px 2%;
+    background: lightslategray;
+    color: #fff;
+    position: relative;
+}
+
+h1,
+.login-signup { 
+    ;
+    display: inline-block;
+}
