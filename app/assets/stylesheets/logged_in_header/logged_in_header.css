@@ -1,4 +1,15 @@
 .header-group {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    display: inline-block;
+}
+
+.header-button {
+    text-decoration: none;
+    color: black;
+    border: solid white 1px;
+    border-radius: 3px;
+    background: white;
+    padding: 8px;
+    display: inline-block;
 }

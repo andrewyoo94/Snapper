@@ -1,6 +1,12 @@
 .homepage {
     background-image: url(https://www.lovephotoshd.com/wp-content/uploads/2019/07/new-nature-photos-nature-hd-photo-gallery-latest-nature-wallpaper.jpg);
-    height: 100vh;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 header {
@@ -8,7 +14,7 @@ header {
     display: flex;
     background-color: rgba(0,0,0,0.5);
     align-items: center;
-    height: 60px;
+    height: 64px;
     justify-content: space-between;
     padding: 0 24px;
     margin: 0px;
@@ -25,21 +31,26 @@ header {
 
 .login-signup { 
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-size: 15.5px;
+
 }
 
 .login { 
-    margin-right: 13px;
+    margin-right: 23px;
     text-decoration: none;
     color: white;
 }
 
 .signup {
+    font-weight: 550;
     text-decoration: none;
     color: black;
     border: solid white 1px;
     border-radius: 3px;
     background: white;
-    padding: 8px;
+    padding-left: 17.5px;
+    padding-right: 17.5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-right: 23px;
 }
-
