@@ -57,7 +57,10 @@ class SessionForm extends React.Component {
                             <br />
                             <input className="auth-submit" type="submit" value={this.props.formType} />
                             <br />
-                            Please {this.props.formType} or {this.props.navLink}
+                                <div className="auth-footer">
+                                    {this.props.formType === "Sign up" ? "Already a Snapper member? " : "Not a Snapper member? "} 
+                                    <div className="auth-footer-link">{this.props.navLink}</div>
+                                </div>
                             <br/>
                         </div>
                     </form>
