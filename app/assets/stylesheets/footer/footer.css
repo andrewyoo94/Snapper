@@ -1,0 +1,15 @@
+.footer-master {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 2.5rem;
+    background-color: black;
+}
+
+.footer-master a {
+    text-decoration: none;
+    color:white;
+    margin: 25px;
+    line-height: 2.5rem;
+    font-family: "Font Awesome 5 Brands";
+}

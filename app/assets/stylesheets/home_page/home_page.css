@@ -35,7 +35,7 @@ header {
 }
 
 .login { 
-    margin-right: 23px;
+    margin-right: 20px;
     text-decoration: none;
     color: white;
 }
@@ -51,5 +51,6 @@ header {
     padding-right: 17.5px;
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-right: 23px;
+    margin-right: 20px;
 }
+

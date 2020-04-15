@@ -15,6 +15,15 @@ const App = () => (
 
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
+
+            <footer className="footer-master">
+                <a href="https://github.com/andrewyoo94">
+                    <i className="fab fa-linkedin"></i>
+                    Github  
+                </a>
+
+                <a href="https://www.linkedin.com/in/andrewyoo94/">LinkedIn</a>
+            </footer>
         </div>
     </div>
 );
