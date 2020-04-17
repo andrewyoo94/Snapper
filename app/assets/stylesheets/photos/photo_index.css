@@ -1,0 +1,21 @@
+
+.photos-index {
+    position: relative;
+    background: white;
+    height: 100%;
+    width: 100%;
+}
+
+.photos-index-item {
+    height: auto;
+    width: auto;
+}
+
+.photo-img {
+    float: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    height: 25%;
+    width: 25%; 
+    margin-bottom: 15px;
+}
