@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 2020_04_10_160439) do
     t.integer "photographer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["photographer_id"], name: "index_photos_on_photographer_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
