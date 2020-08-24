@@ -1,6 +1,8 @@
 .homepage {
-    background-image: url(https://images.pexels.com/photos/127160/pexels-photo-127160.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    /* background-image: url(https://images.pexels.com/photos/127160/pexels-photo-127160.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260),
+                      url(https://images.pexels.com/photos/451589/pexels-photo-451589.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); */
     background-size: cover;
+    background-repeat: repeat;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -9,6 +11,30 @@
     left: 0;
 }
 
+.slideshow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    color: #000;
+}
+
+.inner-slideshow {
+    position: relative;
+    height: 100%;
+    width: 300%;
+    animation: move 20s ease infinite;
+}
+
+.slide1 {
+    background-image: url(https://images.pexels.com/photos/127160/pexels-photo-127160.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+}
+.slide2 {
+    background-image: url(https://images.pexels.com/photos/451589/pexels-photo-451589.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+}
 
 header {
     position: relative;
