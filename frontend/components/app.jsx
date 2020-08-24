@@ -16,6 +16,7 @@ const App = () => (
                 <Route exact path="/" component={GreetingContainer} />
             </header> 
 
+<<<<<<< HEAD
             <ul className="background-slideshow">
                 <li>
                     <span></span>
@@ -25,6 +26,16 @@ const App = () => (
                     </div>
                 </li>
             </ul>
+=======
+            <div className="slideshow">
+                <div className="inner-slideshow">
+                    <div className="slide1"></div>
+                    <div className="slide2"></div>
+                    {/* <div className="slide3"></div> */}
+                </div>
+            </div>
+
+>>>>>>> 621eb5f17734f47baf7feb5fa7176a01c51016b1
 
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
