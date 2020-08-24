@@ -16,6 +16,16 @@ const App = () => (
                 <Route exact path="/" component={GreetingContainer} />
             </header> 
 
+            <ul className="background-slideshow">
+                <li>
+                    <span></span>
+                    <span></span>
+                    <div>
+                        <h3>Find your inspiration.</h3>
+                    </div>
+                </li>
+            </ul>
+
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
 
