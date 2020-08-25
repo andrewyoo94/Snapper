@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
     handleDemo(e) {
         e.preventDefault();
         const demoUser = { username: "demouser", password: "password" };
-        this.props.processForm(demoUser);
+        this.props.processDemo(demoUser);
     }
 
     renderErrors() {
@@ -62,9 +62,9 @@ class SessionForm extends React.Component {
                                     placeholder="Password"
                                 />
                             <br />
-                            <input className="auth-submit" type="submit" value={this.props.formType} />
+                                <input className="auth-submit" type="submit" value={this.props.formType} />
                             <br />
-                            <input className="demo-user" type="submit" value="Demo User" onClick={this.handleDemo}/>
+                                <input className="demo-user" type="submit" value="Demo User" onClick={this.handleDemo}/>
                             <br/>
                                 <div className="auth-footer">
                                     {this.props.formType === "Sign up" ? "Already a Snapper member? " : "Not a Snapper member? "} 
