@@ -50,6 +50,7 @@
     background-color: #128fdc;
     color: white;
     cursor: pointer;
+    margin-top: 4px;
 }
 
 .auth-footer {
