@@ -3,10 +3,11 @@ class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            password: "",
-            username: ""
+            username: "",
+            password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     update(field) {
@@ -19,6 +20,12 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+        const demoUser = { username: "demouser", password: "password" };
+        this.props.processForm(demoUser);
     }
 
     renderErrors() {
@@ -57,8 +64,7 @@ class SessionForm extends React.Component {
                             <br />
                             <input className="auth-submit" type="submit" value={this.props.formType} />
                             <br />
-                            <input className="demo-user" 
-                                type="submit" value="Demo User" />
+                            <input className="demo-user" type="submit" value="Demo User" onClick={this.handleDemo}/>
                             <br/>
                                 <div className="auth-footer">
                                     {this.props.formType === "Sign up" ? "Already a Snapper member? " : "Not a Snapper member? "} 
