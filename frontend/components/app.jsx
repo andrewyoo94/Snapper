@@ -29,7 +29,7 @@ const App = () => (
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
 
-            <Route exact path="/photos" component={PhotoIndexContainer} />
+            <AuthRoute exact path="/photos" component={PhotoIndexContainer} />
         </div>
 
         <footer className="footer-master">
