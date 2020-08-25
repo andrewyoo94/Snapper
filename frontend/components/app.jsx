@@ -11,13 +11,12 @@ const App = () => (
     <div className="master">
         <div className="homepage">
 
-            <header> 
+            <header className="header"> 
                 <Link className="logo" to="/">snapper</Link>
                 <Route exact path="/" component={GreetingContainer} />
             </header> 
 
-<<<<<<< HEAD
-            <ul className="background-slideshow">
+            {/* <ul className="background-slideshow">
                 <li>
                     <span></span>
                     <span></span>
@@ -25,17 +24,7 @@ const App = () => (
                         <h3>Find your inspiration.</h3>
                     </div>
                 </li>
-            </ul>
-=======
-            <div className="slideshow">
-                <div className="inner-slideshow">
-                    <div className="slide1"></div>
-                    <div className="slide2"></div>
-                    {/* <div className="slide3"></div> */}
-                </div>
-            </div>
-
->>>>>>> 621eb5f17734f47baf7feb5fa7176a01c51016b1
+            </ul> */}
 
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
@@ -49,7 +38,10 @@ const App = () => (
                     Github
                 </a>
 
-            <a href="https://www.linkedin.com/in/andrewyoo94/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/andrewyoo94/">
+                LinkedIn
+            </a>
+
         </footer>
     </div>
 );
