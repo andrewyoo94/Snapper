@@ -16,6 +16,7 @@ require "open-uri"
 User.destroy_all
 Photo.destroy_all
 
+
 user1 = User.create!({
     username: "testUser1",
     password: "password"
