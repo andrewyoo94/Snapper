@@ -6,4 +6,7 @@ class Photo < ApplicationRecord
     belongs_to :user,
         foreign_key: :photographer_id,
         class_name: "User"
+
+    has_many :comments
+
 end 
