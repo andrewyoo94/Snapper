@@ -33,7 +33,6 @@ export const fetchAllPhotos = () => dispatch => {
 }
 
 export const fetchPhoto = (id) => dispatch => {
-    debugger
     return (
         PhotoAPIUtil.fetchPhoto(id)
             .then((photo) => dispatch(receivePhoto(photo)))
