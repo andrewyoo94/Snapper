@@ -10,16 +10,16 @@ import PhotoIndexContainer from "./photos/photo_index_container";
 const App = () => (
     <div className="master">
         <div className="homepage">
+            <header className="header">
+                <Link className="logo" to="/">snapper</Link>
+                <Route exact path="/" component={GreetingContainer} />
+            </header> 
+
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
         </div>
 
-        <header className="header">
-            <Link className="logo" to="/">snapper</Link>
-            <Route exact path="/" component={GreetingContainer} />
-        </header> 
-
-        <AuthRoute exact path="/photos" component={PhotoIndexContainer} />
+        <AuthRoute exact path="/explore" component={PhotoIndexContainer} />
 
         <footer className="footer-master">
             <a href="https://github.com/andrewyoo94">
