@@ -17,9 +17,10 @@ const App = () => (
 
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
-        </div>
 
-        <Route exact path="/photos" component={PhotoIndexContainer} />
+
+            <Route exact path="/explore" component={PhotoIndexContainer} />
+        </div>
 
         <footer className="footer-master">
             <a href="https://github.com/andrewyoo94">
