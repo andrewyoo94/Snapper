@@ -1,19 +1,19 @@
-import { connect } from 'react-redux';
-import { fetchPhoto } from '../../actions/photo_actions';
-import PhotoShow from './photo_show';
+import React from 'react';
+
+class PhotoShow extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="photo-show-container">
+                <img src={`${this.props.photo.photoUrl}`} />
+            </div>
+        );
+    }
+    
+}
 
 
-const mSTP = (state, ownProps) => {
-    return {
-        currentUserId: state.session.id,
-        photo: state.entities.photos[ownProps.match.params.photoId]
-    };
-};
-
-const mDTP = (dispatch) => {
-    return {
-        fetchPhoto: (id) => dispatch(fetchPhoto(id))
-    };
-};
-
-export default connect(mSTP, mDTP)(PhotoShow);
+export default PhotoShow;
