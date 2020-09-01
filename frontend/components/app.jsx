@@ -6,6 +6,7 @@ import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import PhotoIndexContainer from "./photos/photo_index_container";
+import PhotoShowContainer from "./photos/photo_show_container";
 
 const App = () => (
     <div className="master">
@@ -21,6 +22,8 @@ const App = () => (
 
             <Route exact path="/explore" component={PhotoIndexContainer} />
         </div>
+
+        <Route path="/photos/:photoId" component={PhotoShowContainer} />
 
         <footer className="footer-master">
             <a href="https://github.com/andrewyoo94">
