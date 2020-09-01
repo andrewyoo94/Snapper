@@ -12,7 +12,7 @@ const App = () => (
     <div className="master">
         <div className="homepage">
             <header className="header">
-                <Link className="logo" to="/">snapper</Link>
+                <Link className="logo" to="/explore">snapper</Link>
                 <Route exact path="/" component={GreetingContainer} />
             </header> 
 
