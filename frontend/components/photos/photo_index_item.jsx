@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PhotoIndexItem = props => {
     const photoUrl = props.photo.photoUrl;
+    
     return (
         <div className="photos-index-item">
             <Link to={`/photos/${props.photo.id}`}>

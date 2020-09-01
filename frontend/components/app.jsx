@@ -23,7 +23,7 @@ const App = () => (
             <Route exact path="/explore" component={PhotoIndexContainer} />
         </div>
 
-        <Route path="/photos/:photoId" component={PhotoShowContainer} />
+        <Route path="/photos/:id" component={PhotoShowContainer} />
 
         <footer className="footer-master">
             <a href="https://github.com/andrewyoo94">

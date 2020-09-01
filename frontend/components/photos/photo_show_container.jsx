@@ -6,7 +6,7 @@ import PhotoShow from './photo_show';
 const mSTP = (state, ownProps) => {
     return {
         currentUserId: state.session.id,
-        photo: state.entities.photos[ownProps.match.params.photoId]
+        photo: state.entities.photos[ownProps.match.params.id]
     };
 };
 
