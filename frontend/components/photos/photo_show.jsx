@@ -21,7 +21,7 @@ class PhotoShow extends React.Component {
         let photoUrl = this.props.photo ? this.props.photo.photoUrl : ""; 
 
         return (
-            <div photo-show-main>
+            <div className="photo-show-main">
                 <div className="photo-show-container">
                     <img src={photoUrl} />
                 </div>
