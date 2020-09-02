@@ -20,7 +20,7 @@ class PhotoShow extends React.Component {
                     <img src={photoUrl} />
                 </div>
 
-                <CommentFormContainer />
+                {/* <CommentFormContainer /> */}
             </div>
         );
     }
