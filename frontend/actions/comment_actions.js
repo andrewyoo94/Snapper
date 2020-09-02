@@ -15,8 +15,9 @@ const receiveAllComments = comments => ({
     comments: comments
 });
 
-const removeComment = () => ({
-    type: DELETE_COMMENT
+const removeComment = (comment) => ({
+    type: DELETE_COMMENT,
+    commentId: comment.id
 });
 
 const receiveCommentErrors = errors => ({
@@ -34,14 +35,14 @@ export const createComment = (comment) => dispatch => {
 
 export const fetchAllComments = (id) => dispatch => {
     return (
-        CommentAPIUtil.fetchAllComments()
+        CommentAPIUtil.fetchAllComments(id)
             .then((comments) => dispatch(receiveAllComments(comments)))
     )
 };
 
-export const deleteComment = (comment) => dispatch => {
+export const deleteComment = (commentId) => dispatch => {
     return (
-        CommentAPIUtil.deleteComment(comment)
+        CommentAPIUtil.deleteComment(commentId)
             .then((comment) => dispatch(removeComment))
             .fail((error) => dispatch(receiveCommentErrors(error.responseJSON)))
     )
