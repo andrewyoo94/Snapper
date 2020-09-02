@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentFormContainer from '../comments/comment_form_container';
+// import CommentFormContainer from '../comments/comment_form_container';
 
 
 class PhotoShow extends React.Component {
@@ -15,8 +15,12 @@ class PhotoShow extends React.Component {
         let photoUrl = this.props.photo.photoUrl ? this.props.photo.photoUrl : ""; 
 
         return (
-            <div className="photo-show-container">
-                <img src={photoUrl} />
+            <div photo-show-main>
+                <div className="photo-show-container">
+                    <img src={photoUrl} />
+                </div>
+
+                <CommentFormContainer />
             </div>
         );
     }
