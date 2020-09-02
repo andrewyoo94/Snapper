@@ -1,5 +1,14 @@
-.photo-show-container {
-    display: block;
-    max-width:100px;
-    max-height:100px;
+.photo-show-main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.photo-show-main img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 9%;
+    max-height: 45%;
+    max-width: 45%; 
 }
