@@ -8,7 +8,7 @@ const photosReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_PHOTOS:
             return action.photos;
         case RECEIVE_PHOTO:
-            newState = Object.assign({}, oldState, action.photo)
+            newState = Object.assign({}, oldState, { [action.photo.id]: action.photo} )
             return newState;
         default: 
             return oldState;

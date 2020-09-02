@@ -8,11 +8,17 @@ class PhotoShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPhoto(this.props.match.params.photoId)
+        this.props.fetchPhoto(this.props.photoId);
+    }
+
+    componentDidUpdate(preProps, preState) {
+        if(preProps.photoId !== this.props.photoId) {
+            this.props.fetchPhoto(this.props.photoId);
+        }
     }
 
     render() { 
-        let photoUrl = this.props.photo.photoUrl ? this.props.photo.photoUrl : ""; 
+        let photoUrl = this.props.photo ? this.props.photo.photoUrl : ""; 
 
         return (
             <div photo-show-main>
