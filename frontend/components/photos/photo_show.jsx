@@ -1,4 +1,6 @@
 import React from 'react';
+import CommentFormContainer from '../comments/comment_form_container';
+
 
 class PhotoShow extends React.Component {
     constructor(props) {
