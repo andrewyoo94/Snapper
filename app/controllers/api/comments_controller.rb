@@ -8,7 +8,6 @@ class Api::CommentsController < ApplicationController
     end 
 
     def create 
-        debugger
         @comment = Comment.new(comment_params)
 
         @comment.user_id = current_user.id
@@ -35,6 +34,7 @@ class Api::CommentsController < ApplicationController
     private 
 
     def comment_params
+        debugger
         params.require(:comment).permit(:body)
     end 
 end
