@@ -8,6 +8,7 @@ const mSTP = (state, ownProps) => {
     return {
         currentUserId: state.session.id,
         photo: state.entities.photos[ownProps.match.params.id],
+        photoId: ownProps.match.params.id
     };
 };
 
