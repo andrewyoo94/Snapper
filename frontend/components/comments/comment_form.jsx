@@ -4,7 +4,7 @@ class CommentForm extends React.Component {
     constructor(props) {
         super(props); 
         this.state = {
-            body: ""
+            
         };
     }
 
@@ -22,18 +22,20 @@ class CommentForm extends React.Component {
     };
 
     render() {
-        <div className="comment-form">
-            <textarea name="comment-textarea" 
-                      value={this.state.body} 
-                      onChange={this.update(body)}
-                      placeHolder="Add a comment here..." >
-            </textarea>
+        return (
+            <div className="comment-form">
+                <textarea name="comment-textarea" 
+                        placeholder="Add a comment here..." >
+                </textarea>
 
-            <button className="comment-form-submit"
-                    onClick={this.handleSubmit.bind(this)}>
-                    Comment
-            </button>
-        </div>
+                <button className="comment-form-submit"
+                        onClick={this.handleSubmit.bind(this)}>
+                        Comment
+                </button>
+            </div>
+        )
     };
 
 }
+
+export default CommentForm;
