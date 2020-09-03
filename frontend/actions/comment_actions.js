@@ -37,6 +37,7 @@ export const fetchAllComments = (id) => dispatch => {
     return (
         CommentAPIUtil.fetchAllComments(id)
             .then((comments) => dispatch(receiveAllComments(comments)))
+            .fail((error) => dispatch(receiveCommentErrors(err.responseJSON)))
     )
 };
 

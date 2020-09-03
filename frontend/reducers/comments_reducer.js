@@ -8,16 +8,14 @@ export default (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_COMMENT:
-            newState = Object.assign({}, oldState, action.comment );
+            newState = Object.assign({}, oldState, { [action.comment.id]: action.comment } );
             return newState;
         case RECEIVE_ALL_COMMENTS:
             return action.comments;
         case REMOVE_COMMENT:
             newState = Object.assign({}, oldState);
-            delete newState[action.comment];
+            delete newState[action.comment.id];
             return newState;
-        case LOGOUT_CURRENT_USER:
-            return {};
         default:
             return state;
     }

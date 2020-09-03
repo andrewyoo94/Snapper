@@ -11,7 +11,7 @@ class Api::CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
 
         @comment.user_id = current_user.id
-        # @comment.photo_id = current_user. (How do I connect photo_id to comment.photo_id)
+        # @comment.photo_id = photo.id (How do I connect photo_id to comment.photo_id)
 
         if @comment.save 
             render :show 
@@ -34,7 +34,6 @@ class Api::CommentsController < ApplicationController
     private 
 
     def comment_params
-        debugger
         params.require(:comment).permit(:body)
     end 
 end
