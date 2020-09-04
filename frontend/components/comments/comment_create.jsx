@@ -19,8 +19,11 @@ class CommentCreate extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        let comment = this.state
 
-        this.props.createComment(this.state)
+        comment.photo_id = this.props.photo_id
+
+        this.props.createComment(comment)
             .then( () => this.setState( {body: ``} ))
     };
 

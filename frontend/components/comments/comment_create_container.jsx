@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import { createComment } from '../../actions/comment_actions';
 import CommentCreate from './comment_create';
+import { withRouter } from 'react-router-dom';
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
     debugger
     return {
+        photo_id: ownProps.match.params.id,
         currentUserId: state.entities.users[state.session.id].id
     };
 };
@@ -15,4 +17,4 @@ const mDTP = (dispatch) => {
     };
 };
 
-export default connect(mSTP, mDTP)(CommentCreate);
+export default withRouter(connect(mSTP, mDTP)(CommentCreate));
