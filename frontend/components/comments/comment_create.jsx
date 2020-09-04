@@ -4,9 +4,7 @@ class CommentCreate extends React.Component {
     constructor(props) {
         super(props); 
         this.state = {
-
-            body: ``,
-            photo_id: this.props.photoId,
+            body: ``
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,6 +27,7 @@ class CommentCreate extends React.Component {
         return (
             <div className="comment-form">
                 <textarea name="comment-textarea" 
+                    cols="33" rows="4"
                     value={this.state.body} 
                     onChange={this.handleUpdate('body')}
                     placeholder="Add a comment here..." >

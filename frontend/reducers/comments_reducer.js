@@ -17,6 +17,6 @@ export default (oldState = {}, action) => {
             delete newState[action.comment.id];
             return newState;
         default:
-            return state;
+            return oldState;
     }
 };
