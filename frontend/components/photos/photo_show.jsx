@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentFormContainer from '../comments/comment_form_container';
+import CommentCreateContainer from '../comments/comment_create_container';
 
 
 class PhotoShow extends React.Component {
@@ -26,7 +26,7 @@ class PhotoShow extends React.Component {
                     <img src={photoUrl} />
                 </div>
 
-                <CommentFormContainer />
+                <CommentCreateContainer />
             </div>
         );
     }

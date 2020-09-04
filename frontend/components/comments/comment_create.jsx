@@ -1,14 +1,18 @@
 import React from 'react';
 
-class CommentForm extends React.Component {
+class CommentCreate extends React.Component {
     constructor(props) {
         super(props); 
         this.state = {
-            body: ""
+
+            body: ``,
+            photo_id: this.props.photoId,
         };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    update(field) {
+    handleUpdate(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         })
@@ -18,19 +22,21 @@ class CommentForm extends React.Component {
         e.preventDefault();
 
         this.props.createComment(this.state)
-            .then( () => this.setState( {body: ""} ))
+            .then( () => this.setState( {body: ``} ))
     };
 
     render() {
         return (
             <div className="comment-form">
                 <textarea name="comment-textarea" 
-                        placeholder="Add a comment here..." >
+                    value={this.state.body} 
+                    onChange={this.handleUpdate('body')}
+                    placeholder="Add a comment here..." >
                 </textarea>
 
                 <button className="comment-form-submit"
-                        onClick={this.handleSubmit.bind(this)}>
-                        Comment
+                    onClick={this.handleSubmit}>
+                    Comment
                 </button>
             </div>
         )
@@ -38,4 +44,4 @@ class CommentForm extends React.Component {
 
 }
 
-export default CommentForm;
+export default CommentCreate;

@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentForm from './comment_form';
+import CommentCreate from './comment_create';
 
 class CommentIndex extends React.Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class CommentIndex extends React.Component {
                         />
                     ))}
                 </ul>
-                <CommentForm
+                <CommentCreate
                     createComment={this.props.createComment}
                     photoId={this.props.photoId}
                 />

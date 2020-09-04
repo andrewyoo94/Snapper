@@ -11,8 +11,8 @@ class Api::CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
 
         @comment.user_id = current_user.id
-        # @comment.photo_id = photo.id (How do I connect photo_id to comment.photo_id)
-
+        @comment.photo_id = photo.id 
+        debugger 
         if @comment.save 
             render :show 
         else  

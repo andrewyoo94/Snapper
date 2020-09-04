@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createComment } from '../../actions/comment_actions';
-import CommentForm from './comment_form';
+import CommentCreate from './comment_create';
 
 const mSTP = (state) => {
     return {
@@ -14,4 +14,4 @@ const mDTP = (dispatch) => {
     };
 };
 
-export default connect(mSTP, mDTP)(CommentForm);
+export default connect(mSTP, mDTP)(CommentCreate);

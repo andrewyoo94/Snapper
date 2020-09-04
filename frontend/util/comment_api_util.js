@@ -1,16 +1,16 @@
-import { $CombinedState } from "redux"
-
 export const createComment = (comment) => {
     return $.ajax({
         method: "POST",
-        url: "/api/comments"
+        url: "/api/comments",
+        data: { comment }
     })
 }
 
 export const fetchAllComments = () => {
     return $.ajax({
         method: "GET",
-        url: "/api/comments"
+        url: "/api/comments",
+        data: { photo_id: id }
     })
 };
 
@@ -21,3 +21,4 @@ export const deleteComment = (id) => (
         url: `/api/comments/${id}`
     })
 )
+
