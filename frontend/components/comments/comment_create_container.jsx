@@ -3,6 +3,7 @@ import { createComment } from '../../actions/comment_actions';
 import CommentCreate from './comment_create';
 
 const mSTP = (state) => {
+    debugger
     return {
         currentUserId: state.entities.users[state.session.id].id
     };
