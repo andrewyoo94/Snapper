@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentCreate from './comment_create';
+import CommentIndexItem from './comment_index_item';
 
 class CommentIndex extends React.Component {
     constructor(props) {
