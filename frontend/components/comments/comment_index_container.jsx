@@ -12,7 +12,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return ({
-        fetchComments: () => dispatch(fetchAllComments(id))
+        fetchComments: (id) => dispatch(fetchAllComments(id))
     })
 }
 

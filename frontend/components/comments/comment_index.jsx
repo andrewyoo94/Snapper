@@ -6,25 +6,26 @@ class CommentIndex extends React.Component {
         super(props);
     }
 
-    render() {
-        if (this.state.loading) return <div className="lds-dual-ring" />;
+    componentDidMount() {
+        this.props.fetchComments();
+    }
 
-        const { comments } = this.props;
-        return (
-            <div className='photo-viewer-comment-container'>
-                <ul className='photo-view-comment-index'>
-                    {comments.map(comment => (
-                        <CommentIndexItem key={comment.id}
-                            comment={comment}
-                            currentUserId={this.props.currentUserId}
-                            deleteComment={this.props.deleteComment}
-                        />
-                    ))}
-                </ul>
-                <CommentCreate
-                    createComment={this.props.createComment}
+    render() {
+        let comments = this.props.comments.map(comment => {
+            return (
+                <CommentIndexItem
+                    key={comment.id}
+                    comment={comment}
                     photoId={this.props.photoId}
                 />
+            )
+        });
+
+        return (
+            <div className="comments-section">
+                <div className="comment-info">
+                    {comments}
+                </div>
             </div>
         );
     }

@@ -6,7 +6,7 @@ export const createComment = (comment) => {
     })
 }
 
-export const fetchAllComments = () => {
+export const fetchAllComments = (id) => {
     return $.ajax({
         method: "GET",
         url: "/api/comments",
