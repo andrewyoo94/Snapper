@@ -3,7 +3,7 @@ import React from 'react';
 class CommentCreate extends React.Component {
     constructor(props) {
         super(props); 
-        debugger
+    
         this.state = {
             body: ``
         };
