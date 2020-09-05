@@ -33,3 +33,11 @@ export const logout = () => dispatch => (
     APIUtil.logout()
         .then(user => dispatch(logoutCurrentUser()))
 );
+
+// export const fetchUser = (currentUser) => dispatch => {
+//     return (
+//         APIUtil.fetchUser(currentUser)
+//             .then((currentUser) => dispatch(receiveErrors(currentUser)))
+//             .fail((error) => dispatch(receiveErrors(error.responseJSON)))
+//     )
+// }
