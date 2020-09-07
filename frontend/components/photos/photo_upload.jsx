@@ -1,7 +1,5 @@
-
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-
+import { withRouter } from 'react-router-dom';
 
 class PhotoUpload extends React.Component {
     constructor(props) {
@@ -40,3 +38,5 @@ class PhotoUpload extends React.Component {
         });
     }
 }
+
+export default withRouter(PhotoUpload);
