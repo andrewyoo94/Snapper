@@ -5,19 +5,22 @@ import CommentIndexItem from './comment_index_item';
 class CommentIndex extends React.Component {
     constructor(props) {
         super(props);
+        debugger
     }
 
     componentDidMount() {
-        this.props.fetchComments();
+        this.props.fetchComments(this.props.photoId);
     }
 
     render() {
+        debugger
         let comments = this.props.comments.map(comment => {
             return (
                 <CommentIndexItem
                     key={comment.id}
                     comment={comment}
                     photoId={this.props.photoId}
+                    currentUsername={this.props.currentUsername}
                 />
             )
         });

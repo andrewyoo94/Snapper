@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const CommentIndexItem = ({ comment, currentUsername }) => {
     if (comment === undefined) return null;
-
-    debugger 
+ 
+    debugger
     return (
         <li className='comment-container'>
             <div className='comment'>
