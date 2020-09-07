@@ -8,6 +8,12 @@ class PhotoUpload extends React.Component {
         this.onFileChange = this.onFileChange.bind(this);
     }
 
+    handleUpdate(field) {
+        return (e) => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
     onFileChange(e) {
         const reader = new FileReader();
         const file = e.currentTarget.files[0];
@@ -36,6 +42,16 @@ class PhotoUpload extends React.Component {
             contentType: false,
             processData: false
         });
+    }
+
+    render() {
+        return (
+            <div className="upload-main">
+                <form className="upload-form">
+                    
+                </form>
+            </div>
+        );
     }
 }
 
