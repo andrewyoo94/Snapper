@@ -1,15 +1,20 @@
 import { connect } from 'react-redux';
 import CommentIndex from './comment_index';
 import { fetchAllComments } from '../../actions/comment_actions';
+import { withRouter } from 'react-router-dom';
 
-const mSTP = state => {
-    let comments = Object.values(state.entities.comments);
+
+const mSTP = (state, ownProps) => {
+    let photoId = ownProps.match.params.id;
+    let photo = state.entities.photos[photoId];
+    let comments = photo ? photo.comments : [];
     let users = Object.values(state.entities.users);
-
+     
     return ({
         comments: comments,
         currentUsername: users[0].username
     })
+
 };
 
 const mDTP = dispatch => {
@@ -18,4 +23,4 @@ const mDTP = dispatch => {
     })
 }
 
-export default connect(mSTP, mDTP)(CommentIndex);
+export default withRouter(connect(mSTP, mDTP)(CommentIndex));
