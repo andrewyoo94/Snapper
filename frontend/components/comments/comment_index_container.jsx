@@ -6,7 +6,6 @@ const mSTP = state => {
     let comments = Object.values(state.entities.comments);
     let users = Object.values(state.entities.users);
 
-    debugger
     return ({
         comments: comments,
         currentUsername: users[0].username

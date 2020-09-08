@@ -5,7 +5,6 @@ import CommentIndexItem from './comment_index_item';
 class CommentIndex extends React.Component {
     constructor(props) {
         super(props);
-        debugger
     }
 
     componentDidMount() {
@@ -13,7 +12,6 @@ class CommentIndex extends React.Component {
     }
 
     render() {
-        debugger
         let comments = this.props.comments.map(comment => {
             return (
                 <CommentIndexItem
