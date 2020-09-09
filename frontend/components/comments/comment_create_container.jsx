@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createComment } from '../../actions/comment_actions';
+import { createComment, fetchAllComments } from '../../actions/comment_actions';
 import CommentCreate from './comment_create';
 import { withRouter } from 'react-router-dom';
 
@@ -12,7 +12,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => {
     return {
-        createComment: (comment) => dispatch(createComment(comment))
+        createComment: (comment) => dispatch(createComment(comment)),
+        fetchAllComments: (photo_id) => dispatch(fetchAllComments(photo_id))
     };
 };
 

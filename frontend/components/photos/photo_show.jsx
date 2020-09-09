@@ -7,19 +7,20 @@ class PhotoShow extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     comments: []
-        // }
+        this.state = {
+            comments: []
+        }
     }
     
     componentDidMount() {
         this.props.fetchPhoto(this.props.photoId)
-            // .then( () => this.setState({ comments: this.props.photo.comments }))
+            .then( () => this.setState({ comments: this.props.photo.comments }))
     }
 
     componentDidUpdate(preProps, preState) {
         if (preProps.photoId !== this.props.photoId) {
             this.props.fetchPhoto(this.props.photoId);
+            
         }
     }
 
@@ -34,7 +35,7 @@ class PhotoShow extends React.Component {
 
                 {/* comments={this.state.comments} inside commentIndex */}
                 <CommentIndexContainer />
-                <CommentCreateContainer />
+                <CommentCreateContainer comments={this.state.comments}/>
             </div>
         );
     }

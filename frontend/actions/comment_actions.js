@@ -30,7 +30,6 @@ export const createComment = (comment) => dispatch => {
     return (
         CommentAPIUtil.createComment(comment)
             .then((comment) => dispatch(receiveComment(comment)))
-            .then((comment) => dispatch(fetchAllComments(comment.photoId)))
             .fail((error) => dispatch(receiveCommentErrors(error.responseJSON)))
     )
 };
