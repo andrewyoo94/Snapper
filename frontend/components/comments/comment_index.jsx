@@ -4,6 +4,15 @@ import CommentIndexItem from './comment_index_item';
 class CommentIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            comments: []
+        }
+    }
+
+    componentDidMount() {
+        this.props.fetchPhoto(this.props.photoId)
+            .then( () => this.setState({ comments: this.props.photo.comments }))
     }
 
     render() {
