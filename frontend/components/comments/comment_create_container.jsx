@@ -4,6 +4,7 @@ import CommentCreate from './comment_create';
 import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => {
+    debugger
     return {
         photo_id: ownProps.match.params.id,
         currentUserId: state.entities.users[state.session.id].id

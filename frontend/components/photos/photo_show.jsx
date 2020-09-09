@@ -6,21 +6,15 @@ import CommentIndexContainer from '../comments/comment_index_container';
 class PhotoShow extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            comments: []
-        }
     }
     
     componentDidMount() {
         this.props.fetchPhoto(this.props.photoId)
-            .then( () => this.setState({ comments: this.props.photo.comments }))
     }
 
     componentDidUpdate(preProps, preState) {
         if (preProps.photoId !== this.props.photoId) {
             this.props.fetchPhoto(this.props.photoId);
-            
         }
     }
 
@@ -33,9 +27,8 @@ class PhotoShow extends React.Component {
                     <img src={photoUrl} />
                 </div>
 
-                {/* comments={this.state.comments} inside commentIndex */}
                 <CommentIndexContainer />
-                <CommentCreateContainer comments={this.state.comments}/>
+                <CommentCreateContainer />
             </div>
         );
     }

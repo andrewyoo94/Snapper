@@ -14,7 +14,6 @@ const mSTP = (state, ownProps) => {
         comments: comments,
         currentUsername: users[0].username
     })
-
 };
 
 const mDTP = dispatch => {
