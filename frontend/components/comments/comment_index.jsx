@@ -10,10 +10,10 @@ class CommentIndex extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.props.fetchPhoto(this.props.photoId)
-            .then( () => this.setState({ comments: this.props.photo.comments }))
-    }
+    // componentDidMount() {
+    //     this.props.fetchPhoto(this.props.photoId)
+    //         .then( () => this.setState({ comments: this.props.photo.comments }))
+    // }
 
     render() {
         let comments = this.props.comments.map(comment => {
