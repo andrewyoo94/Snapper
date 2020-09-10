@@ -13,7 +13,17 @@ class CommentIndex extends React.Component {
 
     componentDidMount() {
         this.setState({ photoComments: this.props.photoComments })
-
+        
+        this.props.fetchComments(this.props.photoId)
+            .then((comments) => {
+                debugger
+                return(
+                    this.setState({ testComments: comments })
+                )
+            }
+        )
+    
+        debugger
         // this.props.fetchComments(this.props.photoId)
         //     .then((photo) => this.setState({ comments: photo.comments }))
     }
@@ -22,16 +32,13 @@ class CommentIndex extends React.Component {
         if (preProps.photoComments != this.props.photoComments) {
             this.setState({ photoComments: this.props.photoComments })
         }
-
-        if (preProps.photoComments != this.props.photoComments) {
-            this.props.fetchComments(this.props.photoId)
-                .then((photo) => this.setState({ testComments: photo.comments }))
-        }
     }
 
     render() {
         let comments = this.state.photoComments ? this.state.photoComments : [];
 
+        debugger 
+        
         let commentIndexItems = comments.map(comment => { 
             return (
                 <CommentIndexItem
@@ -43,7 +50,6 @@ class CommentIndex extends React.Component {
             )
         });
         
-        debugger
         return (    
             <div className="comments-section">
                 <div className="comment-info">

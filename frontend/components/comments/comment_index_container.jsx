@@ -12,7 +12,8 @@ const mSTP = (state, ownProps) => {
      
     return ({
         photoComments: photoComments,
-        currentUsername: users[0].username
+        currentUsername: users[0].username,
+        photoId: photoId
     })
 };
 
