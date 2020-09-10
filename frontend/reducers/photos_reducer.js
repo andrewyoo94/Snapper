@@ -14,9 +14,7 @@ const photosReducer = (oldState = {}, action) => {
         case RECEIVE_COMMENT:
             newState = Object.assign({}, oldState)
             Object.values(newState).map( photo => {
-                debugger
                 if(photo.id === action.comment.photo_id) {
-                    debugger
                     photo.comments.push(action.comment)
                 }
             })

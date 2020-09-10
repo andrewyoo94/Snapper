@@ -6,7 +6,6 @@ class Api::CommentsController < ApplicationController
     def index
         @comments = Comment.where(photo_id: params[:photo_id]) 
 
-        debugger
         render :index
     end 
 

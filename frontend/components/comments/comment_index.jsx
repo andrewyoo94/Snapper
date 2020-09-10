@@ -16,15 +16,15 @@ class CommentIndex extends React.Component {
     }
 
     componentDidUpdate(preProps) {
-        debugger
         if(preProps.comments != this.props.comments) {
             this.setState(this.props.comments)
         }
     }
 
     render() {
-        console.log(this.state.comments);
-        let comments = this.state.comments.map(comment => {
+        let comments = this.state.comments ? this.state.comments : [];
+        debugger
+        comments.map(comment => {
             return (
                 <CommentIndexItem
                     key={comment.id}
