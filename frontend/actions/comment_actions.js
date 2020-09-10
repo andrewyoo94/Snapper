@@ -25,7 +25,7 @@ const receiveCommentErrors = errors => ({
     errors: errors
 });
 
-// added dispatch to fetchAllComments
+// dispatch to fetchAllComments after?
 export const createComment = (comment) => dispatch => {
     return (
         CommentAPIUtil.createComment(comment)
