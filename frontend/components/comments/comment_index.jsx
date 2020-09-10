@@ -11,11 +11,13 @@ class CommentIndex extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchComments(this.props.photoId)
             .then( (photo) => this.setState({ comments: photo.comments }))
     }
 
     componentDidUpdate(preProps) {
+        debugger
         if(preProps.comments != this.props.comments) {
             this.setState(this.props.comments)
         }
@@ -24,6 +26,7 @@ class CommentIndex extends React.Component {
     render() {
         let comments = this.state.comments ? this.state.comments : [];
         debugger
+
         comments.map(comment => {
             return (
                 <CommentIndexItem
