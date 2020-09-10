@@ -26,7 +26,7 @@ class CommentCreate extends React.Component {
         this.props.createComment(comment)
             .then( () => this.setState( {body: ``} ))
 
-        this.props.fetchAllComments(this.props.photo_id)
+        this.props.fetchPhoto(this.props.photo_id)
     };
 
     render() {

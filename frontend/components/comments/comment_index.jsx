@@ -6,28 +6,33 @@ class CommentIndex extends React.Component {
         super(props);
 
         this.state = {
-            comments: []
+            photoComments: [],
+            testComments: {}
         }
     }     
 
     componentDidMount() {
-        debugger
-        this.props.fetchComments(this.props.photoId)
-            .then( (photo) => this.setState({ comments: photo.comments }))
+        this.setState({ photoComments: this.props.photoComments })
+
+        // this.props.fetchComments(this.props.photoId)
+        //     .then((photo) => this.setState({ comments: photo.comments }))
     }
 
     componentDidUpdate(preProps) {
-        debugger
-        if(preProps.comments != this.props.comments) {
-            this.setState(this.props.comments)
+        if (preProps.photoComments != this.props.photoComments) {
+            this.setState({ photoComments: this.props.photoComments })
+        }
+
+        if (preProps.photoComments != this.props.photoComments) {
+            this.props.fetchComments(this.props.photoId)
+                .then((photo) => this.setState({ testComments: photo.comments }))
         }
     }
 
     render() {
-        let comments = this.state.comments ? this.state.comments : [];
-        debugger
+        let comments = this.state.photoComments ? this.state.photoComments : [];
 
-        comments.map(comment => {
+        let commentIndexItems = comments.map(comment => { 
             return (
                 <CommentIndexItem
                     key={comment.id}
@@ -37,11 +42,12 @@ class CommentIndex extends React.Component {
                 />
             )
         });
-
+        
+        debugger
         return (    
             <div className="comments-section">
                 <div className="comment-info">
-                    {comments}
+                    {commentIndexItems}
                 </div>
             </div>
         );

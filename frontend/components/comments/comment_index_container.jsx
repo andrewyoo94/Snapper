@@ -7,11 +7,11 @@ import { withRouter } from 'react-router-dom';
 const mSTP = (state, ownProps) => {
     let photoId = ownProps.match.params.id;
     let photo = state.entities.photos[photoId];
-    let comments = photo ? photo.comments : [];
+    let photoComments = photo ? photo.comments : [];
     let users = Object.values(state.entities.users);
      
     return ({
-        comments: comments,
+        photoComments: photoComments,
         currentUsername: users[0].username
     })
 };
