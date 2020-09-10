@@ -8,13 +8,12 @@ class CommentIndex extends React.Component {
         this.state = {
             comments: []
         }
-    }
+    }     
 
     componentDidMount() {
         debugger
         this.props.fetchComments(this.props.photoId)
-            .then( (photo) => this.setState({ comments: photo.comments }))
-    }
+            .then( (photo) => this.setState({ comments: photo.comments })).phot
 
     componentDidUpdate(preProps) {
         debugger
