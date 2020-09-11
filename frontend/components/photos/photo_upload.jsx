@@ -12,6 +12,7 @@ class PhotoUpload extends React.Component {
         }
 
         this.onFileChange = this.onFileChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleUpdate(field) {
@@ -53,7 +54,7 @@ class PhotoUpload extends React.Component {
     render() {
         return (
             <div className="upload-main">
-
+                <p> HI </p>
             </div>
         );
     }
