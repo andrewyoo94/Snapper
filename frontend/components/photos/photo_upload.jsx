@@ -4,6 +4,12 @@ import { withRouter } from 'react-router-dom';
 class PhotoUpload extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            title: '',
+            body: '',
+            imageFile: null,
+            imageUrl: null
+        }
 
         this.onFileChange = this.onFileChange.bind(this);
     }
@@ -32,8 +38,8 @@ class PhotoUpload extends React.Component {
         e.preventDefault();
         const formData = new FormData();
         formData.append('post[title]', this.state.title);
-        if (this.state.photoFile) {
-            formData.append('post[photo]', this.state.photoFile);
+        if (this.state.imageFile) {
+            formData.append('post[photo]', this.state.imageFile);
         }
         $.ajax({
             url: '/api/posts',
