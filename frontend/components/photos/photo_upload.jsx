@@ -54,7 +54,24 @@ class PhotoUpload extends React.Component {
     render() {
         return (
             <div className="upload-main">
-                <p> HI </p>
+
+                <input className="upload-title"
+                        type="text"
+                        value={this.state.title}
+                        onChange={this.handleInput('title')}
+                        placeholder="Add a title..."
+                />
+
+                <textarea className="upload-body"
+                    value={this.state.body}
+                    onChange={this.handleInput('body')}
+                    placeholder="Add a description..."
+                ></textarea>
+
+                <button className="upload-submit" 
+                    onClick={this.handleSubmit}>
+                    Upload photo!
+                </button>
             </div>
         );
     }
