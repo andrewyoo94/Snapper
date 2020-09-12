@@ -21,7 +21,7 @@ class PhotoUpload extends React.Component {
         });
     }
 
-    onFileChange(e) {
+    handleFile(e) {
         const reader = new FileReader();
         const file = e.currentTarget.files[0];
         reader.onloadend = () => {
@@ -58,13 +58,13 @@ class PhotoUpload extends React.Component {
                 <input className="upload-title"
                         type="text"
                         value={this.state.title}
-                        onChange={this.handleInput('title')}
+                    onChange={this.handleUpdate('title')}
                         placeholder="Add a title..."
                 />
 
                 <textarea className="upload-body"
                     value={this.state.body}
-                    onChange={this.handleInput('body')}
+                    onChange={this.handleUpdate('body')}
                     placeholder="Add a description..."
                 ></textarea>
 
@@ -72,6 +72,13 @@ class PhotoUpload extends React.Component {
                     onClick={this.handleSubmit}>
                     Upload photo!
                 </button>
+
+                <input type="file"
+                    className="upload-browse"
+                    onChange={this.handleFile}
+                />
+
+                <img className="upload-image" src={this.state.photoUrl} />
             </div>
         );
     }
