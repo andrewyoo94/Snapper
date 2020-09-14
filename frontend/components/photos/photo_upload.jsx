@@ -11,7 +11,7 @@ class PhotoUpload extends React.Component {
             imageUrl: null
         }
 
-        this.onFileChange = this.onFileChange.bind(this);
+        this.handleFile = this.handleFile.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
