@@ -38,12 +38,13 @@ class PhotoUpload extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData();
-        formData.append('post[title]', this.state.title);
+        formData.append('photo[title]', this.state.title);
         if (this.state.imageFile) {
-            formData.append('post[photo]', this.state.imageFile);
+            formData.append('photo[photo]', this.state.imageFile);
         }
+        debugger
         $.ajax({
-            url: '/api/posts',
+            url: '/api/photos',
             method: 'POST',
             data: formData,
             contentType: false,
