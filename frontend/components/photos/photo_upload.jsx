@@ -6,7 +6,7 @@ class PhotoUpload extends React.Component {
         super(props)
         this.state = {
             title: '',
-            body: '',
+            description: '',
             imageFile: null,
             imageUrl: null
         }
@@ -39,6 +39,7 @@ class PhotoUpload extends React.Component {
         e.preventDefault();
         const formData = new FormData();
         formData.append('photo[title]', this.state.title);
+        formData.append('photo[description]', this.state.description);
         if (this.state.imageFile) {
             formData.append('photo[photo]', this.state.imageFile);
         }
@@ -57,15 +58,15 @@ class PhotoUpload extends React.Component {
             <div className="upload-main">
 
                 <input className="upload-title"
-                        type="text"
-                        value={this.state.title}
+                    type="text"
+                    value={this.state.title}
                     onChange={this.handleUpdate('title')}
-                        placeholder="Add a title..."
+                    placeholder="Add a title..."
                 />
 
-                <textarea className="upload-body"
-                    value={this.state.body}
-                    onChange={this.handleUpdate('body')}
+                <textarea className="upload-description"
+                    value={this.state.description}
+                    onChange={this.handleUpdate('description')}
                     placeholder="Add a description..."
                 ></textarea>
 
@@ -74,8 +75,8 @@ class PhotoUpload extends React.Component {
                     Upload photo!
                 </button>
 
-                <input type="file"
-                    className="upload-browse"
+                <input className="upload-browse"
+                    type="file"
                     onChange={this.handleFile}
                 />
 

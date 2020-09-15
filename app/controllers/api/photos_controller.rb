@@ -12,7 +12,8 @@ class Api::PhotosController < ApplicationController
     def create
         @photo = Photo.new(photo_params)
         @photo.photographer_id = current_user.id
-
+        debugger
+        
         if @photo.save
             render :show
         else  
@@ -32,7 +33,7 @@ class Api::PhotosController < ApplicationController
     private
 
     def photo_params
-        params.require(:photo).permit(:title, :body, :image)
+        params.require(:photo).permit(:title, :description, :image)
     end 
     
 end
