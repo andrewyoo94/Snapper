@@ -1,5 +1,6 @@
 class Api::PhotosController < ApplicationController 
 
+    protect_from_forgery with: :null_session
     before_action :ensure_logged_in, only: [:create]
 
     def index
