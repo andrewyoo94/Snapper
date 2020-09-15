@@ -42,7 +42,7 @@ class PhotoUpload extends React.Component {
         if (this.state.imageFile) {
             formData.append('photo[photo]', this.state.imageFile);
         }
-        debugger
+        
         $.ajax({
             url: '/api/photos',
             method: 'POST',
