@@ -30,9 +30,8 @@ const App = () => (
 
         <footer className="footer-master">
             <a href="https://github.com/andrewyoo94">
-                <i className="fab fa-linkedin"></i>
-                    Github
-                </a>
+                Github
+            </a>
 
             <a href="https://www.linkedin.com/in/andrewyoo94/">
                 LinkedIn
