@@ -11,19 +11,19 @@ import PhotoUploadContainer from "./photos/photo_upload_container";
 
 const App = () => (
     <div className="master">
-        <div className="homepage">
-            <header className="header">
-                <Link className="logo" to="/explore">snapper</Link>
-                <Route exact path="/" component={GreetingContainer} />
-            </header> 
 
+        <header className="header">
+            <Link className="logo" to="/explore">snapper</Link>
+            <Route path="/" component={GreetingContainer} />
+        </header> 
+
+        <div className="login-signup">
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
-
-            <Route exact path="/explore" component={PhotoIndexContainer} />
         </div>
 
         <Switch>
+            <Route exact path="/explore" component={PhotoIndexContainer} />
             <Route exact path="/photos/:id" component={PhotoShowContainer} />
             <Route exact path="/upload" component={PhotoUploadContainer} />            
         </Switch>
