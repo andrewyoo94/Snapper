@@ -23,7 +23,7 @@ export const fetchTag = (id) => dispatch => {
     return (
         TagAPIUtil.fetchTag(id)
             .then((tag) => dispatch(receiveTag(tag)))
-            .fail(error => dispatch(receiveErrors(error.responseJSON)))
+            .fail(error => dispatch(receiveTagErrors(error.responseJSON)))
     )
 }
 
@@ -31,7 +31,7 @@ export const fetchTags = () => dispatch => {
     return (
         TagAPIUtil.fetchTags()
             .then((tags) => dispatch(receiveAllTags(tags)))
-            .fail(error => dispatch(receiveErrors(error.responseJSON)))
+            .fail(error => dispatch(receiveTagErrors(error.responseJSON)))
     )
 }
 
@@ -40,6 +40,6 @@ export const createTag = (tag) => dispatch => {
     return (
         TagAPIUtil.createTag(tag)
             .then((tag) => dispatch(receiveTag(tag)))
-            .fail(error => dispatch(receiveErrors(error.responseJSON)))
+            .fail(error => dispatch(receiveTagErrors(error.responseJSON)))
     )
 }
