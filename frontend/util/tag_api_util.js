@@ -1,0 +1,23 @@
+export const fetchTag = (id) => (
+    $.ajax({
+        method: "GET",
+        url: `/api/tags/${id}`
+    })
+);
+
+export const fetchTags = () => (
+    $.ajax({
+        method: "GET",
+        url: "/api/tags"
+    })
+);
+
+export const createTag = (tag) => {
+    return $.ajax({
+        method: "POST",
+        url: "/api/tags",
+        data: tag,
+        contentType: false,
+        processData: false
+    })
+};
