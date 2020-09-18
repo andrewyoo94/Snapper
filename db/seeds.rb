@@ -15,7 +15,7 @@ require "open-uri"
 
 User.destroy_all
 Photo.destroy_all
-Photo.Comments.destroy_all
+Comment.delete_all
 
 User.create(
   username: 'demouser',

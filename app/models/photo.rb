@@ -7,7 +7,7 @@ class Photo < ApplicationRecord
         foreign_key: :photographer_id,
         class_name: "User"
 
-    has_many :comments
+    has_many :comments, dependent: :destroy
 
     # belongs_to :tag
 end 
