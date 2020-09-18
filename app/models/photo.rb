@@ -9,5 +9,5 @@ class Photo < ApplicationRecord
 
     has_many :comments, dependent: :destroy
 
-    # belongs_to :tag
+    belongs_to :phototag
 end 

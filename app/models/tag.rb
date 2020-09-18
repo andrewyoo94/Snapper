@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
   validates :name, :photo_id, presence: true
 
-  # has_many :photos
+  belongs_to :phototag
 end
 

@@ -4,6 +4,4 @@ class PhotoTag < ApplicationRecord
     has_many :photos
 
     has_many :tags
-
-    # make associations to photos and tags later!
 end 
