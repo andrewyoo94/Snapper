@@ -21,6 +21,6 @@ const mDTP = dispatch => {
     return ({
         fetchComments: (id) => dispatch(fetchAllComments(id))
     })
-}
+};
 
 export default withRouter(connect(mSTP, mDTP)(CommentIndex));
