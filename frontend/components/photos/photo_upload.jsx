@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { TagCreateContainer } from '../tags/tag_create_container';
+import TagCreateContainer from '../tags/tag_create_container';
 
 class PhotoUpload extends React.Component {
     constructor(props) {

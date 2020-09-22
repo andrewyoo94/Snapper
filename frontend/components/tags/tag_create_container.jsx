@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { createTag } from '../../actions/tag_actions';
 import TagCreate from './tag_create';
+import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => {
     return {
@@ -14,4 +15,4 @@ const mDTP = (dispatch) => {
     };
 };
 
-export default connect(mSTP, mDTP)(TagCreate);
+export default withRouter(connect(mSTP, mDTP)(TagCreate));
