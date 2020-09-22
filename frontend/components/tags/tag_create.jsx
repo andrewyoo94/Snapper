@@ -25,7 +25,7 @@ class TagCreate extends React.Component {
         formData.append('tag[photo_id]', this.state.photo_id);
         this.props.createTag(formData)
             .then( () => this.setState( {tagName: ''} ))
-    }
+    };
 
     render() {
         return (
@@ -39,8 +39,8 @@ class TagCreate extends React.Component {
                 <button className="tag-button" onClick={this.handleSubmit}>Add tag...</button>
             </div>
         )
-    }
+    };
 
-}
+};
 
 export default TagCreate;
