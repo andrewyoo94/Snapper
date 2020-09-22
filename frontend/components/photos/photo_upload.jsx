@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { TagCreateContainer } from '../tags/tag_create_container';
 
 class PhotoUpload extends React.Component {
     constructor(props) {
@@ -69,6 +70,8 @@ class PhotoUpload extends React.Component {
                     onChange={this.handleUpdate('description')}
                     placeholder="Add a description..."
                 ></textarea>
+
+                <TagCreateContainer />
 
                 <button className="upload-submit" 
                     onClick={this.handleSubmit}>

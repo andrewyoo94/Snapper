@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createTag } from '../../actions/tags_actions';
+import { createTag } from '../../actions/tag_actions';
 import TagCreate from './tag_create';
 
 const mSTP = (state, ownProps) => {
