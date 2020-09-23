@@ -8,7 +8,7 @@ class PhotoUpload extends React.Component {
         this.state = {
             title: '',
             description: '',
-            tag: '',
+            name: '',
             imageFile: null,
             imageUrl: null
         }
@@ -39,25 +39,26 @@ class PhotoUpload extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const formData = new FormData();
-        
-        debugger
+        const photoFormData = new FormData();
 
-        this.props.createTag(this.state.tag);
+        let tag = { photo_id: null, name: this.state.name};
 
-        formData.append('photo[title]', this.state.title);
-        formData.append('photo[description]', this.state.description);
+        photoFormData.append('photo[title]', this.state.title);
+        photoFormData.append('photo[description]', this.state.description);
         if (this.state.imageFile) {
-            formData.append('photo[photo]', this.state.imageFile);
+            photoFormData.append('photo[photo]', this.state.imageFile);
         }
         
         $.ajax({
             url: '/api/photos',
             method: 'POST',
-            data: formData,
+            data: photoFormData,
             contentType: false,
             processData: false
-        });
+        }).then( (response) => {
+            tag.photo_id = response.id
+            this.props.createTag(tag)
+        }, error => console.log(error) );
     }
 
     render() {
@@ -78,11 +79,10 @@ class PhotoUpload extends React.Component {
                 ></textarea>
 
 
-                {/* <TagCreateContainer /> */}
                 <input className="tag-text"
                     type="text"
                     value={this.state.name}
-                    onChange={this.handleUpdate("tag")}
+                    onChange={this.handleUpdate("name")}
                     placeholder="Add a tag..." />
 
 
