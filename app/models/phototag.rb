@@ -1,5 +1,5 @@
 class PhotoTag < ApplicationRecord 
-    validates :photo_id, :tag_id presence: true
+    validates :photo_id, :tag_id, presence: true
 
     has_many :photos
 
