@@ -30,13 +30,13 @@ class TagCreate extends React.Component {
     render() {
         return (
             <div className="tag-form">
-                <input className="tag-text"
+                {/* <input className="tag-text"
                     type="text"
                     value={this.state.name}
                     onChange={this.handleUpdate("name")}
                     placeholder="Add a tag..." />
 
-                <button className="tag-button" onClick={this.handleSubmit}>Add tag...</button>
+                <button className="tag-button" onClick={this.handleSubmit}>Add tag...</button> */}
             </div>
         )
     };

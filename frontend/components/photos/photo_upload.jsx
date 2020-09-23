@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import TagCreateContainer from '../tags/tag_create_container';
+// import TagCreateContainer from '../tags/tag_create_container';
 
 class PhotoUpload extends React.Component {
     constructor(props) {
@@ -8,6 +8,7 @@ class PhotoUpload extends React.Component {
         this.state = {
             title: '',
             description: '',
+            tag: '',
             imageFile: null,
             imageUrl: null
         }
@@ -40,7 +41,9 @@ class PhotoUpload extends React.Component {
         e.preventDefault();
         const formData = new FormData();
         
-        this.props.createTag(tag);
+        debugger
+
+        this.props.createTag(this.state.tag);
 
         formData.append('photo[title]', this.state.title);
         formData.append('photo[description]', this.state.description);
@@ -74,7 +77,15 @@ class PhotoUpload extends React.Component {
                     placeholder="Add a description..."
                 ></textarea>
 
-                <TagCreateContainer />
+
+                {/* <TagCreateContainer /> */}
+                <input className="tag-text"
+                    type="text"
+                    value={this.state.name}
+                    onChange={this.handleUpdate("tag")}
+                    placeholder="Add a tag..." />
+
+
 
                 <button className="upload-submit" 
                     onClick={this.handleSubmit}>
