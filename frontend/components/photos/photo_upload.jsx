@@ -40,7 +40,11 @@ class PhotoUpload extends React.Component {
     handleSubmit(e) {
         if(this.state.name.length < 3) {
             document.getElementById('tag-error').innerHTML = "Tag must be at least 3 characters long!";
+            document.getElementById('img-error').innerHTML = "";
             return null
+        } else {
+            document.getElementById('tag-error').innerHTML = "";
+            document.getElementById('img-error').innerHTML = "";
         }
         e.preventDefault();
         const photoFormData = new FormData();
@@ -51,6 +55,10 @@ class PhotoUpload extends React.Component {
         photoFormData.append('photo[description]', this.state.description);
         if (this.state.imageFile) {
             photoFormData.append('photo[image]', this.state.imageFile);
+            document.getElementById('img-error').innerHTML = "";
+        } else {
+            document.getElementById('img-error').innerHTML = "Please attach an image to upload!";
+            return null
         }
         
         $.ajax({
@@ -102,6 +110,7 @@ class PhotoUpload extends React.Component {
                     onChange={this.handleFile}
                 />
 
+                <span id="img-error"></span>
                 <img className="upload-image" src={this.state.photoUrl} />
             </div>
         );
