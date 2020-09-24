@@ -32,7 +32,6 @@ class PhotoShow extends React.Component {
             </div>
         );
     }
-    
 }
 
 export default PhotoShow;

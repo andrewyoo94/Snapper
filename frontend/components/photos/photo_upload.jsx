@@ -46,7 +46,7 @@ class PhotoUpload extends React.Component {
         photoFormData.append('photo[title]', this.state.title);
         photoFormData.append('photo[description]', this.state.description);
         if (this.state.imageFile) {
-            photoFormData.append('photo[photo]', this.state.imageFile);
+            photoFormData.append('photo[image]', this.state.imageFile);
         }
         
         $.ajax({
@@ -58,7 +58,8 @@ class PhotoUpload extends React.Component {
         }).then( (response) => {
             tag.photo_id = response.id
             this.props.createTag(tag)
-        }, error => console.log(error) );
+            this.props.history.push(`/photos/${response.id}`)
+        }, error => console.log(error) )
     };
 
     render() {
