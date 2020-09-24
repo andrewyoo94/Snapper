@@ -59,7 +59,7 @@ class PhotoUpload extends React.Component {
             tag.photo_id = response.id
             this.props.createTag(tag)
         }, error => console.log(error) );
-    }
+    };
 
     render() {
         return (
@@ -78,14 +78,13 @@ class PhotoUpload extends React.Component {
                     placeholder="Add a description..."
                 ></textarea>
 
-
                 <input className="tag-text"
                     type="text"
                     value={this.state.name}
                     onChange={this.handleUpdate("name")}
-                    placeholder="Add a tag..." />
-
-
+                    placeholder="Add a tag..." 
+                    required
+                />
 
                 <button className="upload-submit" 
                     onClick={this.handleSubmit}>

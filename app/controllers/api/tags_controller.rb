@@ -29,7 +29,6 @@ class Api::TagsController < ApplicationController
     private 
 
     def tag_params 
-        debugger
         params.require(:tag).permit(:name, :photo_id)
     end 
 end 
