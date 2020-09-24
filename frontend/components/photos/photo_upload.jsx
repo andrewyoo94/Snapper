@@ -38,6 +38,10 @@ class PhotoUpload extends React.Component {
     }
 
     handleSubmit(e) {
+        if(this.state.name.length < 3) {
+            document.getElementById('tag-error').innerHTML = "Tag must be at least 3 characters long!";
+            return null
+        }
         e.preventDefault();
         const photoFormData = new FormData();
 
@@ -79,6 +83,7 @@ class PhotoUpload extends React.Component {
                     placeholder="Add a description..."
                 ></textarea>
 
+                <span id="tag-error"></span>
                 <input className="tag-text"
                     type="text"
                     value={this.state.name}
