@@ -10,7 +10,7 @@ class PhotoUpload extends React.Component {
             description: '',
             name: '',
             imageFile: null,
-            imageUrl: null
+            photoUrl: null
         }
 
         this.handleFile = this.handleFile.bind(this);
@@ -27,13 +27,13 @@ class PhotoUpload extends React.Component {
         const reader = new FileReader();
         const file = e.currentTarget.files[0];
         reader.onloadend = () => {
-            this.setState({ imageUrl: reader.result, imageFile: file });
+            this.setState({ photoUrl: reader.result, imageFile: file });
         }
 
         if (file) {
             reader.readAsDataURL(file);
         } else {
-            this.setState({ imageUrl: "", imageFile: null });
+            this.setState({ photoUrl: "", imageFile: null });
         }
     }
 
@@ -41,7 +41,7 @@ class PhotoUpload extends React.Component {
         e.preventDefault();
         const photoFormData = new FormData();
 
-        let tag = { photo_id: null, name: this.state.name};
+        let tag = { photo_id: null, name: this.state.name };
 
         photoFormData.append('photo[title]', this.state.title);
         photoFormData.append('photo[description]', this.state.description);
