@@ -10,16 +10,16 @@ class TagShow extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchTag(this.props.photoId)
     }
 
     render() {
-        let tags = this.state.tag ? this.state.tag : [];
-
+        let tags = this.props.photoId.name ? this.props.photoId.name : '';
+        document.getElementById("tag-name").innerHTML = tags;
+        debugger
         return (
             <div className="tag-show">
-                { tags }
+                <span id="tag-name"></span>
             </div>
         );
     }
