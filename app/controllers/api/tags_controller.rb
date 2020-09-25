@@ -10,8 +10,8 @@ class Api::TagsController < ApplicationController
     end 
 
     def show 
-        @tag = Tag.where(photo_id: params[:photo_id])
-
+        @tags = Tag.where(photo_id: params[:id])
+        debugger
         render :show
     end 
 
