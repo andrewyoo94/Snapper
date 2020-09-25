@@ -1,5 +1,5 @@
-import { RECEIVE_TAG } from '../actions/tags_actions';
-import { RECEIVE_ALL_TAGS } from '../actions/tags_actions';
+import { RECEIVE_TAG } from '../actions/tag_actions';
+import { RECEIVE_ALL_TAGS } from '../actions/tag_actions';
 
 const tagsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
