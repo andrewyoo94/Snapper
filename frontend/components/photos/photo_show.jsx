@@ -2,7 +2,7 @@ import React from 'react';
 import CommentCreateContainer from '../comments/comment_create_container';
 import CommentIndexContainer from '../comments/comment_index_container';
 import TagShowContainer from '../tags/tag_show_container';
-
+import TagCreateContainer from '..tags/tag_create_container';
 
 class PhotoShow extends React.Component {
     constructor(props) {
@@ -29,6 +29,7 @@ class PhotoShow extends React.Component {
                 </div>
 
                 <TagShowContainer />
+                <TagCreateContainer />
                 <CommentIndexContainer />
                 <CommentCreateContainer />
             </div>
