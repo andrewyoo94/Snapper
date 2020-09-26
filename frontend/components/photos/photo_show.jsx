@@ -28,9 +28,9 @@ class PhotoShow extends React.Component {
                     <img src={photoUrl} />
                 </div>
 
+                <TagShowContainer />
                 <CommentIndexContainer />
                 <CommentCreateContainer />
-                <TagShowContainer />
             </div>
         );
     }

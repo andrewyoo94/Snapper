@@ -14,7 +14,9 @@
     padding: 8px;
     margin-left: 10px;
 }
-/* 
-.header-upload {
 
-} */
+.header-upload {
+    padding-top: 25px;
+    width: 10em;
+    float: left;
+}
