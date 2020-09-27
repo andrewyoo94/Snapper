@@ -37,6 +37,7 @@ export const fetchTags = () => dispatch => {
 
 // might have to change tag to an array of tags
 export const createTag = (tag) => dispatch => {
+    debugger
     return (
         TagAPIUtil.createTag(tag)
             .then((tag) => dispatch(receiveTag(tag)))

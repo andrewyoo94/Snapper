@@ -16,7 +16,7 @@ class Api::TagsController < ApplicationController
     end 
 
     def create 
-        # debugger
+        debugger
         @tag = Tag.new(tag_params)
 
         if @tag.save 

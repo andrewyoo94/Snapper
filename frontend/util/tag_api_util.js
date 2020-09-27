@@ -13,12 +13,13 @@ export const fetchTags = () => (
 );
 
 export const createTag = (tag) => {
+    debugger
     return $.ajax({
         method: "POST",
         url: "/api/tags",
         data: { tag },
-        processData: false,
-        contentType: false,
-        cache: false
+        // processData: false,
+        // contentType: false,
+        // cache: false
     })
 };

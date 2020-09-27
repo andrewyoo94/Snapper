@@ -27,6 +27,7 @@ class TagCreate extends React.Component {
         //     .then(() => this.setState({ name: ''} ))
 
         let tag = { photo_id: this.state.photo_id, name: this.state.name };
+        debugger
         this.props.createTag(tag)
     };
 
