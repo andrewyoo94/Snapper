@@ -16,6 +16,7 @@ class Api::TagsController < ApplicationController
     end 
 
     def create 
+        # debugger
         @tag = Tag.new(tag_params)
 
         if @tag.save 
@@ -28,6 +29,7 @@ class Api::TagsController < ApplicationController
     private 
 
     def tag_params 
+        # debugger
         params.require(:tag).permit(:name, :photo_id)
     end 
 end 

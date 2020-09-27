@@ -22,9 +22,12 @@ class TagCreate extends React.Component {
         e.preventDefault();
         const formData = new FormData();
         formData.append('tag[name]', this.state.name);
-        formData.append('tag[photo_id]', this.state.photo_id);
-        this.props.createTag(formData)
-            .then(() => this.setState({ name: ''} ))
+        // formData.append('tag[photo_id]', this.state.photo_id);
+        // this.props.createTag(formData)
+        //     .then(() => this.setState({ name: ''} ))
+
+        let tag = { photo_id: this.state.photo_id, name: this.state.name };
+        this.props.createTag(tag)
     };
 
     render() {
