@@ -15,8 +15,9 @@ class TagShow extends React.Component {
 
     render() {
         let id = this.props.photoId
-        let tags = this.props.tags[id] && this.props.tags[id].name ? this.props.tags[id].name  : '';
+        let tags = this.props.tags ? this.props.tags : [];
         
+        debugger
         return (
             <div className="tag-show">
                 {tags}
