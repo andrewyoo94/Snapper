@@ -1,5 +1,6 @@
 @tags.each do |tag|
-    json.set! tag.photo_id do 
+    debugger
+    json.set! tag.id do 
         json.partial! 'tag', tag: tag 
     end 
 end 

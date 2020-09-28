@@ -13,7 +13,6 @@ export const fetchTags = () => (
 );
 
 export const createTag = (tag) => {
-    debugger
     return $.ajax({
         method: "POST",
         url: "/api/tags",

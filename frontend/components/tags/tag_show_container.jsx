@@ -5,9 +5,11 @@ import TagShow from './tag_show';
 
 
 const mSTP = (state, ownProps) => {
+    debugger
     return {
         photoId: ownProps.match.params.id,
-        tags: state.entities.tags
+        // tags: state.entities.tags,
+        tags: Object.values(state.entities.tags)
     };
 }
 
