@@ -22,8 +22,10 @@ class PhotoShow extends React.Component {
     render() { 
 
         let tagContainer;
+        let photographer_id = this.props.photo ? this.props.photo.photographer_id : "";
+
         debugger
-        if (this.props.currentUserId === this.props.photo.photographer_id) {
+        if (this.props.currentUserId === photographer_id) {
             tagContainer = (
                 <div>
                     <TagShowContainer />
