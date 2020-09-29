@@ -20,6 +20,20 @@ class PhotoShow extends React.Component {
     }
 
     render() { 
+
+        let tagContainer;
+        debugger
+        if (this.props.currentUserId === this.props.photo.photographer_id) {
+            tagContainer = (
+                <div>
+                    <TagShowContainer />
+                </div>
+            )
+        } else {
+            tagContainer = "hi";
+        };
+
+
         let photoUrl = this.props.photo ? this.props.photo.photoUrl : ""; 
 
         return (
@@ -27,8 +41,12 @@ class PhotoShow extends React.Component {
                 <div className="photo-show-container">
                     <img src={photoUrl} />
                 </div>
+                
 
-                <TagShowContainer />
+                {tagContainer}
+
+
+                {/* <TagShowContainer /> */}
                 <TagCreateContainer />
                 <CommentIndexContainer />
                 <CommentCreateContainer />
