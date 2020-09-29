@@ -35,7 +35,7 @@ class PhotoShow extends React.Component {
         };
 
         let commentCreateContainer;
-        if (this.props.currentUserId === photographer_id) {
+        if (this.props.currentUserId) {
             commentCreateContainer = (
                 <div>
                     <CommentCreateContainer />
