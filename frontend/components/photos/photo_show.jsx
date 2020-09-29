@@ -31,9 +31,19 @@ class PhotoShow extends React.Component {
                 </div>
             )
         } else {
-            tagContainer = "hi";
+            tagContainer = "";
         };
 
+        let commentCreateContainer;
+        if (this.props.currentUserId === photographer_id) {
+            commentCreateContainer = (
+                <div>
+                    <CommentCreateContainer />
+                </div>
+            )
+        } else {
+            commentCreateContainer = "";
+        };
 
         let photoUrl = this.props.photo ? this.props.photo.photoUrl : ""; 
 
@@ -44,12 +54,11 @@ class PhotoShow extends React.Component {
                 </div>
 
                 <TagShowContainer />
-
                 {tagContainer}
-
-                {/* <TagCreateContainer /> */}
                 <CommentIndexContainer />
-                <CommentCreateContainer />
+
+                {commentCreateContainer}
+                {/* <CommentCreateContainer /> */}
             </div>
         );
     }

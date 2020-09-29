@@ -11,7 +11,6 @@ const mSTP = (state, ownProps) => {
     let users = Object.values(state.entities.users);
     let username = users[0] ? users[0].username : "";
 
-    debugger
     return ({
         photoComments: photoComments,
 
