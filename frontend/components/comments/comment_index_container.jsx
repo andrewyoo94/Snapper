@@ -9,10 +9,14 @@ const mSTP = (state, ownProps) => {
     let photo = state.entities.photos[photoId];
     let photoComments = photo ? Object.values(photo.comments) : [];
     let users = Object.values(state.entities.users);
-     
+    let username = users[0] ? users[0].username : "";
+
+    debugger
     return ({
         photoComments: photoComments,
-        currentUsername: users[0].username,
+
+        // might need ternary when users is undefined cus not logged in
+        currentUsername: username,
         photoId: photoId
     })
 };
