@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import TagsItem from './tag_show_item';
 
 class TagShow extends React.Component {
     constructor(props) {
@@ -28,7 +29,6 @@ class TagShow extends React.Component {
             )
         });
 
-        debugger
         return (
             <div className="tag-show">
                 {tagsItems}
