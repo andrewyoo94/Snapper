@@ -17,10 +17,21 @@ class TagShow extends React.Component {
         let id = this.props.photoId
         let tags = this.props.tags ? this.props.tags : [];
         
+        let tagsItems = tags.map(tag => {
+            return (
+                <TagsItem
+                    key={tag.id}
+                    tag={tag}
+                    name={this.props.name}
+                    photoId={this.props.photoId}
+                />
+            )
+        });
+
         debugger
         return (
             <div className="tag-show">
-                {tags}
+                {tagsItems}
             </div>
         );
     }
