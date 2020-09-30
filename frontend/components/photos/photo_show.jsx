@@ -20,7 +20,6 @@ class PhotoShow extends React.Component {
     }
 
     render() { 
-
         let tagContainer;
         let photographer_id = this.props.photo ? this.props.photo.photographer_id : "";
 
@@ -56,9 +55,7 @@ class PhotoShow extends React.Component {
                 <TagShowContainer />
                 {tagContainer}
                 <CommentIndexContainer />
-
                 {commentCreateContainer}
-                {/* <CommentCreateContainer /> */}
             </div>
         );
     }
