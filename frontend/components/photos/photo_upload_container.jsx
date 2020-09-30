@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { createPhoto } from '../../actions/photo_actions';
 import { createTag } from '../../actions/tag_actions';
+import { createPhotoTag } from '../../actions/phototag_actions';
 import PhotoUpload from './photo_upload';
 
 const mSTP = (state) => {
