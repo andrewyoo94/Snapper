@@ -70,6 +70,10 @@ class PhotoUpload extends React.Component {
         }).then( (response) => {
             tag.photo_id = response.id
             this.props.createTag(tag)
+
+            // // .then and write ajax request in util
+            
+
             this.props.history.push(`/photos/${response.id}`)
         }, error => console.log(error) )
     };

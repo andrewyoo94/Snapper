@@ -6,7 +6,7 @@ class Api::PhotoTagsController < ApplicationController
     end 
 
     def show 
-        @phototag = PhotoTag.where(photo_id: params[:photo_id])
+        @phototag = PhotoTag.where(tag_id: params[:tag_id])
 
         render :show
     end 

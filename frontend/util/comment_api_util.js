@@ -14,7 +14,6 @@ export const fetchAllComments = (id) => {
     })
 };
 
-
 export const deleteComment = (id) => (
     $.ajax({
         method: "DELETE",
