@@ -1,7 +1,8 @@
 export const fetchTag = (id) => (
     $.ajax({
         method: "GET",
-        url: `/api/tags/${id}`
+        url: `/api/tags`,
+        data: {id}
     })
 );
 

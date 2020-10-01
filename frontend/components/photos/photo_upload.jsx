@@ -70,7 +70,6 @@ class PhotoUpload extends React.Component {
             tag.photo_id = response.id
             this.props.createTag(tag)
                 .then( (response) => {
-                    debugger
                     let phototag = { photo_id: response.photo_id, tag_id: response.id}
                     this.props.createPhotoTag(phototag)
                 }), error => console.log(error)

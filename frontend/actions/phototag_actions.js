@@ -22,7 +22,6 @@ export const fetchPhotoTags = (tag_id) => dispatch => {
 }
 
 export const createPhotoTag = (photoTag) => dispatch => {
-    debugger
     return (
         PhotoTagAPIUtil.createPhotoTag(photoTag)
             .then((photoTag) => dispatch(receivePhotoTags(photoTag.tag_id)))

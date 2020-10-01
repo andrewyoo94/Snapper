@@ -1,6 +1,6 @@
 class Tag < ApplicationRecord
   validates :name, :photo_id, presence: true
 
-  # belongs_to :phototag
+  # has_many :phototag
 end
 

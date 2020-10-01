@@ -4,20 +4,25 @@ class Api::TagsController < ApplicationController
     before_action :ensure_logged_in, only: [:create]
 
     def index
-        @tags = Tag.all
-
+        if( params[:id] )
+            @tags = Tag.where(photo_id: params[:id])
+            
+        else 
+            @tags = Tag.all
+        end
+        
         render :index
     end 
 
     def show 
-        @tags = Tag.where(photo_id: params[:id])
-        render :show
+        # @tags = Tag.where(photo_id: params[:id])
+        # render :show
     end 
 
     def create 
-        @tags = Tag.new(tag_params)
-
-        if @tags.save 
+        @tag = Tag.new(tag_params)
+        if @tag.save 
+            debugger
             render :show 
         else 
             render json: @tag.errors.full_messages, status: 422 

@@ -33,6 +33,7 @@ class PhotoShow extends React.Component {
             tagContainer = "";
         };
 
+
         let commentCreateContainer;
         if (this.props.currentUserId) {
             commentCreateContainer = (
