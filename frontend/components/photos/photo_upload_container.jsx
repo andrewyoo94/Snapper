@@ -15,7 +15,7 @@ const mDTP = (dispatch) => {
     return {
         createPhoto: (photo) => dispatch(createPhoto(photo)),
         createTag: (tag) => dispatch(createTag(tag)),
-        createPhotoTag: (phototag) => dispatch(createPhotoTag)
+        createPhotoTag: (photoTag) => dispatch(createPhotoTag(photoTag))
     }
 };  
 

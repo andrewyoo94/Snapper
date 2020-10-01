@@ -24,7 +24,7 @@ export const fetchPhotoTags = (tag_id) => dispatch => {
 export const createPhotoTag = (photoTag) => dispatch => {
     return (
         PhotoTagAPIUtil.createPhotoTag(photoTag)
-            // .then((photoTag) => dispatch(receivePhotoTags(photoTag.tag_id)))
-            // .fail(error => dispatch(receiveTagErrors(error.responseJSON)))
+            .then((photoTag) => dispatch(receivePhotoTags(photoTag.tag_id)))
+            .fail(error => dispatch(receiveTagErrors(error.responseJSON)))
     )
 }
