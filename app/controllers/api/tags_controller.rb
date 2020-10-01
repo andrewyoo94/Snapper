@@ -6,7 +6,6 @@ class Api::TagsController < ApplicationController
     def index
         if( params[:id] )
             @tags = Tag.where(photo_id: params[:id])
-            
         else 
             @tags = Tag.all
         end
@@ -15,8 +14,12 @@ class Api::TagsController < ApplicationController
     end 
 
     def show 
-        # @tags = Tag.where(photo_id: params[:id])
-        # render :show
+        @tag = Tag.find(params[:id])
+        if @tag 
+            render :show
+        else  
+            render json: @tag.errors.full_messages, status: 404
+        end 
     end 
 
     def create 
