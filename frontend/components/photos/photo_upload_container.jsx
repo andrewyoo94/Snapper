@@ -14,7 +14,8 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         createPhoto: (photo) => dispatch(createPhoto(photo)),
-        createTag: (tag) => dispatch(createTag(tag))
+        createTag: (tag) => dispatch(createTag(tag)),
+        createPhotoTag: (phototag) => dispatch(createPhotoTag)
     }
 };  
 
