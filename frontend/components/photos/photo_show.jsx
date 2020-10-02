@@ -8,19 +8,24 @@ import TagsItem from '../tags/tag_show_item';
 class PhotoShow extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     tags = []
-        // }
+        this.state = {
+            tagShow: []
+        }
     }
     
     componentDidMount() {
         this.props.fetchPhoto(this.props.photoId)
-        this.props.fetchTags()
+        this.props.fetchTags().then( (tags) => {
+            this.setState({tagShow: Object.values(tags.tags)})
+        })
     }
 
     componentDidUpdate(preProps, preState) {
         if (preProps.photoId !== this.props.photoId) {
             this.props.fetchPhoto(this.props.photoId);
+        }
+        if (preProps.tags != this.props.tags) {
+            this.setState({tagShow: this.props.tags})
         }
     }
 
@@ -31,7 +36,7 @@ class PhotoShow extends React.Component {
         // create ternary
         let result = [];
 
-        let tagShow = this.props.tags.map(tag => {
+        this.state.tagShow.map(tag => {
             if (this.props.photoId == tag.photo_id) {
                 result.push(
                     tag
@@ -72,7 +77,9 @@ class PhotoShow extends React.Component {
                 {/* <TagShowContainer /> */}
                 <div className="tag-show">
                     {result.map((tag) => {
-                        <div>{tag.name}</div>
+                        return (
+                            <div>{tag.name}</div>
+                        )
                     })}
                 </div>
 

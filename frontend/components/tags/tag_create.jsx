@@ -23,6 +23,9 @@ class TagCreate extends React.Component {
 
         let tag = { photo_id: this.state.photo_id, name: this.state.name };
         this.props.createTag(tag)
+        // .then 
+        // setSTaet and set to empty string
+
     };
 
     render() {

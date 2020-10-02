@@ -25,7 +25,6 @@ class Api::TagsController < ApplicationController
     def create 
         @tag = Tag.new(tag_params)
         if @tag.save 
-            debugger
             render :show 
         else 
             render json: @tag.errors.full_messages, status: 422 

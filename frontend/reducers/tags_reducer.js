@@ -7,7 +7,8 @@ const tagsReducer = (oldState = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_TAG:
-            newState = Object.assign({}, oldState, action.tag);
+            newState = Object.assign({}, oldState);
+            newState[action.tag.id] = action.tag
             return newState;
         case RECEIVE_ALL_TAGS:
             return action.tags
