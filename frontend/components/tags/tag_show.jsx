@@ -19,7 +19,6 @@ class TagShow extends React.Component {
         let tags = this.props.tags ? this.props.tags : [];
         
         let tagsItems = tags.map(tag => {
-            debugger
             return (
                 <TagsItem
                     key={tag.id}
