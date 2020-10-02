@@ -27,9 +27,16 @@ class PhotoShow extends React.Component {
         let tagContainer;
         let photographer_id = this.props.photo ? this.props.photo.photographer_id : "";
 
+
         console.log(this.props.tags)
 
-        // this.props.tags.each do 
+        let tags = this.props.tags.map(tag => {
+            if (this.props.photoId === tag.photo_id) {
+                tags.push(
+                    <div>tag</div>
+                )
+            }
+        });
 
         if (this.props.currentUserId === photographer_id) {
             tagContainer = (
@@ -60,7 +67,8 @@ class PhotoShow extends React.Component {
                     <img src={photoUrl} />
                 </div>
 
-                <TagShowContainer />
+                {/* <TagShowContainer /> */}
+                {tags}
                 {tagContainer}
                 <CommentIndexContainer />
                 {commentCreateContainer}
