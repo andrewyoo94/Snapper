@@ -25,6 +25,6 @@ export const createPhotoTag = (photoTag) => dispatch => {
     return (
         PhotoTagAPIUtil.createPhotoTag(photoTag)
             .then((photoTag) => dispatch(receivePhotoTags(photoTag.tag_id)))
-            .fail(error => dispatch(receiveTagErrors(error.responseJSON)))
+            .fail(error => dispatch(receivePhotoTagErrors(error.responseJSON)))
     )
 }
