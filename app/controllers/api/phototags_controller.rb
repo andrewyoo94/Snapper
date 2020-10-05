@@ -15,7 +15,7 @@ class Api::PhototagsController < ApplicationController
     end 
 
     def create 
-        @phototag = Tag.new(phototag_params)
+        @phototag = PhotoTag.new(phototag_params)
 
         if @phototag.save 
             render :show 
@@ -27,6 +27,6 @@ class Api::PhototagsController < ApplicationController
     private 
 
     def phototag_params 
-        params.require(:tag).permit(:photo_id, :tag_id)
+        params.require(:phototag).permit(:photo_id, :tag_id)
     end 
 end 
