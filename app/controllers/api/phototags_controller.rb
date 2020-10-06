@@ -14,11 +14,11 @@ class Api::PhototagsController < ApplicationController
         render :show
     end 
 
-    def create
-        debugger 
+    def create 
         @phototag = Phototag.new(phototag_params)
 
         if @phototag.save 
+            debugger
             render :show 
         else 
             render json: @phototag.errors.full_messages, status: 422 
@@ -28,7 +28,6 @@ class Api::PhototagsController < ApplicationController
     private 
 
     def phototag_params 
-        debugger
         params.require(:phototag).permit(:photo_id, :tag_id)
     end 
 end 
