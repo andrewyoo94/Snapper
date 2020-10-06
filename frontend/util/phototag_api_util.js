@@ -1,8 +1,9 @@
-export const createPhotoTag = (photoTag) => {
+export const createPhotoTag = (phototag) => {
+    debugger
     return $.ajax({
         method: "POST",
         url: "/api/phototags",
-        data: photoTag 
+        data: { phototag } 
     })
 };
 

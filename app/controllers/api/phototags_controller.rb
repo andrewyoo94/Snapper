@@ -14,9 +14,9 @@ class Api::PhototagsController < ApplicationController
         render :show
     end 
 
-    def create 
+    def create
+        debugger 
         @phototag = Phototag.new(phototag_params)
-        debugger
 
         if @phototag.save 
             render :show 
