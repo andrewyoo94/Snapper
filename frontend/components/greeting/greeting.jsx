@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
@@ -8,15 +8,20 @@ const Greeting = ({ currentUser, logout }) => {
 
             <Link className="signup" to="/signup">Sign Up</Link>
         </nav>
-        
     );
+    
+    const handleSubmit = () => {
+        const history = useHistory()
+        logout()
+        history.push(`/`)
+    }
 
     const personalGreeting = () => (
         <hgroup className="header-group">
             <Link className="header-upload" to="/upload"><i className="fas fa-cloud-upload-alt"></i>Upload Picture!</Link>
 
             <h2 className="header-name">Hello, {currentUser.username}!
-                <button className="header-button" onClick={logout}>Log Out</button>
+                <button className="header-button" onClick={handleSubmit} >Log Out</button>
             </h2>
         </hgroup>
     );
