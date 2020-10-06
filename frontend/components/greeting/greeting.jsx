@@ -11,8 +11,8 @@ const Greeting = ({ currentUser, logout }) => {
     );
     
     const handleSubmit = () => {
-        const history = useHistory()
         logout()
+        const history = useHistory()
         history.push(`/`)
     }
 

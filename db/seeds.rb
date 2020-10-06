@@ -25,7 +25,7 @@ User.create(
 )
 
 user1 = User.create!({
-    username: "testUser1",
+    username: "James Bond",
     password: "password"
 })
 
@@ -48,7 +48,7 @@ photo1.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/bradley-dunn-
 photo1.save!
 
 user2 = User.create!({
-    username: "testUser2",
+    username: "Joker",
     password: "password"
 })
 
@@ -62,7 +62,7 @@ photo2.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/richard-lee-8
 photo2.save!
 
 user3 = User.create!({
-    username: "user3",
+    username: "Hermione",
     password: "password"
 })
 
@@ -76,9 +76,8 @@ photo3.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/amy-shamblen-
 ")
 photo3.save!
 
-
 user4 = User.create!({
-    username: "user4",
+    username: "Jon Snow",
     password: "password"
 })
 
@@ -94,7 +93,7 @@ photo4.save!
 
 
 user5 = User.create!({
-    username: "user5",
+    username: "Michael Scott",
     password: "password"
 })
 
@@ -109,7 +108,7 @@ photo5.save!
 
 
 user6 = User.create!({
-    username: "user6",
+    username: "Phoebe Buffay",
     password: "password"
 })
 
@@ -124,7 +123,7 @@ photo6.save!
 
 
 user7 = User.create!({
-    username: "user7",
+    username: "Carlton Banks",
     password: "password"
 })
 
@@ -139,7 +138,7 @@ photo7.save!
 
 
 user8 = User.create!({
-    username: "user8",
+    username: "Lucille Bluth",
     password: "password"
 })
 
