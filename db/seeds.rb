@@ -17,6 +17,7 @@ User.destroy_all
 Photo.destroy_all
 Comment.destroy_all
 Tag.destroy_all
+Phototag.destroy_all
 
 User.create(
   username: 'demouser',
