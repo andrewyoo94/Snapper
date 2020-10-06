@@ -18,7 +18,6 @@ class Api::PhototagsController < ApplicationController
         @phototag = Phototag.new(phototag_params)
 
         if @phototag.save 
-            debugger
             render :show 
         else 
             render json: @phototag.errors.full_messages, status: 422 

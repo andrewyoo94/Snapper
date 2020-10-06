@@ -22,8 +22,22 @@ class TagCreate extends React.Component {
         e.preventDefault();
 
         let tag = { photo_id: this.state.photo_id, name: this.state.name };
+        // this.props.createTag(tag)
+        //     .then(() => this.setState({ name: `` }))
+        //         .then((response) => {
+        //             debugger
+        //             let phototag = { photo_id: response.tag.photo_id, tag_id: response.tag.id }
+        //             this.props.createPhotoTag(phototag)
+        //         }), error => console.log(error)
+
         this.props.createTag(tag)
-            .then(() => this.setState({ name: `` }))
+            .then((response) => {
+                debugger
+                let phototag = { photo_id: response.tag.photo_id, tag_id: response.tag.id }
+                this.props.createPhotoTag(phototag)
+            }), error => console.log(error)
+        
+        this.setState({ name: `` })
     };
 
     render() {

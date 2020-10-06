@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { createTag } from '../../actions/tag_actions';
+import { createPhotoTag } from '../../actions/phototag_actions';
 import TagCreate from './tag_create';
 import { withRouter } from 'react-router-dom';
 
@@ -12,7 +13,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => {
     return {
-        createTag: (tag) => dispatch(createTag(tag))
+        createTag: (tag) => dispatch(createTag(tag)),
+        createPhotoTag: (phototag) => dispatch(createPhotoTag(phototag))
     };
 };
 
