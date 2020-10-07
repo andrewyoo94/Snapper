@@ -5,7 +5,9 @@ import { fetchTags } from '../../actions/tag_actions';
 import PhotoShow from './photo_show';
 
 const mSTP = (state, ownProps) => {
+    console.log(state)
     return {
+        // username: state.entities.photos[ownProps.match.params.id].photographer_id,
         currentUserId: state.session.id,
         photo: state.entities.photos[ownProps.match.params.id],
         photoId: ownProps.match.params.id,
