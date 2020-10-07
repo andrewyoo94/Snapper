@@ -74,7 +74,6 @@ class PhotoShow extends React.Component {
                     <img src={photoUrl} />
                 </div>
 
-                {/* <TagShowContainer /> */}
                 <div className="tag-show">
                     {result.map((tag) => {
                         return (

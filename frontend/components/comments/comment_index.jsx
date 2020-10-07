@@ -24,12 +24,14 @@ class CommentIndex extends React.Component {
         let comments = this.state.photoComments ? this.state.photoComments : []; 
         
         let commentIndexItems = comments.map(comment => { 
+            debugger
             return (
                 <CommentIndexItem
                     key={comment.id}
                     comment={comment}
                     photoId={this.props.photoId}
-                    currentUsername={this.props.currentUsername}
+                    username={this.props.users[comment.user_id].username}
+                    // currentUsername={this.props.currentUsername}
                 />
             )
         });

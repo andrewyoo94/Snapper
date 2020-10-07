@@ -146,8 +146,16 @@ photo8.save!
 
 
 
-comment1 = Comment.create!({
+# Comments Seeding---------------------------------------------------------------------------------------------------------
+
+p1c1 = Comment.create!({
     user_id: user8.id,
     photo_id: photo1.id,
     body: "Awesome picture!"
+})
+
+p1c2 = Comment.create!({
+    user_id: user7.id,
+    photo_id: photo1.id,
+    body: "Nice bike"
 })
