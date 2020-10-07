@@ -19,7 +19,7 @@ Comment.destroy_all
 Tag.destroy_all
 Phototag.destroy_all
 
-User.create(
+User.create!(
   username: 'demouser',
   password: 'password'
 )
@@ -35,14 +35,6 @@ photo1 = Photo.new({
     photographer_id: user1.id,
     user: user1
     # comments: 
-})
-
-# change usernames to real ones ! 
-
-comment1 = Comment.create!({
-    user_id: user8.id
-    photo_id: photo1.id
-    body: "Awesome picture!"
 })
 
 photo1.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/bradley-dunn-i8qs7bfTB0M-unsplash.jpg'), filename: "bradley-dunn-i8qs7bfTB0M-unsplash.jpg")
@@ -151,3 +143,11 @@ photo8 = Photo.new({
 })
 photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
 photo8.save!
+
+
+
+comment1 = Comment.create!({
+    user_id: user8.id,
+    photo_id: photo1.id,
+    body: "Awesome picture!"
+})
