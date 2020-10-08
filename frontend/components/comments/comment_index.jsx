@@ -5,9 +5,9 @@ class CommentIndex extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            photoComments: []
-        }
+        // this.state = {
+        //     photoComments: []
+        // }
     }     
 
     componentDidMount() {
@@ -20,30 +20,28 @@ class CommentIndex extends React.Component {
         //     this.setState({ photoComments: this.props.photoComments })
         // }
 
-        
     }
 
     render() {
         // let comments = this.state.photoComments ? this.state.photoComments : []; 
     
         
-        
-        // let commentIndexItems = comments.map(comment => { 
-        //     debugger
-        //     return (
-        //         <CommentIndexItem
-        //             key={comment.id}
-        //             comment={comment}
-        //             photoId={this.props.photoId}
-        //             // username={this.props.fetchUser[comment.user_id].username}
-        //         />
-        //     )
-        // });
+        let commentIndexItems = this.props.photoComments.map(comment => {
+            debugger
+            return (
+                <CommentIndexItem
+                    key={comment.id}
+                    comment={comment}
+                    photoId={comment.photoId}
+                    username={comment.author}
+                />
+            )
+        });
         
         return (    
             <div className="comments-section">
                 <div className="comment-info">
-                    {/* {commentIndexItems} */}
+                    {commentIndexItems}
                 </div>
             </div>
         );
