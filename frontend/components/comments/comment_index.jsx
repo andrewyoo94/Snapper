@@ -10,14 +10,6 @@ class CommentIndex extends React.Component {
         this.props.fetchAllComments(this.props.photoId)
     }
 
-    componentDidUpdate(preProps) {
-        // debugger
-        // if (preProps.photoComments != this.props.photoComments) {
-        //     debugger
-        //     this.props.fetchAllComments(this.props.photoId)
-        // }
-    }
-
     render() {
         let commentIndexItems = this.props.photoComments.map(comment => {
             return (
