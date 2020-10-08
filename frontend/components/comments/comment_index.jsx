@@ -11,35 +11,39 @@ class CommentIndex extends React.Component {
     }     
 
     componentDidMount() {
-        this.setState({ photoComments: this.props.photoComments })
+        // this.setState({ photoComments: this.props.photoComments })
+        this.props.fetchAllComments(this.props.photoId)
     }
 
     componentDidUpdate(preProps) {
-        if (preProps.photoComments != this.props.photoComments) {
-            this.setState({ photoComments: this.props.photoComments })
-        }
+        // if (preProps.photoComments != this.props.photoComments) {
+        //     this.setState({ photoComments: this.props.photoComments })
+        // }
+
+        
     }
 
     render() {
-        let comments = this.state.photoComments ? this.state.photoComments : []; 
+        // let comments = this.state.photoComments ? this.state.photoComments : []; 
+    
         
-        let commentIndexItems = comments.map(comment => { 
-            debugger
-            return (
-                <CommentIndexItem
-                    key={comment.id}
-                    comment={comment}
-                    photoId={this.props.photoId}
-                    username={this.props.users[comment.user_id].username}
-                    // currentUsername={this.props.currentUsername}
-                />
-            )
-        });
+        
+        // let commentIndexItems = comments.map(comment => { 
+        //     debugger
+        //     return (
+        //         <CommentIndexItem
+        //             key={comment.id}
+        //             comment={comment}
+        //             photoId={this.props.photoId}
+        //             // username={this.props.fetchUser[comment.user_id].username}
+        //         />
+        //     )
+        // });
         
         return (    
             <div className="comments-section">
                 <div className="comment-info">
-                    {commentIndexItems}
+                    {/* {commentIndexItems} */}
                 </div>
             </div>
         );

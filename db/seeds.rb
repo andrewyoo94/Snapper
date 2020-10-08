@@ -34,7 +34,6 @@ photo1 = Photo.new({
     description: "Riding on the moon!",
     photographer_id: user1.id,
     user: user1
-    # comments: 
 })
 
 photo1.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/bradley-dunn-i8qs7bfTB0M-unsplash.jpg'), filename: "bradley-dunn-i8qs7bfTB0M-unsplash.jpg")

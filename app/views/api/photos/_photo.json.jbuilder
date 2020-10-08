@@ -1,4 +1,4 @@
-json.extract! photo, :id, :title, :description, :photographer_id, :comments
+json.extract! photo, :id, :title, :description, :photographer_id
 
 if photo.image.attached?
     json.photoUrl url_for(photo.image)
