@@ -11,14 +11,6 @@ const photosReducer = (oldState = {}, action) => {
         case RECEIVE_PHOTO:
             newState = Object.assign({}, oldState, { [action.photo.id]: action.photo} )
             return newState;
-        case RECEIVE_COMMENT:
-            newState = Object.assign({}, oldState)
-            Object.values(newState).map( photo => {
-                if(photo.id === action.comment.photo_id) {
-                    photo.comments.push(action.comment)
-                }
-            })
-            return newState;
         default: 
             return oldState;
     }

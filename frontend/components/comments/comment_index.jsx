@@ -11,8 +11,10 @@ class CommentIndex extends React.Component {
     }
 
     componentDidUpdate(preProps) {
+        // debugger
         // if (preProps.photoComments != this.props.photoComments) {
-        //     this.setState({ photoComments: this.props.photoComments })
+        //     debugger
+        //     this.props.fetchAllComments(this.props.photoId)
         // }
     }
 
