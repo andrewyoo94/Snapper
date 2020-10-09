@@ -1,4 +1,6 @@
 .tag-show {
     display: inline-block;
     text-align: center;
+    border: gray;
+    border-radius: 5px;
 }

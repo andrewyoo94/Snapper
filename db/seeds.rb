@@ -144,7 +144,6 @@ photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffma
 photo8.save!
 
 
-
 # Comments Seeding---------------------------------------------------------------------------------------------------------
 
 p1c1 = Comment.create!({
