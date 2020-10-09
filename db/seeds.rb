@@ -144,7 +144,7 @@ photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffma
 photo8.save!
 
 
-# Comments Seeding---------------------------------------------------------------------------------------------------------
+# Comments/Tags Seeding---------------------------------------------------------------------------------------------------------
 
 p1c1 = Comment.create!({
     user_id: user8.id,
@@ -164,6 +164,8 @@ p1c3 = Comment.create!({
     body: "Cool helmet."
 })
 
+
+
 # ----------------------------------------------------------------------------------------
 
 p2c1 = Comment.create!({
@@ -173,13 +175,13 @@ p2c1 = Comment.create!({
 })
 
 p2c2 = Comment.create!({
-    user_id: user5.id,
+    user_id: user4.id,
     photo_id: photo2.id,
     body: "Great photo"
 })
 
 p2c3 = Comment.create!({
-    user_id: user5.id,
+    user_id: user3.id,
     photo_id: photo2.id,
     body: "Cool background"
 })
@@ -187,13 +189,13 @@ p2c3 = Comment.create!({
 # ----------------------------------------------------------------------------------------
 
 p3c1 = Comment.create!({
-    user_id: user4.id,
+    user_id: user2.id,
     photo_id: photo3.id,
     body: "Yummy breakfast!"
 })
 
 p3c2 = Comment.create!({
-    user_id: user4.id,
+    user_id: user1.id,
     photo_id: photo3.id,
     body: "Looks good"
 })
@@ -201,6 +203,46 @@ p3c2 = Comment.create!({
 p3c3 = Comment.create!({
     user_id: user4.id,
     photo_id: photo3.id,
+    body: "Amazing colors"
+})
+
+# ----------------------------------------------------------------------------------------
+
+p4c1 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo4.id,
+    body: "Yummy breakfast!"
+})
+
+p4c2 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo4.id,
+    body: "Looks good"
+})
+
+p4c3 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo4.id,
+    body: "Amazing colors"
+})
+
+# ----------------------------------------------------------------------------------------
+
+p5c1 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo5.id,
+    body: "Yummy breakfast!"
+})
+
+p5c2 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo5.id,
+    body: "Looks good"
+})
+
+p5c3 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo5.id,
     body: "Amazing colors"
 })
 
