@@ -150,11 +150,77 @@ photo8.save!
 p1c1 = Comment.create!({
     user_id: user8.id,
     photo_id: photo1.id,
-    body: "Awesome picture!"
+    body: "Nice bike!"
 })
 
 p1c2 = Comment.create!({
     user_id: user7.id,
     photo_id: photo1.id,
-    body: "Nice bike"
+    body: "Awesome picture"
+})
+
+p1c3 = Comment.create!({
+    user_id: user6.id,
+    photo_id: photo1.id,
+    body: "Cool helmet."
+})
+
+# ----------------------------------------------------------------------------------------
+
+p2c1 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo2.id,
+    body: "Cute owl!"
+})
+
+p2c2 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo2.id,
+    body: "Great photo"
+})
+
+p2c3 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo2.id,
+    body: "Cool background"
+})
+
+# ----------------------------------------------------------------------------------------
+
+p3c1 = Comment.create!({
+    user_id: user4.id,
+    photo_id: photo3.id,
+    body: "Yummy breakfast!"
+})
+
+p3c2 = Comment.create!({
+    user_id: user4.id,
+    photo_id: photo3.id,
+    body: "Looks good"
+})
+
+p3c3 = Comment.create!({
+    user_id: user4.id,
+    photo_id: photo3.id,
+    body: "Amazing colors"
+})
+
+# ----------------------------------------------------------------------------------------
+
+p4c1 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo4.id,
+    body: "Yummy breakfast!"
+})
+
+p4c2 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo4.id,
+    body: "Looks good"
+})
+
+p4c3 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo4.id,
+    body: "Amazing colors"
 })
