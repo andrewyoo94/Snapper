@@ -265,3 +265,23 @@ p4c3 = Comment.create!({
     photo_id: photo4.id,
     body: "Amazing colors"
 })
+
+# ----------------------------------------------------------------------------------------
+
+p5c1 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo5.id,
+    body: "Yummy breakfast!"
+})
+
+p5c2 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo5.id,
+    body: "Looks good"
+})
+
+p5c3 = Comment.create!({
+    user_id: user5.id,
+    photo_id: photo5.id,
+    body: "Amazing colors"
+})
