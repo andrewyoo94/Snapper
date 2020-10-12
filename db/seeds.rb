@@ -40,7 +40,7 @@ photo1.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/bradley-dunn-
 photo1.save!
 
 user2 = User.create!({
-    username: "Joker",
+    username: "Donnie Darko",
     password: "password"
 })
 
@@ -54,7 +54,7 @@ photo2.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/richard-lee-8
 photo2.save!
 
 user3 = User.create!({
-    username: "Hermione",
+    username: "April Ludgate",
     password: "password"
 })
 
@@ -90,8 +90,8 @@ user5 = User.create!({
 })
 
 photo5 = Photo.new({
-    title: "Open field",
-    description: "Pretty flower field",
+    title: "Graffiti love",
+    description: "Artwork found in Brooklyn",
     photographer_id: user5.id,
     user: user5
 })
@@ -229,59 +229,79 @@ p4c3 = Comment.create!({
 # ----------------------------------------------------------------------------------------
 
 p5c1 = Comment.create!({
-    user_id: user5.id,
+    user_id: user4.id,
     photo_id: photo5.id,
-    body: "Yummy breakfast!"
+    body: "Stunning artwork!"
 })
 
 p5c2 = Comment.create!({
-    user_id: user5.id,
+    user_id: user3.id,
     photo_id: photo5.id,
-    body: "Looks good"
+    body: "Very nice piece"
 })
 
 p5c3 = Comment.create!({
-    user_id: user5.id,
+    user_id: user2.id,
     photo_id: photo5.id,
-    body: "Amazing colors"
+    body: "I love this artist."
 })
 
 # ----------------------------------------------------------------------------------------
 
-p4c1 = Comment.create!({
-    user_id: user5.id,
-    photo_id: photo4.id,
-    body: "Yummy breakfast!"
+p6c1 = Comment.create!({
+    user_id: user1.id,
+    photo_id: photo6.id,
+    body: "Cute cat!"
 })
 
-p4c2 = Comment.create!({
-    user_id: user5.id,
-    photo_id: photo4.id,
-    body: "Looks good"
+p6c2 = Comment.create!({
+    user_id: user2.id,
+    photo_id: photo6.id,
+    body: "So adorable"
 })
 
-p4c3 = Comment.create!({
-    user_id: user5.id,
-    photo_id: photo4.id,
-    body: "Amazing colors"
+p6c3 = Comment.create!({
+    user_id: user3.id,
+    photo_id: photo6.id,
+    body: "Charming model."
 })
 
 # ----------------------------------------------------------------------------------------
 
-p5c1 = Comment.create!({
-    user_id: user5.id,
-    photo_id: photo5.id,
-    body: "Yummy breakfast!"
+p7c1 = Comment.create!({
+    user_id: user2.id,
+    photo_id: photo7.id,
+    body: "I take this train!"
 })
 
-p5c2 = Comment.create!({
-    user_id: user5.id,
-    photo_id: photo5.id,
-    body: "Looks good"
+p7c2 = Comment.create!({
+    user_id: user1.id,
+    photo_id: photo7.id,
+    body: "Nice effects"
 })
 
-p5c3 = Comment.create!({
+p7c3 = Comment.create!({
+    user_id: user8.id,
+    photo_id: photo7.id,
+    body: "Amazing candid photo."
+})
+
+# ----------------------------------------------------------------------------------------
+
+p8c1 = Comment.create!({
+    user_id: user7.id,
+    photo_id: photo8.id,
+    body: "Love the colors!"
+})
+
+p8c2 = Comment.create!({
+    user_id: user6.id,
+    photo_id: photo8.id,
+    body: "Simple but mesmerizing"
+})
+
+p8c3 = Comment.create!({
     user_id: user5.id,
-    photo_id: photo5.id,
-    body: "Amazing colors"
+    photo_id: photo8.id,
+    body: "Lovely photo."
 })
