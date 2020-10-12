@@ -183,7 +183,7 @@ p2c2 = Comment.create!({
 p2c3 = Comment.create!({
     user_id: user3.id,
     photo_id: photo2.id,
-    body: "Cool background"
+    body: "Cool background."
 })
 
 # ----------------------------------------------------------------------------------------
@@ -201,29 +201,29 @@ p3c2 = Comment.create!({
 })
 
 p3c3 = Comment.create!({
-    user_id: user4.id,
+    user_id: user8.id,
     photo_id: photo3.id,
-    body: "Amazing colors"
+    body: "Amazing colors."
 })
 
 # ----------------------------------------------------------------------------------------
 
 p4c1 = Comment.create!({
-    user_id: user5.id,
+    user_id: user7.id,
     photo_id: photo4.id,
-    body: "Yummy breakfast!"
+    body: "Pretty flowers!"
 })
 
 p4c2 = Comment.create!({
-    user_id: user5.id,
+    user_id: user6.id,
     photo_id: photo4.id,
-    body: "Looks good"
+    body: "Nice effects"
 })
 
 p4c3 = Comment.create!({
     user_id: user5.id,
     photo_id: photo4.id,
-    body: "Amazing colors"
+    body: "Beautiful scenery."
 })
 
 # ----------------------------------------------------------------------------------------
