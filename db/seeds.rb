@@ -309,92 +309,92 @@ p8c3 = Comment.create!({
 
 t1p1 = Tag.create!({
     photo_id: photo8.id,
-    name: "Love the colors!"
+    name: "bike"
 })
 
 t2p1 = Tag.create!({
     photo_id: photo8.id,
-    name: "Simple but mesmerizing"
+    name: "astronaut"
 })
 
 t3p1 = Tag.create!({
     photo_id: photo8.id,
-    name: "Lovely photo."
+    name: "mountain"
 })
 
 # ----------------------------------------------------------------------------------------
 
-t1p1 = Tag.create!({
+t1p2 = Tag.create!({
     photo_id: photo8.id,
-    name: "Love the colors!"
+    name: "owl"
 })
 
-t2p1 = Tag.create!({
+t2p2 = Tag.create!({
     photo_id: photo8.id,
-    name: "Simple but mesmerizing"
+    name: "branch"
 })
 
-t3p1 = Tag.create!({
+t3p2 = Tag.create!({
     photo_id: photo8.id,
-    name: "Lovely photo."
+    name: "nature"
 })# ----------------------------------------------------------------------------------------
 
-t1p1 = Tag.create!({
+t1p3 = Tag.create!({
     photo_id: photo8.id,
-    name: "Love the colors!"
+    name: "breakfast"
 })
 
-t2p1 = Tag.create!({
+t2p3 = Tag.create!({
     photo_id: photo8.id,
-    name: "Simple but mesmerizing"
+    name: "fruits"
 })
 
-t3p1 = Tag.create!({
+t3p3 = Tag.create!({
     photo_id: photo8.id,
-    name: "Lovely photo."
+    name: "food"
 })# ----------------------------------------------------------------------------------------
 
-t1p1 = Tag.create!({
+t1p4 = Tag.create!({
     photo_id: photo8.id,
-    name: "Love the colors!"
+    name: "flowers"
 })
 
-t2p1 = Tag.create!({
+t2p4 = Tag.create!({
     photo_id: photo8.id,
-    name: "Simple but mesmerizing"
+    name: "field"
 })
 
-t3p1 = Tag.create!({
+t3p4 = Tag.create!({
     photo_id: photo8.id,
-    name: "Lovely photo."
+    name: "daisies"
 })# ----------------------------------------------------------------------------------------
 
-t1p1 = Tag.create!({
+t1p5 = Tag.create!({
     photo_id: photo8.id,
-    name: "Love the colors!"
+    name: "graffiti"
 })
 
-t2p1 = Tag.create!({
+t2p5 = Tag.create!({
     photo_id: photo8.id,
-    name: "Simple but mesmerizing"
+    name: "artwork"
 })
 
-t3p1 = Tag.create!({
+t3p5 = Tag.create!({
     photo_id: photo8.id,
-    name: "Lovely photo."
+    name: "love"
 })# ----------------------------------------------------------------------------------------
 
-t1p1 = Tag.create!({
+t1p6 = Tag.create!({
     photo_id: photo8.id,
-    name: "Love the colors!"
+    name: "cat"
 })
 
-t2p1 = Tag.create!({
+t2p6 = Tag.create!({
     photo_id: photo8.id,
-    name: "Simple but mesmerizing"
+    name: "pet"
 })
 
-t3p1 = Tag.create!({
+t3p6 = Tag.create!({
     photo_id: photo8.id,
-    name: "Lovely photo."
+    name: "animal"
 })
