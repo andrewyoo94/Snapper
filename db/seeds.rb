@@ -308,93 +308,123 @@ p8c3 = Comment.create!({
 # ----------------------------------------------------------------------------------------
 
 t1p1 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo1.id,
     name: "bike"
 })
 
 t2p1 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo1.id,
     name: "astronaut"
 })
 
 t3p1 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo1.id,
     name: "mountain"
 })
 
 # ----------------------------------------------------------------------------------------
 
 t1p2 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo2.id,
     name: "owl"
 })
 
 t2p2 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo2.id,
     name: "branch"
 })
 
 t3p2 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo2.id,
     name: "nature"
 })# ----------------------------------------------------------------------------------------
 
 t1p3 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo3.id,
     name: "breakfast"
 })
 
 t2p3 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo3.id,
     name: "fruits"
 })
 
 t3p3 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo3.id,
     name: "food"
 })# ----------------------------------------------------------------------------------------
 
 t1p4 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo4.id,
     name: "flowers"
 })
 
 t2p4 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo4.id,
     name: "field"
 })
 
 t3p4 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo4.id,
     name: "daisies"
 })# ----------------------------------------------------------------------------------------
 
 t1p5 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo5.id,
     name: "graffiti"
 })
 
 t2p5 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo5.id,
     name: "artwork"
 })
 
 t3p5 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo5.id,
     name: "love"
 })# ----------------------------------------------------------------------------------------
 
 t1p6 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo6.id,
     name: "cat"
 })
 
 t2p6 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo6.id,
     name: "pet"
 })
 
 t3p6 = Tag.create!({
-    photo_id: photo8.id,
+    photo_id: photo6.id,
     name: "animal"
+}) # ----------------------------------------------------------------------------------------
+
+t1p7 = Tag.create!({
+    photo_id: photo7.id,
+    name: "subway"
+})
+
+t2p7 = Tag.create!({
+    photo_id: photo7.id,
+    name: "train"
+})
+
+t3p7 = Tag.create!({
+    photo_id: photo7.id,
+    name: "people"
+})# ----------------------------------------------------------------------------------------
+
+t1p8 = Tag.create!({
+    photo_id: photo8.id,
+    name: "window"
+})
+
+t2p8 = Tag.create!({
+    photo_id: photo8.id,
+    name: "house"
+})
+
+t3p8 = Tag.create!({
+    photo_id: photo8.id,
+    name: "flower"
 })
