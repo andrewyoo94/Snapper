@@ -1,0 +1,10 @@
+.comments-section {
+    font-size: 62.5%;
+    padding: 10px;
+    background-color: #d0e2bc;
+    border: 3px dashed #8ebf42;
+}
+
+.comment-form {
+    border: 3px dashed black;
+}
