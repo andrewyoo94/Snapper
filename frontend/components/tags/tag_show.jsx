@@ -31,6 +31,7 @@ class TagShow extends React.Component {
 
         return (
             <div className="tag-show">
+                <h1>Tags</h1>
                 {tagsItems}
             </div>
         );

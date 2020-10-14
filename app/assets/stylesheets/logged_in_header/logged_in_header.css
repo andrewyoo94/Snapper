@@ -16,13 +16,13 @@
 }
 
 .header-upload {
-        background-image: url(assets/upload.png);
+    /* background-image: url("../../images/upload.png");
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
     padding: 10px 0;
-    color: transparent;
-    /* padding-top: 25px;
+    color: transparent; */
+    padding-top: 25px;
     width: 10em;
-    float: left; */
+    float: left;
 }
