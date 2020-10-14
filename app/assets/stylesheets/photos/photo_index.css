@@ -14,3 +14,12 @@
     width: 25%; 
     margin-bottom: 15px;
 }
+
+.photos-explore {
+    margin: 4px 24px -19px;
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: lighter;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    color: #212124;
+}

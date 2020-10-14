@@ -18,8 +18,14 @@ class PhotoIndex extends React.Component {
         });
 
         return (
-            <div className="photos-index">
-                {photos}
+            <div className="photos-main">
+                <div className="photos-explore">
+                    <h1>Explore</h1>
+                </div>
+
+                <div className="photos-index">
+                    {photos}
+                </div>
             </div>
         );
     }
