@@ -15,7 +15,6 @@ class TagShow extends React.Component {
     }
 
     render() {
-        let id = this.props.photoId
         let tags = this.props.tags ? this.props.tags : [];
         
         let tagsItems = tags.map(tag => {
@@ -31,7 +30,6 @@ class TagShow extends React.Component {
 
         return (
             <div className="tag-show">
-                <h1>Tags</h1>
                 {tagsItems}
             </div>
         );

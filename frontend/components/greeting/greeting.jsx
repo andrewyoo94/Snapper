@@ -16,9 +16,16 @@ const Greeting = ({ currentUser, logout }) => {
         history.push(`/`)
     }
 
+    const handleUpload = () => {
+        const history = useHistory()
+        history.push(`/upload`)
+    }
+
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <Link className="header-upload" to="/upload">Upload Picture!</Link>
+            <Link className="header-upload" to="/upload"> 
+                <img src={window.images.uploadImg} />
+            </Link>
 
             <h2 className="header-name">Hello, {currentUser.username}!
                 <button className="header-button" onClick={handleSubmit} >Log Out</button>

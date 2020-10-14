@@ -73,7 +73,10 @@ class PhotoShow extends React.Component {
                     <img src={photoUrl} />
                 </div>
 
+                <div></div>
+
                 <div className="tag-show">
+                    <h3>Tags</h3>
                     {result.map((tag) => {
                         return (
                             <div>{tag.name}</div>
