@@ -18,7 +18,7 @@ const Greeting = ({ currentUser, logout }) => {
 
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <Link className="header-upload" to="/upload"><i className="fas fa-cloud-upload-alt"></i>Upload Picture!</Link>
+            <Link className="header-upload" to="/upload">Upload Picture!</Link>
 
             <h2 className="header-name">Hello, {currentUser.username}!
                 <button className="header-button" onClick={handleSubmit} >Log Out</button>

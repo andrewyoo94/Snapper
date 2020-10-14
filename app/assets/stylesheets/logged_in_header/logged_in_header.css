@@ -16,7 +16,13 @@
 }
 
 .header-upload {
-    padding-top: 25px;
+        background-image: url(/assets/cloudupload-bd3fb16….png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px 0;
+    color: transparent;
+    /* padding-top: 25px;
     width: 10em;
-    float: left;
+    float: left; */
 }
