@@ -1,14 +1,9 @@
-
 .photos-index {
-    position: relative;
-    background: white;
-    height: 100%;
     width: 100%;
 }
 
 .photos-index-item {
-    height: auto;
-    width: auto;
+    display: block;
 }
 
 .photo-img {
