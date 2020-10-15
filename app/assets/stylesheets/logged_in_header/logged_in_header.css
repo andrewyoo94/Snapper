@@ -15,14 +15,9 @@
     margin-left: 10px;
 }
 
-.header-upload {
-    /* background-image: url("../../images/upload.png");
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 10px 0;
-    color: transparent; */
-    padding-top: 25px;
-    width: 10em;
-    float: left;
+.upload-img {
+    margin-top: 25%;
+    padding-right: 10px;
+    width: 40px;
+    height: auto;;
 }

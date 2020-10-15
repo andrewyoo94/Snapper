@@ -24,7 +24,7 @@ const Greeting = ({ currentUser, logout }) => {
     const personalGreeting = () => (
         <hgroup className="header-group">
             <Link className="header-upload" to="/upload"> 
-                <img src={window.images.uploadImg} />
+                <img className="upload-img" src={window.images.uploadImg} />
             </Link>
 
             <h2 className="header-name">Hello, {currentUser.username}!
