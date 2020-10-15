@@ -17,10 +17,12 @@
 }
 
 .photos-explore {
-    margin: 4px 24px -19px;
-    font-size: 12px;
+    margin-top: 21px;
+    margin-left: 24px;
+    margin-bottom: -2px;
+    font-size: 20px;
     line-height: 30px;
-    font-weight: lighter;
+    font-weight: 100 !important;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     color: #212124;
 }
