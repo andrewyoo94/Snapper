@@ -1,10 +1,10 @@
 .comments-section {
-    font-size: 62.5%;
+    /* font-size: 62.5%;
+    /* border: 3px dashed #8ebf42; */
     padding: 10px;
     background-color: #d0e2bc;
-    border: 3px dashed #8ebf42;
 }
 
 .comment-form {
-    border: 3px dashed black;
+    /* border: 3px dashed black; */
 }
