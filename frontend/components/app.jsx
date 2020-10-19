@@ -9,6 +9,8 @@ import PhotoIndexContainer from "./photos/photo_index_container";
 import PhotoShowContainer from "./photos/photo_show_container";
 import PhotoUploadContainer from "./photos/photo_upload_container";
 
+// const headerStyle = currentUser ? "header-loggedin" : "header-loggedout";
+
 const App = () => (
     <div className="master">
 

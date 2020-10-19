@@ -16,11 +16,6 @@ const Greeting = ({ currentUser, logout }) => {
         history.push(`/`)
     }
 
-    const handleUpload = () => {
-        const history = useHistory()
-        history.push(`/upload`)
-    }
-
     const personalGreeting = () => (
         <hgroup className="header-group">
             <Link className="header-upload" to="/upload"> 
