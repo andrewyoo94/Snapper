@@ -9,15 +9,25 @@ import PhotoIndexContainer from "./photos/photo_index_container";
 import PhotoShowContainer from "./photos/photo_show_container";
 import PhotoUploadContainer from "./photos/photo_upload_container";
 
+console.log(window.currentUser)
+
 // const headerStyle = currentUser ? "header-loggedin" : "header-loggedout";
 
 const App = () => (
     <div className="master">
 
-        <header className="header">
-            <Link className="logo" to="/explore">snapper</Link>
-            <Route path="/" component={GreetingContainer} />
-        </header> 
+        <div className="header-background">
+
+            <header className="header">
+                <Link className="logo" to="/explore">snapper</Link>
+                <Route path="/" component={GreetingContainer} />
+            </header> 
+
+            {/* <div className="header-background">
+
+            </div> */}
+
+        </div>
 
         <div className="login-signup">
             <AuthRoute path="/login" component={LoginFormContainer} />

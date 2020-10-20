@@ -9,13 +9,15 @@
     margin: 0px;
 }
 
+.header-background {
+    background: url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
 .login-signup {
-    /* background: url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); */
-    /* background-size: cover; */
-    /* height: 100%; */
-    /* width: 100%; */
     text-align: center;
-    /* position: fixed; */
 }
 
 .logo {
