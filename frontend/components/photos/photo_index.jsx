@@ -29,7 +29,8 @@ class PhotoIndex extends React.Component {
             </div>
         );
     }
-
 }
+
+// $(".photos-index").justifiedGallery();
 
 export default PhotoIndex;

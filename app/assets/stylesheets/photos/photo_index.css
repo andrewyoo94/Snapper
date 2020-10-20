@@ -1,26 +1,6 @@
 .photos-index {
-    /* width: 100%;
-    margin-left: 10px; */
-    display: flex;
-  flex-wrap: wrap;
-  div {
-    height: 150px;
-    line-height: 150px;
-    background: #EC985A;
-    color: white;
-    margin: 0 1rem 1rem 0;
-    text-align: center;
-    font-family: system-ui;
-    font-weight: 900;
-    font-size: 2rem;
-    flex: 1 0 auto;
-  } 
-  @for $i from 1 through 36 { 
-    div:nth-child(#{$i}) {
-      $h: (random(400) + 70) + px;
-      width: $h;
-    }
-  }
+    width: 100%;
+    margin-left: 10px;
 }
 
 .photos-index-item {
