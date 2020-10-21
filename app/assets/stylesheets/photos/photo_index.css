@@ -1,11 +1,13 @@
 .photos-main {
+    /* margin-left: auto;
+    margin-right: auto; */
     margin: 24px;
-    color: #212124
 }
 
+/* 
 .photos-index {
     width: 100%;
-}
+} */
 
 .photos-index-item {
     display: block;
@@ -26,6 +28,7 @@
     column-count: 7;
     max-width: 25%;
     max-height: 25%;
+    /* transform: translate(0px, 4px); */
 }
 
 .photos-explore {
