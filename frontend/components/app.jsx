@@ -3,6 +3,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 import GreetingContainer from "./greeting/greeting_container";
+import HomepageContainer from "./homepage/homepage_container"
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import PhotoIndexContainer from "./photos/photo_index_container";
@@ -13,19 +14,30 @@ console.log(window.currentUser)
 
 // const headerStyle = currentUser ? "header-loggedin" : "header-loggedout";
 
+const composeComponents = (...components) => {
+    return () => (
+        <div>
+            {components.map((Component, index) => (
+                <Component key={`comp-${index}`} />
+            ))}
+        </div>
+    );
+};
+
 const App = () => (
     <div className="master">
 
         <div className="header-container">
             <header className="header">
                 <Link className="logo" to="/explore">snapper</Link>
-                <Route path="/" component={GreetingContainer} />
             </header> 
         </div>
-{/* 
+
         <div className="header-background">
             <h1>Hi</h1>
-        </div> */}
+        </div>
+
+        <Route path="/" component={composeComponents(GreetingContainer, HomepageContainer)} />
 
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />

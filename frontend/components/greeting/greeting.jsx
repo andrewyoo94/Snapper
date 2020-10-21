@@ -3,17 +3,11 @@ import { Link, useHistory } from "react-router-dom";
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
-        <span>
-            <nav className="login-signup"> 
-                <Link className="login" to="/login">Log In</Link>
+        <nav className="login-signup"> 
+            <Link className="login" to="/login">Log In</Link>
 
-                <Link className="signup" to="/signup">Sign Up</Link>
-            </nav>
-
-            <div className="header-background">
-
-            </div>
-        </span>
+            <Link className="signup" to="/signup">Sign Up</Link>
+        </nav>
     );
     
     const handleSubmit = () => {
