@@ -9,14 +9,6 @@
     margin: 0px;
 }
 
-.header-background {
-    /* background: url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-    background-size: cover; */
-    background-color: red;
-    height: 1vh;
-    overflow: hidden;
-}
-
 .login-signup {
     text-align: center;
 }
@@ -55,3 +47,6 @@
     margin-right: 20px;
 }
 
+.homepage {
+    
+}

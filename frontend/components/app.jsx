@@ -30,14 +30,11 @@ const App = () => (
         <div className="header-container">
             <header className="header">
                 <Link className="logo" to="/explore">snapper</Link>
+                <Route path="/" component={GreetingContainer} />
             </header> 
         </div>
 
-        <div className="header-background">
-            <h1>Hi</h1>
-        </div>
-
-        <Route path="/" component={composeComponents(GreetingContainer, HomepageContainer)} />
+        <Route exact path="/" component={HomepageContainer} />
 
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
