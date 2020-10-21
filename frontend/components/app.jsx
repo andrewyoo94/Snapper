@@ -16,23 +16,19 @@ console.log(window.currentUser)
 const App = () => (
     <div className="master">
 
-        <div className="header-background">
-
+        <div className="header-container">
             <header className="header">
                 <Link className="logo" to="/explore">snapper</Link>
                 <Route path="/" component={GreetingContainer} />
             </header> 
-
-            {/* <div className="header-background">
-
-            </div> */}
-
         </div>
+{/* 
+        <div className="header-background">
+            <h1>Hi</h1>
+        </div> */}
 
-        <div className="login-signup">
-            <AuthRoute path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer} />
-        </div>
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
 
         <Switch>
             <Route exact path="/explore" component={PhotoIndexContainer} />
