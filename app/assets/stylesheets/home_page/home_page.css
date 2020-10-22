@@ -23,21 +23,23 @@
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     color: #fff;
     text-align: center;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin: 0 auto;
-    max-width: 720px;
+    max-width: 620px;
     height: 100%;
-    padding-top: 88px;
+    padding-top: 114px;
 }
 
 .hometext-h1 {
-    font-size: 56px;
+    font-size: 47px;
     line-height: 56px;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 .hometext-h3 {
-    font-size: 26px;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .login-signup {
