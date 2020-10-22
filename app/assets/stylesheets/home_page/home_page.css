@@ -10,13 +10,28 @@
 }
 
 .homepage {
-    background: url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    /* background: url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); */
+    background-color: black;
     background-size: cover;
-    /* background-color: red; */
     height: 100%;
     width: 100%;
     overflow: hidden;
     position: absolute;
+}
+
+.homepage-text {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+}
+
+.hometext-h1 {
+    font-size: 56px;
+}
+
+.hometext-h3 {
+    font-size: 26px;
 }
 
 .login-signup {
