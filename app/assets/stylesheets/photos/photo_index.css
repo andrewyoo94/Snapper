@@ -4,14 +4,17 @@
     margin: 24px;
 }
 
-/* 
+
 .photos-index {
-    width: 100%;
-} */
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .photos-index-item {
     display: block;
 }
+
+/* seed wide/small around 15-20 */
 
 /* 
 .photo-img {
@@ -26,8 +29,8 @@
 .photo-img {
     float: right;
     column-count: 7;
-    max-width: 25%;
-    max-height: 25%;
+    max-height: 25vh;
+    margin: 2px;
     /* transform: translate(0px, 4px); */
 }
 
