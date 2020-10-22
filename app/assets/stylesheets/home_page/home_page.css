@@ -24,10 +24,16 @@
     color: #fff;
     text-align: center;
     font-weight: 600;
+    margin: 0 auto;
+    max-width: 720px;
+    height: 100%;
+    padding-top: 88px;
 }
 
 .hometext-h1 {
     font-size: 56px;
+    line-height: 56px;
+    margin-bottom: 5px;
 }
 
 .hometext-h3 {
