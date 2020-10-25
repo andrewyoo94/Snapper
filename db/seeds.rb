@@ -144,12 +144,12 @@ photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffma
 photo8.save!
 
 user9 = User.create!({
-    username: "Lucille Bluth",
+    username: "Ted Mosby",
     password: "password"
 })
 
 user10 = User.create!({
-    username: "Lucille Bluth",
+    username: "Homer Simpson",
     password: "password"
 })
 
