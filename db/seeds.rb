@@ -143,6 +143,35 @@ photo8 = Photo.new({
 photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
 photo8.save!
 
+user9 = User.create!({
+    username: "Lucille Bluth",
+    password: "password"
+})
+
+user10 = User.create!({
+    username: "Lucille Bluth",
+    password: "password"
+})
+
+user11 = User.create!({
+    username: "Lucille Bluth",
+    password: "password"
+})
+
+user12 = User.create!({
+    username: "Lucille Bluth",
+    password: "password"
+})
+
+user13 = User.create!({
+    username: "Lucille Bluth",
+    password: "password"
+})
+
+user14 = User.create!({
+    username: "Lucille Bluth",
+    password: "password"
+})
 
 # Comments/Tags Seeding---------------------------------------------------------------------------------------------------------
 
