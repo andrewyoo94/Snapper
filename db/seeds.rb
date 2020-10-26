@@ -143,35 +143,95 @@ photo8 = Photo.new({
 photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
 photo8.save!
 
+
 user9 = User.create!({
     username: "Ted Mosby",
     password: "password"
 })
+
+photo9 = Photo.new({
+    title: "Space Bike",
+    description: "Riding on the moon!",
+    photographer_id: user9.id,
+    user: user9
+})
+
+photo9.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/bradley-dunn-i8qs7bfTB0M-unsplash.jpg'), filename: "bradley-dunn-i8qs7bfTB0M-unsplash.jpg")
+photo9.save!
+
 
 user10 = User.create!({
     username: "Homer Simpson",
     password: "password"
 })
 
+photo10 = Photo.new({
+    title: "Peachy Window",
+    description: "Random window in Paris.",
+    photographer_id: user10.id,
+    user: user10
+})
+photo10.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
+photo10.save!
+
+
 user11 = User.create!({
-    username: "Lucille Bluth",
+    username: "Walter White",
     password: "password"
 })
+
+photo11 = Photo.new({
+    title: "Peachy Window",
+    description: "Random window in Paris.",
+    photographer_id: user11.id,
+    user: user11
+})
+photo11.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
+photo11.save!
 
 user12 = User.create!({
-    username: "Lucille Bluth",
+    username: "Meredith Grey",
     password: "password"
 })
+
+photo12 = Photo.new({
+    title: "Peachy Window",
+    description: "Random window in Paris.",
+    photographer_id: user12.id,
+    user: user12
+})
+photo12.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
+photo12.save!
+
 
 user13 = User.create!({
-    username: "Lucille Bluth",
+    username: "Miles Morales",
     password: "password"
 })
 
+photo13 = Photo.new({
+    title: "Peachy Window",
+    description: "Random window in Paris.",
+    photographer_id: user13.id,
+    user: user13
+})
+photo13.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
+photo13.save!
+
+
 user14 = User.create!({
-    username: "Lucille Bluth",
+    username: "Tony Stark",
     password: "password"
 })
+
+photo14 = Photo.new({
+    title: "Peachy Window",
+    description: "Random window in Paris.",
+    photographer_id: user14.id,
+    user: user14
+})
+photo14.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
+photo14.save!
 
 # Comments/Tags Seeding---------------------------------------------------------------------------------------------------------
 
