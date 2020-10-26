@@ -81,6 +81,11 @@ class PhotoUpload extends React.Component {
     render() {
         return (
             <div className="upload-main">
+                
+                <input className="upload-browse"
+                    type="file"
+                    onChange={this.handleFile}
+                />
 
                 <input className="upload-title"
                     type="text"
@@ -108,11 +113,6 @@ class PhotoUpload extends React.Component {
                     onClick={this.handleSubmit}>
                     Upload photo!
                 </button>
-
-                <input className="upload-browse"
-                    type="file"
-                    onChange={this.handleFile}
-                />
 
                 <span id="img-error"></span>
                 <img className="upload-image" src={this.state.photoUrl} />

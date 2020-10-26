@@ -233,6 +233,7 @@ photo14 = Photo.new({
 photo14.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffman-RCfHM4dDCOY-unsplash.jpg'), filename: "parker-coffman-RCfHM4dDCOY-unsplash.jpg")
 photo14.save!
 
+
 # Comments/Tags Seeding---------------------------------------------------------------------------------------------------------
 
 p1c1 = Comment.create!({
