@@ -3,7 +3,7 @@
     display: flex;
     background-color: rgba(0,0,0,0.5);
     align-items: center;
-    height: 64px;
+    height: 59px;
     justify-content: space-between;
     padding: 0 24px;
     margin: 0px;
@@ -17,7 +17,7 @@
     width: 100%;
     overflow: hidden;
     position: fixed;
-    margin-top: -100px; /* Higher or lower number depending on how far up you want it to go */
+    margin-top: -99px; /* Higher or lower number depending on how far up you want it to go */
     z-index: -1;
 }
 
@@ -28,7 +28,7 @@
     margin: 0 auto;
     max-width: 620px;
     height: 100%;
-    padding-top: 114px;
+    padding-top: 219px;
 }
 
 .hometext-h1 {
