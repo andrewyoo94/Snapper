@@ -1,9 +1,12 @@
 .upload-main {
     background: rgb(46 46 46);
-    float: left;
 }
 
 .upload-title {
 
 
+}
+
+.upload-image {
+    max-width: 200px;
 }
