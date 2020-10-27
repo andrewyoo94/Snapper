@@ -1,10 +1,13 @@
 .upload-main {
     background: rgb(46 46 46);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
 }
 
-.upload-title {
-
-
+.upload-container {
+    text-align: center;
 }
 
 .upload-image {

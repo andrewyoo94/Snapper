@@ -81,41 +81,44 @@ class PhotoUpload extends React.Component {
     render() {
         return (
             <div className="upload-main">
-                
-                <input className="upload-browse"
-                    type="file"
-                    onChange={this.handleFile}
-                />
 
-                <input className="upload-title"
-                    type="text"
-                    value={this.state.title}
-                    onChange={this.handleUpdate('title')}
-                    placeholder="Add a title..."
-                />
+                <div className="upload-container">
 
-                <textarea className="upload-description"
-                    value={this.state.description}
-                    onChange={this.handleUpdate('description')}
-                    placeholder="Add a description..."
-                ></textarea>
+                    <img className="upload-image" src={this.state.photoUrl} />
+                    <input className="upload-browse"
+                        type="file"
+                        onChange={this.handleFile}
+                    />
 
-                <span id="tag-error"></span>
-                <input className="tag-text"
-                    type="text"
-                    value={this.state.name}
-                    onChange={this.handleUpdate("name")}
-                    placeholder="Add a tag..." 
-                    required
-                />
+                    <input className="upload-title"
+                        type="text"
+                        value={this.state.title}
+                        onChange={this.handleUpdate('title')}
+                        placeholder="Add a title..."
+                    />
 
-                <button className="upload-submit" 
-                    onClick={this.handleSubmit}>
-                    Upload photo!
-                </button>
+                    <textarea className="upload-description"
+                        value={this.state.description}
+                        onChange={this.handleUpdate('description')}
+                        placeholder="Add a description..."
+                    ></textarea>
 
-                <span id="img-error"></span>
-                <img className="upload-image" src={this.state.photoUrl} />
+                    <span id="tag-error"></span>
+                    <input className="tag-text"
+                        type="text"
+                        value={this.state.name}
+                        onChange={this.handleUpdate("name")}
+                        placeholder="Add a tag..."
+                        required
+                    />
+
+                    <button className="upload-submit"
+                        onClick={this.handleSubmit}>
+                        Upload photo!
+                    </button>
+
+                    <span id="img-error"></span>
+                </div>
             </div>
         );
     }
