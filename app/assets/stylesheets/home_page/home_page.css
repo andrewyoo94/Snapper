@@ -17,6 +17,8 @@
     width: 100%;
     overflow: hidden;
     position: fixed;
+    margin-top: -100px; /* Higher or lower number depending on how far up you want it to go */
+    z-index: -1;
 }
 
 .homepage-text {
