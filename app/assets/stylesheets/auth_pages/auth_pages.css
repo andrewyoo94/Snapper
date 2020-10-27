@@ -1,10 +1,15 @@
 .session-container{
-    padding-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
+    background: grey;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-top: -99px;
+    z-index: -1;
 }
 
 .form-container {
