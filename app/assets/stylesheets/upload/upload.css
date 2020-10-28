@@ -7,7 +7,7 @@
 }
 
 .upload-container {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .upload-details {
@@ -16,4 +16,6 @@
 
 .upload-image {
     max-width: 400px;
+    border: 3px solid #ff0084;
+    border-radius: 2px;
 }
