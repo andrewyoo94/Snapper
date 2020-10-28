@@ -397,6 +397,66 @@ p8c3 = Comment.create!({
 
 # ----------------------------------------------------------------------------------------
 
+p9c1 = Comment.create!({
+    user_id: user9.id,
+    photo_id: photo9.id,
+    body: "Love the colors!"
+})
+
+p9c2 = Comment.create!({
+    user_id: user10.id,
+    photo_id: photo9.id,
+    body: "Simple but mesmerizing"
+})
+
+p9c3 = Comment.create!({
+    user_id: user11.id,
+    photo_id: photo9.id,
+    body: "Lovely photo."
+})
+
+# ----------------------------------------------------------------------------------------
+
+p10c1 = Comment.create!({
+    user_id: user12.id,
+    photo_id: photo10.id,
+    body: "Love the colors!"
+})
+
+p10c2 = Comment.create!({
+    user_id: user13.id,
+    photo_id: photo10.id,
+    body: "Simple but mesmerizing"
+})
+
+p10c3 = Comment.create!({
+    user_id: user14.id,
+    photo_id: photo10.id,
+    body: "Lovely photo."
+})
+
+# ----------------------------------------------------------------------------------------
+
+p10c1 = Comment.create!({
+    user_id: user14.id,
+    photo_id: photo10.id,
+    body: "Love the colors!"
+})
+
+p10c2 = Comment.create!({
+    user_id: user13.id,
+    photo_id: photo10.id,
+    body: "Simple but mesmerizing"
+})
+
+p10c3 = Comment.create!({
+    user_id: user12.id,
+    photo_id: photo10.id,
+    body: "Lovely photo."
+})
+
+# ----------------------------------------------------------------------------------------
+
 t1p1 = Tag.create!({
     photo_id: photo1.id,
     name: "bike"

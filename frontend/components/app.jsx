@@ -10,19 +10,7 @@ import PhotoIndexContainer from "./photos/photo_index_container";
 import PhotoShowContainer from "./photos/photo_show_container";
 import PhotoUploadContainer from "./photos/photo_upload_container";
 
-console.log(window.currentUser)
-
 // const headerStyle = currentUser ? "header-loggedin" : "header-loggedout";
-
-const composeComponents = (...components) => {
-    return () => (
-        <div>
-            {components.map((Component, index) => (
-                <Component key={`comp-${index}`} />
-            ))}
-        </div>
-    );
-};
 
 const App = () => (
     <div className="master">
@@ -35,7 +23,6 @@ const App = () => (
         </div>
 
         <AuthRoute exact path="/" component={HomepageContainer} />
-
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
 
