@@ -7,7 +7,9 @@
 }
 
 .upload-container {
-    /* text-align: center; */
+    margin-left: 15%;
+    display: inline-grid;
+    grid-gap: 5px;
 }
 
 .upload-details {
@@ -16,6 +18,11 @@
 
 .upload-image {
     max-width: 400px;
-    border: 3px solid #ff0084;
+    min-width: 300px;
+    min-height: 300px;
+    border: 3px solid transparent;
     border-radius: 2px;
+    border-color: #ff0084;
+    float: right;
+    margin-right: 15%;
 }

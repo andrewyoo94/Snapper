@@ -89,7 +89,7 @@ class PhotoUpload extends React.Component {
                         onChange={this.handleFile}
                     />
 
-                    <div className="upload-details">
+                    
 
                         <input className="upload-title"
                             type="text"
@@ -119,11 +119,9 @@ class PhotoUpload extends React.Component {
                         </button>
 
                         <span id="img-error"></span>
-                    </div>
-                    
-                    <img className="upload-image" src={this.state.photoUrl} />
                 </div>
-
+                
+                <img className="upload-image" src={this.state.photoUrl} />
             </div>
         );
     }
