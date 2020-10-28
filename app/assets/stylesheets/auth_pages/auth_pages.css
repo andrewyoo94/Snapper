@@ -23,6 +23,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.form-box {
+    text-align: center;
+}
+
 .auth-input {
     display: flex;
     flex-direction: column;

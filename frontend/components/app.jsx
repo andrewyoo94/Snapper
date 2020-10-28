@@ -34,7 +34,7 @@ const App = () => (
             </header> 
         </div>
 
-        <Route exact path="/" component={HomepageContainer} />
+        <AuthRoute exact path="/" component={HomepageContainer} />
 
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
