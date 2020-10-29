@@ -4,7 +4,8 @@
     align-items: center;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
-    background: grey;
+    background-image: url("https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1655&q=80");
+    background-size: cover;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -15,9 +16,9 @@
 .form-container {
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 377px;
-    padding: 20px 24px 24px 20px;
+    width: 17%;
+    height: 355px;
+    padding: 20px 24px 0px   20px;
     background-color: white;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
@@ -39,6 +40,7 @@
     padding-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .auth-submit {
@@ -49,6 +51,7 @@
     background-color: #128fdc;
     color: white;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .demo-user { 
@@ -60,6 +63,7 @@
     color: white;
     cursor: pointer;
     margin-top: 4px;
+    margin-bottom: 4px
 }
 
 .auth-footer {
