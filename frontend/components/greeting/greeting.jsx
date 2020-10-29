@@ -3,23 +3,26 @@ import { Link } from "react-router-dom";
 
 const Greeting = ({ currentUser, logout, url }) => {
 
-    // const headerStyles = () => {
-
-
-    // }
-
     // <div className="header-container">
     //     <header className="header">
     //         <Link className="logo" to="/explore">snapper</Link>
             
-
-
     //     </header>
     // </div>
 
+    // const sessionLinks = () => (
+    //     <nav className="login-signup"> 
+    //         <Link className="login" to="/login">Log In</Link>
+
+    //         <Link className="signup" to="/signup">Sign Up</Link>
+    //     </nav>
+    // );
+
+    if (url.includes("photos")) {
+        url = "/photos"
+    }
 
     const sessionLinks = () => (
-
             <header className={url}>
                 <Link className="logo" to="/explore">snapper</Link>
                 
@@ -30,20 +33,10 @@ const Greeting = ({ currentUser, logout, url }) => {
                 </nav>
             </header>
     );
-
-
-    // const sessionLinks = () => (
-    //     <nav className="login-signup"> 
-    //         <Link className="login" to="/login">Log In</Link>
-
-    //         <Link className="signup" to="/signup">Sign Up</Link>
-    //     </nav>
-    // );
     
     const handleSubmit = () => {
         logout()
     }
-
 
     const personalGreeting = () => (
 
