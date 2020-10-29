@@ -1,0 +1,32 @@
+.\/ {
+    position: relative;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    height: 59px;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin: 0px;  
+}
+
+.\/signup {
+    position: relative;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    height: 59px;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin: 0px;  
+}
+
+.\/login {
+    position: relative;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    height: 59px;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin: 0px;  
+}

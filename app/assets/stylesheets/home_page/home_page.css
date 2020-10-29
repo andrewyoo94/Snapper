@@ -1,4 +1,4 @@
-.header {
+/* .header {
     position: relative;
     display: flex;
     background-color: rgba(0,0,0,0.5);
@@ -7,6 +7,17 @@
     justify-content: space-between;
     padding: 0 24px;
     margin: 0px;
+} */
+
+.\/ {
+    position: relative;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    height: 59px;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin: 0px;  
 }
 
 .homepage {

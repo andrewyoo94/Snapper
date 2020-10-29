@@ -20,8 +20,7 @@ const Greeting = ({ currentUser, logout, url }) => {
 
     const sessionLinks = () => (
 
-        <div className="header-container">
-            <header className="header">
+            <header className={url}>
                 <Link className="logo" to="/explore">snapper</Link>
                 
                 <nav className="login-signup">
@@ -30,7 +29,6 @@ const Greeting = ({ currentUser, logout, url }) => {
                     <Link className="signup" to="/signup">Sign Up</Link>
                 </nav>
             </header>
-        </div>
     );
 
 
