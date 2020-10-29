@@ -4,7 +4,8 @@ import Greeting from "./greeting";
 
 const mSTP = (state, ownProps) => { 
     return {
-        currentUser: state.entities.users[state.session.id]
+        currentUser: state.entities.users[state.session.id],
+        url: ownProps.location.pathname
     };
 };
 

@@ -10,17 +10,17 @@ import PhotoIndexContainer from "./photos/photo_index_container";
 import PhotoShowContainer from "./photos/photo_show_container";
 import PhotoUploadContainer from "./photos/photo_upload_container";
 
-// const headerStyle = currentUser ? "header-loggedin" : "header-loggedout";
-
 const App = () => (
     <div className="master">
 
-        <div className="header-container">
+        {/* <div className="header-container">
             <header className="header">
                 <Link className="logo" to="/explore">snapper</Link>
                 <Route path="/" component={GreetingContainer} />
             </header> 
-        </div>
+        </div> */}
+
+        <Route path="/" component={GreetingContainer} />
 
         <Route exact path="/" component={HomepageContainer} />
         <Route path="/login" component={LoginFormContainer} />
