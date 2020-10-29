@@ -2,9 +2,9 @@ import { connect } from "react-redux";
 import { logout } from "../../actions/session_actions";
 import Greeting from "./greeting";
 
-const mSTP = ({ session, entities: { users } }) => { 
+const mSTP = (state, ownProps) => { 
     return {
-        currentUser: users[session.id]
+        currentUser: state.entities.users[state.session.id]
     };
 };
 

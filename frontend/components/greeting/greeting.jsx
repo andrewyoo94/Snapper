@@ -12,8 +12,6 @@ const Greeting = ({ currentUser, logout }) => {
     
     const handleSubmit = () => {
         logout()
-        const history = useHistory()
-        history.push(`/`)
     }
 
     const personalGreeting = () => (
@@ -23,7 +21,7 @@ const Greeting = ({ currentUser, logout }) => {
             </Link>
 
             <h2 className="header-name">Hello, {currentUser.username}!
-                <button className="header-button" onClick={handleSubmit} >Log Out</button>
+                <Link className="header-button" onClick={handleSubmit} to="/">Log Out</Link>
             </h2>
         </hgroup>
     );

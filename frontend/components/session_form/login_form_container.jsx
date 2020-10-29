@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-const mSTP = ({ errors }) => {
+const mSTP = ({ errors, session }) => {
     return {
         errors: errors.session,
         formType: 'Log in',
-        navLink: <Link to='/signup'>Sign up here.</Link>
+        navLink: <Link to='/signup'>Sign up here.</Link>,
+        sessionId: session.id
+        
     };
 };
 

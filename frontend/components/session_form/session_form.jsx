@@ -1,4 +1,6 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
@@ -41,8 +43,13 @@ class SessionForm extends React.Component {
     }
 
     render() {
+        const loggedIn = this.props.sessionId ? <Redirect to="/explore" /> : null
+        
         return (
             <div className="session-container">
+
+                {loggedIn}
+
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className="form-box">
                         
