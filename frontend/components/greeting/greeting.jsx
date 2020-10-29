@@ -46,17 +46,39 @@ const Greeting = ({ currentUser, logout, url }) => {
         logout()
     }
 
-    const personalGreeting = () => (
-        <hgroup className="header-group">
-            <Link className="header-upload" to="/upload"> 
-                <img className="upload-img" src={window.images.uploadImg} />
-            </Link>
 
-            <h2 className="header-name">Hello, {currentUser.username}!
-                <Link className="header-button" onClick={handleSubmit} to="/">Log Out</Link>
-            </h2>
-        </hgroup>
+    const personalGreeting = () => (
+
+        <div className="header-container">
+            <header className="header">
+                <Link className="logo" to="/explore">snapper</Link>
+                
+                <hgroup className="header-group">
+                    <Link className="header-upload" to="/upload">
+                        <img className="upload-img" src={window.images.uploadImg} />
+                    </Link>
+
+                    <h2 className="header-name">Hello, {currentUser.username}!
+                        <Link className="header-button" onClick={handleSubmit} to="/">Log Out</Link>
+                    </h2>
+                </hgroup>
+
+            </header>
+        </div>
     );
+
+
+    // const personalGreeting = () => (
+    //     <hgroup className="header-group">
+    //         <Link className="header-upload" to="/upload"> 
+    //             <img className="upload-img" src={window.images.uploadImg} />
+    //         </Link>
+
+    //         <h2 className="header-name">Hello, {currentUser.username}!
+    //             <Link className="header-button" onClick={handleSubmit} to="/">Log Out</Link>
+    //         </h2>
+    //     </hgroup>
+    // );
 
     return currentUser ? personalGreeting() : sessionLinks();
 };
