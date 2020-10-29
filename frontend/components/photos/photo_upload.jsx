@@ -84,13 +84,15 @@ class PhotoUpload extends React.Component {
 
                 <div className="upload-container">
 
+                    <h1 className="upload-header">Editing photo:</h1>
+
+                    <span id="img-error"></span>
                     <input className="upload-browse"
                         type="file"
                         onChange={this.handleFile}
                     />
 
-                    
-
+                    {/* <div className="upload-details"> */}
                         <input className="upload-title"
                             type="text"
                             value={this.state.title}
@@ -105,20 +107,20 @@ class PhotoUpload extends React.Component {
                         ></textarea>
 
                         <span id="tag-error"></span>
-                        <input className="tag-text"
+                        <input className="upload-tag"
                             type="text"
                             value={this.state.name}
                             onChange={this.handleUpdate("name")}
                             placeholder="Add a tag..."
                             required
                         />
+                    {/* </div> */}
 
-                        <button className="upload-submit"
-                            onClick={this.handleSubmit}>
-                            Upload photo!
-                        </button>
 
-                        <span id="img-error"></span>
+                    <button className="upload-submit"
+                        onClick={this.handleSubmit}>
+                        Upload photo!
+                    </button>
                 </div>
                 
                 <img className="upload-image" src={this.state.photoUrl} />

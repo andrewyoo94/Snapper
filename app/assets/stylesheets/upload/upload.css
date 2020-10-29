@@ -4,25 +4,99 @@
     width: 100%;
     overflow: hidden;
     position: fixed;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.upload-header {
+    font-size: 18px;
+    font-weight: 300;
+    color: #999;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #666;
 }
 
 .upload-container {
-    margin-left: 15%;
+    margin-left: 5%;
     display: inline-grid;
-    grid-gap: 5px;
-}
-
-.upload-details {
-    
+    grid-gap: 12px;
+    border: 1px solid #666;
+    background: #242424;
+    border-radius: 3px;
+    padding: 10px;
+    padding-bottom: 15px;
+    float: left;
 }
 
 .upload-image {
-    max-width: 400px;
-    min-width: 300px;
-    min-height: 300px;
-    border: 3px solid transparent;
+    width: 0; 
+}
+
+.upload-image[src] {
+    min-width: 40%;
+    border: 3px solid #ff0084;
     border-radius: 2px;
-    border-color: #ff0084;
-    float: right;
-    margin-right: 15%;
+    margin-left: 5%;
+    background-color: white;
+}
+
+.upload-title {
+    background-color: #f1f1f1;
+    box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.5);
+    color: #222;
+    font-size: 13px;
+    border: 0;
+    border-radius: 2px;
+    padding: 6px;
+}
+
+.upload-description {
+    background-color: #f1f1f1;
+    box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.5);
+    resize: none;
+    color: #222;
+    font-size: 13px;
+    border: 0;
+    border-radius: 2px;
+    padding: 6px;
+}   
+
+.upload-tag {
+    background-color: #f1f1f1;
+    box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.5);
+    color: #222;
+    font-size: 13px;
+    border: 0;
+    border-radius: 2px;
+    padding: 6px;
+    margin-top: -8px;
+}
+
+.upload-browse {
+    cursor: pointer;
+    color: white;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #666;
+    margin-top: -12px;
+}
+
+.upload-submit {
+    color: white;
+    background: #0063dc;
+    padding: 5px 9px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.upload-submit:hover {
+    background: #0054bd;
+}
+
+#img-error {
+    color: white;
+}
+
+#tag-error {
+    color: white;
 }
