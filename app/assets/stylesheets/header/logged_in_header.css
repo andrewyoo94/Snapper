@@ -16,4 +16,5 @@
     height: 45px;
     justify-content: space-between;
     padding: 0 147px;
+    z-index: 1;
 }

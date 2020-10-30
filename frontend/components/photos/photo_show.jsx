@@ -70,7 +70,7 @@ class PhotoShow extends React.Component {
         return (
             <div className="photo-show-main">
                 <div className="photo-show-container">
-                    <img src={photoUrl} />
+                    <img className="photo-show-img" src={photoUrl} />
                 </div>
 
                 <div className="photo-show-info">
