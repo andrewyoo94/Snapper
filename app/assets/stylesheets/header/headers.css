@@ -16,14 +16,15 @@
     border: solid white 1px;
     border-radius: 3px;
     background: white;
-    padding: 2px;
-    margin-left: 10px;
-    font-size: 18px;
+    padding: 3px;
+    font-size: 15px;
+    font-weight: bold;
     letter-spacing: -.5px;
 }
 
+
 .upload-img {
-    padding-right: 10px;
+    padding: 10px;
     width: 40px;
     height: auto;
 }  
