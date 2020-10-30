@@ -11,10 +11,9 @@
 .\/photos {
     position: relative;
     display: flex;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(21,21,23,.95);
     align-items: center;
-    height: 59px;
+    height: 45px;
     justify-content: space-between;
-    padding: 0 24px;
-    margin: 0px; 
+    padding: 0 147px;
 }
