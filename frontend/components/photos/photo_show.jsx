@@ -9,7 +9,8 @@ class PhotoShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tagShow: []
+            tagShow: [],
+            photographer: ""
         }
     }
     
@@ -30,10 +31,9 @@ class PhotoShow extends React.Component {
     }
 
     render() { 
-        let tagContainer;
-        let photographer_id = this.props.photo ? this.props.photo.photographer_id : "";
+        let tagCreateContainer;
+        const photographer_id = this.props.photo ? this.props.photo.photographer_id : "";
 
-        // create ternary
         let result = [];
 
         this.state.tagShow.map(tag => {
@@ -45,13 +45,13 @@ class PhotoShow extends React.Component {
         });
 
         if (this.props.currentUserId === photographer_id) {
-            tagContainer = (
+            tagCreateContainer = (
                 <div>
                     <TagCreateContainer />
                 </div>
             )
         } else {
-            tagContainer = "";
+            tagCreateContainer = "";
         };
 
         let commentCreateContainer;
@@ -65,7 +65,10 @@ class PhotoShow extends React.Component {
             commentCreateContainer = "";
         };
 
-        let photoUrl = this.props.photo ? this.props.photo.photoUrl : ""; 
+        const photoUrl = this.props.photo ? this.props.photo.photoUrl : ""; 
+        const photographer = this.props.photo ? this.props.photo.user.username : "";
+        const title = this.props.photo ? this.props.photo.title : "";
+        const description = this.props.photo ? this.props.photo.description : "";
         
         return (
             <div className="photo-show-main">
@@ -74,16 +77,25 @@ class PhotoShow extends React.Component {
                 </div>
 
                 <div className="photo-show-info">
-                    <div className="tag-show">
-                        <h3>Tags</h3>
-                        {result.map((tag) => {
-                            return (
-                                <div>{tag.name}</div>
-                            )
-                        })}
+                    <div className="photo-show-info-top">
+                        <div>
+                            <h1 className="photo-show-photographer">{photographer}</h1>
+                            <h1 className="photo-show-title">{title}</h1>
+
+                            <p className="photo-show-description">{description}</p>
+                        </div>
+
+                        <div className="tag-show">
+                            <h3>Tags</h3>
+                            {result.map((tag) => {
+                                return (
+                                    <div className="tag-group">{tag.name}</div>
+                                )
+                            })}
+                        </div>
                     </div>
 
-                    {tagContainer}
+                    {tagCreateContainer}
                     <CommentIndexContainer />
                     {commentCreateContainer}
                 </div>

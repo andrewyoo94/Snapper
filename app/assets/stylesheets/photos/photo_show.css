@@ -15,6 +15,33 @@
     padding-top: 6%;
     padding-bottom: 3%;
     margin-top: -45px;
-    max-height: 400px;
-    max-width: 40%; 
+    max-height: 420px;
+    max-width: 45%; 
+}
+
+.photo-show-info {
+    margin-left: 13%;
+    margin-right: 13%;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+
+.photo-show-info-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo-show-photographer {
+    color: #212124;
+    font-size: 18px;
+}
+
+.photo-show-title {
+    color: #212124;
+    font-size: 16px;
+}
+
+.photo-show-description {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
 }

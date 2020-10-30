@@ -1,20 +1,10 @@
 .tag-show {
-  /* border: 2px solid rgb(207, 214, 217);
-  border-radius: 5px;
-  margin: 3px;
-  color: rgb(33, 33, 36);
-  font-size: 16px;
-  font-weight: 400;
-  padding: 3px 8px; */
-  float: right;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  float: left;
+  width: 225px;
 }
 
-.tag-name {
-  /* border: 2px solid rgb(207, 214, 217);
-  border-radius: 5px;
-  margin: 3px;
-  color: rgb(33, 33, 36);
-  font-size: 16px;
-  font-weight: 400;
-  padding: 3px 8px; */
+.tag-container {
+  display: flex;
+  float: left;
 }
