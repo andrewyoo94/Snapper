@@ -2,9 +2,12 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     display: flex;
-    height: 64px;
-    font-size: 13px;
+    font-size: 14px;
     align-items: center;
+}
+
+.header-name {
+    margin-top: 23px;
 }
 
 .header-button {
@@ -13,8 +16,10 @@
     border: solid white 1px;
     border-radius: 3px;
     background: white;
-    /* padding: 8px; */
+    padding: 2px;
     margin-left: 10px;
+    font-size: 18px;
+    letter-spacing: -.5px;
 }
 
 .upload-img {
