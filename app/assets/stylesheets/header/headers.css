@@ -3,6 +3,8 @@
     color: white;
     display: flex;
     height: 64px;
+    font-size: 13px;
+    align-items: center;
 }
 
 .header-button {
@@ -11,15 +13,14 @@
     border: solid white 1px;
     border-radius: 3px;
     background: white;
-    padding: 8px;
+    /* padding: 8px; */
     margin-left: 10px;
 }
 
 .upload-img {
-    margin-top: 25%;
     padding-right: 10px;
     width: 40px;
-    height: auto;;
+    height: auto;
 }  
 
 .\/explore {
