@@ -34,7 +34,8 @@
 }
 
 .comment-textarea:focus {
-    border: #008ddf;
-    /* border-color: #008ddf; */
+    border-radius: 3px;
+    /* border: #008ddf; */
+    border-color: #008ddf;
     /* box-shadow: inset 0 0 0 1px #008ddf; */
 }

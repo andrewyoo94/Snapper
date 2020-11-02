@@ -86,7 +86,12 @@ class PhotoShow extends React.Component {
                         </div>
 
                         <div className="tag-show">
-                            <h3 className="tag-header">Tags</h3>
+                            <div>
+                                <h3 className="tag-header">Tags</h3>
+
+                                {tagCreateContainer}
+                            </div>
+
                             <div className="tag-list">
                                 {result.map((tag) => {
                                     return (
@@ -97,7 +102,6 @@ class PhotoShow extends React.Component {
                         </div>
                     </div>
 
-                    {tagCreateContainer}
                     <CommentIndexContainer />
                     {commentCreateContainer}
                 </div>

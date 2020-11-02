@@ -1,0 +1,33 @@
+.tag-form {
+    width: 65%;
+    margin-top: -10%;
+}
+
+.tag-button {
+    float: right;
+    margin-top: -4%;
+    margin-bottom: 5px;
+    margin-right: -47px;
+    border: none;
+    background: white;
+    color: #006dac;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.tag-button:focus {
+    outline: none;
+}
+
+.tag-button:hover {
+    text-decoration: underline;
+}
+
+.tag-text {
+    margin-left: 2px;
+    margin-bottom: 5px;
+    padding: 6px 10px;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-size: 13px;
+}
