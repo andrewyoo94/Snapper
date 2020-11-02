@@ -34,7 +34,7 @@ class CommentCreate extends React.Component {
                     cols="33" rows="4"
                     value={this.state.body} 
                     onChange={this.handleUpdate('body')}
-                    placeholder="Add a comment here..." >
+                    placeholder="Add a comment" >
                 </textarea>
 
                 <button className="comment-form-submit"
