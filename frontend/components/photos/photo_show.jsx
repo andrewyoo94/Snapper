@@ -78,7 +78,7 @@ class PhotoShow extends React.Component {
 
                 <div className="photo-show-info">
                     <div className="photo-show-info-top">
-                        <div>
+                        <div className="photo-show-info-container">
                             <h1 className="photo-show-photographer">{photographer}</h1>
                             <h1 className="photo-show-title">{title}</h1>
 
@@ -86,7 +86,7 @@ class PhotoShow extends React.Component {
                         </div>
 
                         <div className="tag-show">
-                            <h3>Tags</h3>
+                            <h3 className="tag-header">Tags</h3>
                             <div className="tag-list">
                                 {result.map((tag) => {
                                     return (

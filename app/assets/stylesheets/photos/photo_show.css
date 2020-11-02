@@ -26,6 +26,12 @@
     padding-bottom: 5%;
 }
 
+.photo-show-info-container {
+    width: 45%;
+    border-bottom: 1px solid #cfd6d9;
+    margin-bottom: 15px;
+}
+
 .photo-show-info-top {
     display: flex;
     justify-content: space-between;
