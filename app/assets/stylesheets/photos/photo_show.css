@@ -23,6 +23,7 @@
     margin-left: 13%;
     margin-right: 13%;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    padding-bottom: 5%;
 }
 
 .photo-show-info-top {
@@ -37,11 +38,11 @@
 
 .photo-show-title {
     color: #212124;
-    font-size: 16px;
+    font-size: 15.5px;    
 }
 
 .photo-show-description {
-    font-size: 14px;
+    font-size: 13.5px;
     line-height: 18px;
     font-weight: 400;
 }

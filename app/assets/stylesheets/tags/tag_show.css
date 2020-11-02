@@ -4,7 +4,26 @@
   width: 225px;
 }
 
+.tag-list {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+}
+
 .tag-container {
   display: flex;
   float: left;
+}
+
+.tag-item {
+  padding: 0 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #212124;
+  border-radius: 5px;
+  background-color: #cfd6d9;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  max-width: 96%;
+  margin: 2px;
+  font-size: 15px;
 }
