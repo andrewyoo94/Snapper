@@ -1,5 +1,20 @@
 .comments-section {
+    list-style-type: none;
 }
 
-.comment-form {
+.comment {
+    margin-bottom: 15px;
+}
+
+.comment-author {
+    color: #006dac;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-weight: 600;
+}
+
+.comment-body {
+    font-weight: 400;
+    font-size: 14px;
 }
