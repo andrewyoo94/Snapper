@@ -18,3 +18,37 @@
     padding: 0 147px;
     z-index: 1;
 }
+
+.\/upload {
+    position: relative;
+    display: flex;
+    background-color: #f8f8f8;
+    align-items: center;
+    height: 45px;
+    justify-content: space-between;
+    padding: 0 15px;
+    z-index: 1;
+}
+
+.\/upload .logo{
+    color: black;
+}
+
+.\/upload .header-name{
+    display: none;
+}
+
+.\/upload .header-upload{
+    display: none;
+}
+
+.\/upload .header-button{
+    text-decoration: none;
+    color: black;
+    border: none;
+    padding: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -.5px;
+    background-color: #f8f8f8;
+}

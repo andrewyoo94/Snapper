@@ -5,7 +5,7 @@
 
 .tag-button {
     float: right;
-    margin-top: -4%;
+    margin-top: -3%;
     margin-bottom: 5px;
     margin-right: -47px;
     border: none;
@@ -29,5 +29,5 @@
     margin-bottom: 5px;
     padding: 6px 10px;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-    font-size: 13px;
+    font-size: 12px;
 }

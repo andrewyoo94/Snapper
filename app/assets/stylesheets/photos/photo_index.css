@@ -1,7 +1,6 @@
 .photos-main {
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin: 24px;
+    margin-left: 147px;
+    margin-right: 147px;
 }
 
 .photos-index {
@@ -33,9 +32,9 @@
 }
 
 .photos-explore {
-    margin-top: 21px;
-    margin-bottom: -2px;
-    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20.5px;
     line-height: 30px;
     font-weight: 100 !important;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
