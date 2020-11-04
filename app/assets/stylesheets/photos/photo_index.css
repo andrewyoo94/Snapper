@@ -24,10 +24,17 @@
     margin-bottom: 15px;
 } */
 
-.photo-img {
+/* .photo-img {
     float: right;
     column-count: 7;
     max-height: 25vh;
+    margin: 2px;
+} */
+
+.photo-img {
+    float: right;
+    column-count: 7;
+    max-height: 40vh;
     margin: 2px;
 }
 
