@@ -75,7 +75,10 @@ class PhotoShow extends React.Component {
             <div className="photo-show-main">
                 <div className="photo-show-container">
 
-                    <Link to="/explore">Back To Explore</Link>
+                    <Link to="/explore">
+                        <img className="upload-img" src={window.images.backArrow} />
+                        Back To Explore
+                    </Link>
 
                     <img className="photo-show-img" src={photoUrl} />
                 </div>
