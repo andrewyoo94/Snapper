@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import CommentCreateContainer from '../comments/comment_create_container';
 import CommentIndexContainer from '../comments/comment_index_container';
 import TagShowContainer from '../tags/tag_show_container';
@@ -73,6 +74,9 @@ class PhotoShow extends React.Component {
         return (
             <div className="photo-show-main">
                 <div className="photo-show-container">
+
+                    <Link to="/explore">Back To Explore</Link>
+
                     <img className="photo-show-img" src={photoUrl} />
                 </div>
 
