@@ -77,7 +77,7 @@ class PhotoShow extends React.Component {
                 <div>
                     <Link className="photo-show-back" to="/explore">
                         <img className="back-logo" src={window.images.backArrow} />
-                        Back To Explore
+                        Back To explore
                     </Link>
                 </div>
 

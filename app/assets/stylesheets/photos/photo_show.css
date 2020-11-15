@@ -14,9 +14,9 @@
     margin-right: auto;
     padding-top: 6.5%;
     padding-bottom: 3%;
-    margin-top: -64px;
-    max-height: 420px;
-    max-width: 45%; 
+    margin-top: -78px;
+    max-height: 460px;
+    max-width: 58%; 
 }
 
 .photo-show-info {
@@ -56,11 +56,13 @@
 .photo-show-back {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
-    padding: 36px;
+    padding: 20px;
 }
 
 .back-logo {
-    height: 15px;
+    height: 12px;
+    padding-top: 15px;
+    padding-right: 8px;
 }
