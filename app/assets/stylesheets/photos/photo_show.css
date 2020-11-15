@@ -8,13 +8,13 @@
     background: #212124;
 }
 
-.photo-show-main img{
+.photo-show-img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 6%;
+    padding-top: 6.5%;
     padding-bottom: 3%;
-    margin-top: -45px;
+    margin-top: -64px;
     max-height: 420px;
     max-width: 45%; 
 }
@@ -51,4 +51,16 @@
     font-size: 13.5px;
     line-height: 18px;
     font-weight: 400;
+}
+
+.photo-show-back {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 36px;
+}
+
+.back-logo {
+    height: 15px;
 }
