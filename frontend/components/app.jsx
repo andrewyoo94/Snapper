@@ -33,11 +33,11 @@ const App = () => (
         </Switch>
 
         <footer className="footer-master">
-            <a href="https://github.com/andrewyoo94">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewyoo94">
                 Github
             </a>
 
-            <a href="https://www.linkedin.com/in/andrewyoo94/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
                 LinkedIn
             </a>
         </footer>
