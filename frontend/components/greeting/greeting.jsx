@@ -25,6 +25,16 @@ const Greeting = ({ currentUser, logout, url }) => {
     const sessionLinks = () => (
             <header className={url}>
                 <Link className="logo" to="/explore">snapper</Link>
+
+                <div className="online-presence-header">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewyoo94">
+                        <img className="github-logo" src={window.images.github} />
+                    </a>
+
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
+                        <img className="linkedin-logo" src={window.images.linkedin} />
+                    </a>
+                </div>
                 
                 <nav className="login-signup">
                     <Link className="login" to="/login">Log In</Link>
@@ -42,6 +52,16 @@ const Greeting = ({ currentUser, logout, url }) => {
 
         <header className={url}>
             <Link className="logo" to="/explore">snapper</Link>
+
+            <div className="online-presence-header">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewyoo94">
+                    <img className="github-logo" src={window.images.github} />
+                </a>
+
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
+                    <img className="linkedin-logo" src={window.images.linkedin} />
+                </a>
+            </div>
             
             <hgroup className="header-group">
                 <h2 className="header-name">Hello, {currentUser.username}!</h2>
