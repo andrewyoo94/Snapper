@@ -18,6 +18,8 @@ const Greeting = ({ currentUser, logout, url }) => {
     //     </nav>
     // );
 
+    let icon = "";
+
     if (url.includes("photos")) {
         url = "/photos"
     }
@@ -48,6 +50,12 @@ const Greeting = ({ currentUser, logout, url }) => {
         logout()
     }
 
+    if (url.includes("upload")) {
+        icon = window.images.githubDark
+    } else {
+        icon = window.images.github
+    }
+
     const personalGreeting = () => (
 
         <header className={url}>
@@ -55,7 +63,7 @@ const Greeting = ({ currentUser, logout, url }) => {
 
             <div className="online-presence-header">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewyoo94">
-                    <img className="github-logo" src={window.images.github} />
+                    <img className="github-logo" src={icon} />
                 </a>
 
                 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
