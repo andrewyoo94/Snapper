@@ -144,35 +144,35 @@ photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffma
 photo8.save!
 
 
-# user9 = User.create!({
-#     username: "Ted Mosby",
-#     password: "password"
-# })
+user9 = User.create!({
+    username: "Ted Mosby",
+    password: "password"
+})
 
-# photo9 = Photo.new({
-#     title: "",
-#     description: "",
-#     photographer_id: user9.id,
-#     user: user9
-# })
+photo9 = Photo.new({
+    title: "City Booth",
+    description: "Downtown aesthetics",
+    photographer_id: user9.id,
+    user: user9
+})
 
-# photo9.image.attach(io: open(''), filename: "")
-# photo9.save!
+photo9.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/alec-favale-JPZ27K13Jd8-unsplash.jpg'), filename: "alec-favale-JPZ27K13Jd8-unsplash.jpg")
+photo9.save!
 
 
-# user10 = User.create!({
-#     username: "Homer Simpson",
-#     password: "password"
-# })
+user10 = User.create!({
+    username: "Homer Simpson",
+    password: "password"
+})
 
-# photo10 = Photo.new({
-#     title: "",
-#     description: "",
-#     photographer_id: user10.id,
-#     user: user10
-# })
-# photo10.image.attach(io: open(''), filename: "")
-# photo10.save!
+photo10 = Photo.new({
+    title: "We Like You Too :)",
+    description: "Share the love!",
+    photographer_id: user10.id,
+    user: user10
+})
+photo10.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/weLikeU2.jpeg'), filename: "weLikeU2.jpeg")
+photo10.save!
 
 
 # user11 = User.create!({
@@ -410,7 +410,7 @@ p9c2 = Comment.create!({
 })
 
 p9c3 = Comment.create!({
-    user_id: user11.id,
+    user_id: user1.id,
     photo_id: photo9.id,
     body: "Lovely photo."
 })
@@ -418,42 +418,42 @@ p9c3 = Comment.create!({
 # ----------------------------------------------------------------------------------------
 
 p10c1 = Comment.create!({
-    user_id: user12.id,
+    user_id: user9.id,
     photo_id: photo10.id,
     body: "Love the colors!"
 })
 
 p10c2 = Comment.create!({
-    user_id: user13.id,
+    user_id: user3.id,
     photo_id: photo10.id,
     body: "Simple but mesmerizing"
 })
 
 p10c3 = Comment.create!({
-    user_id: user14.id,
+    user_id: user4.id,
     photo_id: photo10.id,
     body: "Lovely photo."
 })
 
 # ----------------------------------------------------------------------------------------
 
-p10c1 = Comment.create!({
-    user_id: user14.id,
-    photo_id: photo10.id,
-    body: "Love the colors!"
-})
+# p11c1 = Comment.create!({
+#     user_id: user14.id,
+#     photo_id: photo11.id,
+#     body: "Love the colors!"
+# })
 
-p10c2 = Comment.create!({
-    user_id: user13.id,
-    photo_id: photo10.id,
-    body: "Simple but mesmerizing"
-})
+# p11c2 = Comment.create!({
+#     user_id: user13.id,
+#     photo_id: photo11.id,
+#     body: "Simple but mesmerizing"
+# })
 
-p10c3 = Comment.create!({
-    user_id: user12.id,
-    photo_id: photo10.id,
-    body: "Lovely photo."
-})
+# p11c3 = Comment.create!({
+#     user_id: user12.id,
+#     photo_id: photo11.id,
+#     body: "Lovely photo."
+# })
 
 # ----------------------------------------------------------------------------------------
 
@@ -577,4 +577,34 @@ t2p8 = Tag.create!({
 t3p8 = Tag.create!({
     photo_id: photo8.id,
     name: "flower"
+})# ----------------------------------------------------------------------------------------
+
+t1p9 = Tag.create!({
+    photo_id: photo9.id,
+    name: "booth"
+})
+
+t2p9 = Tag.create!({
+    photo_id: photo9.id,
+    name: "downtown"
+})
+
+t3p9 = Tag.create!({
+    photo_id: photo9.id,
+    name: "taxi"
+})# ----------------------------------------------------------------------------------------
+
+t1p10 = Tag.create!({
+    photo_id: photo10.id,
+    name: "like"
+})
+
+t2p10 = Tag.create!({
+    photo_id: photo10.id,
+    name: "love"
+})
+
+t3p10 = Tag.create!({
+    photo_id: photo10.id,
+    name: "happy"
 })
