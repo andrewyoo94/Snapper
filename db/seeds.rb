@@ -144,94 +144,94 @@ photo8.image.attach(io: open('https://snapper-dev.s3.amazonaws.com/parker-coffma
 photo8.save!
 
 
-user9 = User.create!({
-    username: "Ted Mosby",
-    password: "password"
-})
+# user9 = User.create!({
+#     username: "Ted Mosby",
+#     password: "password"
+# })
 
-photo9 = Photo.new({
-    title: "",
-    description: "",
-    photographer_id: user9.id,
-    user: user9
-})
+# photo9 = Photo.new({
+#     title: "",
+#     description: "",
+#     photographer_id: user9.id,
+#     user: user9
+# })
 
-photo9.image.attach(io: open(''), filename: "")
-photo9.save!
-
-
-user10 = User.create!({
-    username: "Homer Simpson",
-    password: "password"
-})
-
-photo10 = Photo.new({
-    title: "",
-    description: "",
-    photographer_id: user10.id,
-    user: user10
-})
-photo10.image.attach(io: open(''), filename: "")
-photo10.save!
+# photo9.image.attach(io: open(''), filename: "")
+# photo9.save!
 
 
-user11 = User.create!({
-    username: "Walter White",
-    password: "password"
-})
+# user10 = User.create!({
+#     username: "Homer Simpson",
+#     password: "password"
+# })
 
-photo11 = Photo.new({
-    title: "",
-    description: "",
-    photographer_id: user11.id,
-    user: user11
-})
-photo11.image.attach(io: open(''), filename: "")
-photo11.save!
-
-user12 = User.create!({
-    username: "Meredith Grey",
-    password: "password"
-})
-
-photo12 = Photo.new({
-    title: "",
-    description: "",
-    photographer_id: user12.id,
-    user: user12
-})
-photo12.image.attach(io: open(''), filename: "")
-photo12.save!
+# photo10 = Photo.new({
+#     title: "",
+#     description: "",
+#     photographer_id: user10.id,
+#     user: user10
+# })
+# photo10.image.attach(io: open(''), filename: "")
+# photo10.save!
 
 
-user13 = User.create!({
-    username: "Miles Morales",
-    password: "password"
-})
+# user11 = User.create!({
+#     username: "Walter White",
+#     password: "password"
+# })
 
-photo13 = Photo.new({
-    title: "",
-    description: "",
-    photographer_id: user13.id,
-    user: user13
-})
-photo13.image.attach(io: open(''), filename: "")
-photo13.save!
+# photo11 = Photo.new({
+#     title: "",
+#     description: "",
+#     photographer_id: user11.id,
+#     user: user11
+# })
+# photo11.image.attach(io: open(''), filename: "")
+# photo11.save!
+
+# user12 = User.create!({
+#     username: "Meredith Grey",
+#     password: "password"
+# })
+
+# photo12 = Photo.new({
+#     title: "",
+#     description: "",
+#     photographer_id: user12.id,
+#     user: user12
+# })
+# photo12.image.attach(io: open(''), filename: "")
+# photo12.save!
 
 
-user14 = User.create!({
-    username: "Tony Stark",
-    password: "password"
-})
+# user13 = User.create!({
+#     username: "Miles Morales",
+#     password: "password"
+# })
 
-photo14 = Photo.new({
-    title: "",
-    description: "",
-    photographer_id: user14.id,
-    user: user14
-})
-photo14.image.attach(io: open(''), filename: "")
-photo14.save!
+# photo13 = Photo.new({
+#     title: "",
+#     description: "",
+#     photographer_id: user13.id,
+#     user: user13
+# })
+# photo13.image.attach(io: open(''), filename: "")
+# photo13.save!
+
+
+# user14 = User.create!({
+#     username: "Tony Stark",
+#     password: "password"
+# })
+
+# photo14 = Photo.new({
+#     title: "",
+#     description: "",
+#     photographer_id: user14.id,
+#     user: user14
+# })
+# photo14.image.attach(io: open(''), filename: "")
+# photo14.save!
 
 
 # Comments/Tags Seeding---------------------------------------------------------------------------------------------------------
