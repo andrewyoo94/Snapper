@@ -1,24 +1,8 @@
-# README
+# Snapper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+## https://snapper-app.herokuapp.com/#/
 
-* System dependencies
+Snapper is a clone of flickr, a social image hosting website. 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
