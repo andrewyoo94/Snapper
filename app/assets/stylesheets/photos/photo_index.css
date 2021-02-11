@@ -1,6 +1,7 @@
 .photos-main {
     margin-left: 147px;
     margin-right: 147px;
+    padding-bottom: 80px;
 }
 
 .photos-index {
@@ -9,33 +10,16 @@
 }
 
 .photos-index-item {
-    display: block;
+    flex-grow: 1;
+    position: relative;
+    margin-right: 7px;
+    margin-bottom: 2px;
 }
 
-/* seed wide/small around 15-20 */
-
-/* 
 .photo-img {
-    float: left;
-    margin-top: 8px;
-    margin-left: 15px;
-    height: 25%;
-    width: 25%; 
-    margin-bottom: 15px;
-} */
-
-/* .photo-img {
-    float: right;
-    column-count: 7;
-    max-height: 25vh;
-    margin: 2px;
-} */
-
-.photo-img {
-    float: right;
-    column-count: 7;
-    max-height: 37.7vh;
-    margin: 2px;
+    height: 250px;
+    min-width: 100%;
+    object-fit: cover;
 }
 
 .photos-explore {
