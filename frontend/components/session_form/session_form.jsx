@@ -30,20 +30,29 @@ class SessionForm extends React.Component {
         this.props.processDemo(demoUser);
     }
 
-    renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
-    }
+    // renderErrors() {
+    //     return (
+    //         <ul>
+    //             {this.props.errors.map((error, i) => (
+    //                 <li key={`error-${i}`}>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     );
+    // }
 
     render() {
         const loggedIn = this.props.sessionId ? <Redirect to="/explore" /> : null
+
+        let errorText;
+        if (this.props.errors[0]) {
+            errorText = (<div className="errorText"><p>{this.props.errors[0]}</p></div>);
+        } else {
+            errorText = (<div className="hidden"></div>);
+        }
+
+        // debugger
         
         return (
             <div className="session-container">
@@ -53,8 +62,11 @@ class SessionForm extends React.Component {
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className="form-box">
                         
-                        {this.props.formType} {this.props.formType === "Sign up" ? "for Snapper" : "to Snapper"} 
-                        {this.renderErrors()}
+                        {this.props.formType} {this.props.formType === "Sign up" ? "for Snapper" : "to Snapper"}
+                        <div className="session-form-error">
+                            {errorText}
+                            <h1>error</h1>
+                        </div> 
                         <div className="login-form">
                                 <input className="auth-input" 
                                     type="text"

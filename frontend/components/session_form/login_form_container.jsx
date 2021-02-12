@@ -10,7 +10,6 @@ const mSTP = ({ errors, session }) => {
         formType: 'Log in',
         navLink: <Link to='/signup'>Sign up here.</Link>,
         sessionId: session.id
-        
     };
 };
 
