@@ -18,7 +18,6 @@ const mDTP = dispatch => {
         processForm: (user) => dispatch(login(user)), 
         processDemo: (user) => dispatch(login(user)),
         removeSessionErrors: () => dispatch(removeSessionErrors())
-
     };
 };
 

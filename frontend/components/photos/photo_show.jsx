@@ -11,8 +11,9 @@ class PhotoShow extends React.Component {
         super(props);
         this.state = {
             tagShow: [],
-            photographer: ""
+            photographer: "",
         }
+        this.handleDelete = this.handleDelete.bind(this)
     }
     
     componentDidMount() {
@@ -29,6 +30,13 @@ class PhotoShow extends React.Component {
         if (preProps.tags != this.props.tags) {
             this.setState({tagShow: this.props.tags})
         }
+    }
+
+    handleDelete(e) {
+        debugger
+        e.preventDefault();
+        this.props.deletePhoto(this.props.photoId)
+            .then(() => this.props.history.push("/explore"))
     }
 
     render() { 
@@ -97,6 +105,8 @@ class PhotoShow extends React.Component {
                         </div>
 
                         <div className="tag-show">
+                            <button className="delete-photo" onClick={this.handleDelete}>Delete Photo</button>
+
                             <div>
                                 <h3 className="tag-header">Tags</h3>
 

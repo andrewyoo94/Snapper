@@ -34,32 +34,12 @@ class SessionForm extends React.Component {
         this.props.removeSessionErrors();
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
-
     render() {
         const loggedIn = this.props.sessionId ? <Redirect to="/explore" /> : null
-
-        // let errorText;
-        // if (this.props.errors[0]) {
-        //     errorText = (<div className="errorText"><p>{this.props.errors[0]}</p></div>);
-        // } else {
-        //     errorText = (<div className="hidden"></div>);
-        // }
-
-        // debugger
         
         return (
             <div className="session-container">
+                { loggedIn }
 
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className="form-box">

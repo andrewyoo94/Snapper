@@ -29,6 +29,14 @@ class Api::PhotosController < ApplicationController
         end 
     end 
 
+    def destroy
+        @photo = Photo.find(params[:id])
+
+        if @photo.photographer_id === current_user.id
+            @photo.destroy
+        end
+    end
+
     private
 
     def photo_params

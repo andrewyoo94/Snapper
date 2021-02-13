@@ -21,3 +21,10 @@ export const createPhoto = (photo) => {
         processData: false
     })
 };
+
+export const deletePhoto = (id) => {
+    return $.ajax({
+        method: "DELETE",
+        url: `/api/photos/${id}`
+    })
+}
