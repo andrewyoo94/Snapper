@@ -30,6 +30,10 @@ class SessionForm extends React.Component {
         this.props.processDemo(demoUser);
     }
 
+    componentWillUnmount() {
+        this.props.removeSessionErrors();
+    }
+
     // renderErrors() {
     //     return (
     //         <ul>
@@ -45,27 +49,26 @@ class SessionForm extends React.Component {
     render() {
         const loggedIn = this.props.sessionId ? <Redirect to="/explore" /> : null
 
-        let errorText;
-        if (this.props.errors[0]) {
-            errorText = (<div className="errorText"><p>{this.props.errors[0]}</p></div>);
-        } else {
-            errorText = (<div className="hidden"></div>);
-        }
+        // let errorText;
+        // if (this.props.errors[0]) {
+        //     errorText = (<div className="errorText"><p>{this.props.errors[0]}</p></div>);
+        // } else {
+        //     errorText = (<div className="hidden"></div>);
+        // }
 
         // debugger
         
         return (
             <div className="session-container">
 
-                {loggedIn}
-
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className="form-box">
                         
-                        {this.props.formType} {this.props.formType === "Sign up" ? "for Snapper" : "to Snapper"}
+                        <div className="form-header">
+                            {this.props.formType} {this.props.formType === "Sign up" ? "for Snapper" : "to Snapper"}
+                        </div>
                         <div className="session-form-error">
-                            {errorText}
-                            <h1>error</h1>
+                            {this.props.errors[0]}
                         </div> 
                         <div className="login-form">
                                 <input className="auth-input" 
