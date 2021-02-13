@@ -31,6 +31,8 @@ class Api::PhotosController < ApplicationController
 
     def update
         @photo = Photo.find(params[:id])
+        # debugger
+
         if @photo.update(photo_params)
             render :show
         else
@@ -49,7 +51,7 @@ class Api::PhotosController < ApplicationController
     private
 
     def photo_params
-        params.require(:photo).permit(:title, :description, :image)
+        params.require(:photo).permit(:title, :description)
     end 
     
 end
