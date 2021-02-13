@@ -29,6 +29,15 @@ class Api::PhotosController < ApplicationController
         end 
     end 
 
+    def update
+        @photo = Photo.find(params[:id])
+        if @photo.update(photo_params)
+            render :show
+        else
+            render json: @photo.errors.full_messages, status: 404
+        end
+    end
+
     def destroy
         @photo = Photo.find(params[:id])
 

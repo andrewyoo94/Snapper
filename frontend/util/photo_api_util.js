@@ -22,6 +22,14 @@ export const createPhoto = (photo) => {
     })
 };
 
+export const updatePhoto = (photo) => {
+    return $.ajax({
+        method: "PATCH",
+        url: `/api/photos/${photo.id}`,
+        data: photo
+    })
+};
+
 export const deletePhoto = (id) => {
     return $.ajax({
         method: "DELETE",

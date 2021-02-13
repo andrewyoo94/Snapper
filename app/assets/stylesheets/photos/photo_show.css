@@ -53,6 +53,32 @@
     font-weight: 400;
 }
 
+.photo-show-description-edit {
+    /* font-size: 13.5px;
+    line-height: 18px;
+    font-weight: 400; */
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.edit-photo-button {
+    margin-top: 10px;
+    transition: background-color .15s ease-in-out;
+    min-width: 100px;
+    padding: 5px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: #0091dc;
+    color: #fff;
+    border-color: transparent;
+    border-radius: 3px;
+    margin-right: -21px;
+}
+
 .photo-show-back {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     text-decoration: none;

@@ -12,8 +12,12 @@ class PhotoShow extends React.Component {
         this.state = {
             tagShow: [],
             photographer: "",
+            editable: false
         }
-        this.handleDelete = this.handleDelete.bind(this)
+        this.titleEdit = React.createRef();
+        this.descriptionEdit = React.createRef();
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
     }
     
     componentDidMount() {
@@ -23,13 +27,27 @@ class PhotoShow extends React.Component {
         })
     }
 
-    componentDidUpdate(preProps, preState) {
+    componentDidUpdate(preProps) {
         if (preProps.photoId !== this.props.photoId) {
             this.props.fetchPhoto(this.props.photoId);
         }
         if (preProps.tags != this.props.tags) {
             this.setState({tagShow: this.props.tags})
         }
+    }
+
+    handleEdit(e) {
+        e.preventDefault();
+        if (this.state.editable) {
+            let newTitle = this.titleEdit.current.value;
+            let newDescription = this.descriptionEdit.current.value;
+            
+            console.log('in handleEdit', this.state.editable, newTitle, newDescription);
+        }
+        this.setState({ editable: !this.state.editable })
+
+        this.props.updatePhoto(this.props.photo)
+            .then(() => this.props.history.push("/photos/${photo.id}"))
     }
 
     handleDelete(e) {
@@ -45,13 +63,12 @@ class PhotoShow extends React.Component {
         
         this.state.tagShow.map(tag => {
             if (this.props.photoId == tag.photo_id) {
-                result.push(
-                    tag
-                    )
-                }
-            });
+                result.push(tag)
+            }
+        });
             
         let tagCreateContainer;
+        // let editButton;
         let deleteButton;
         if (this.props.currentUserId === photographer_id) {
             tagCreateContainer = (
@@ -83,6 +100,16 @@ class PhotoShow extends React.Component {
         const photographer = this.props.photo ? this.props.photo.user.username : "";
         const title = this.props.photo ? this.props.photo.title : "";
         const description = this.props.photo ? this.props.photo.description : "";
+
+
+
+        let titleEdit = this.state.editable ? <input className="photo-show-title-edit" type='text' ref={this.titleEdit} defaultValue={title} /> 
+                                                : <h1 className="photo-show-title">{title}</h1>;
+        let descriptionEdit = this.state.editable ? <input className="photo-show-description-edit" type='text' ref={this.descriptionEdit} defaultValue={description} /> 
+                                                : <p className="photo-show-description">{description}</p>;
+
+
+
         
         return (
             <div className="photo-show-main">
@@ -95,18 +122,23 @@ class PhotoShow extends React.Component {
                 </div>
 
                 <div className="photo-show-container">
-
-
                     <img className="photo-show-img" src={photoUrl} />
                 </div>
 
                 <div className="photo-show-info">
                     <div className="photo-show-info-top">
                         <div className="photo-show-info-container">
-                            <h1 className="photo-show-photographer">{photographer}</h1>
-                            <h1 className="photo-show-title">{title}</h1>
 
-                            <p className="photo-show-description">{description}</p>
+
+                            <button className="edit-photo-button" onClick={this.handleEdit}> {this.state.editable ? "Submit" : "Edit"} </button>
+
+                            <h1 className="photo-show-photographer">{photographer}</h1>
+                            {titleEdit}
+                            {descriptionEdit}
+
+
+                            {/* <h1 className="photo-show-title">{title}</h1>
+                            <p className="photo-show-description">{description}</p> */}
                         </div>
 
                         <div className="tag-show">
