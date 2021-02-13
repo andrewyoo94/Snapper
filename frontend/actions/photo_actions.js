@@ -26,11 +26,9 @@ const receivePhotoErrors = errors => {
     })
 }
 
-const removePhoto = (photo) => {
-    debugger
+const removePhoto = () => {
     return ({
-        type: REMOVE_PHOTO,
-        photoId: photo
+        type: REMOVE_PHOTO
     })
 }
 

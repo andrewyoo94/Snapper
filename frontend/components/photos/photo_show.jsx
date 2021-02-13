@@ -33,34 +33,39 @@ class PhotoShow extends React.Component {
     }
 
     handleDelete(e) {
-        debugger
         e.preventDefault();
         this.props.deletePhoto(this.props.photoId)
             .then(() => this.props.history.push("/explore"))
     }
 
     render() { 
-        let tagCreateContainer;
         const photographer_id = this.props.photo ? this.props.photo.photographer_id : "";
-
+        
         let result = [];
-
+        
         this.state.tagShow.map(tag => {
             if (this.props.photoId == tag.photo_id) {
                 result.push(
                     tag
-                )
-            }
-        });
-
+                    )
+                }
+            });
+            
+        let tagCreateContainer;
+        let deleteButton;
         if (this.props.currentUserId === photographer_id) {
             tagCreateContainer = (
                 <div>
                     <TagCreateContainer />
                 </div>
             )
+
+            deleteButton = (
+                <button className="delete-photo" onClick={this.handleDelete}>Delete Photo</button>
+            )
         } else {
             tagCreateContainer = "";
+            deleteButton = "";
         };
 
         let commentCreateContainer;
@@ -105,7 +110,7 @@ class PhotoShow extends React.Component {
                         </div>
 
                         <div className="tag-show">
-                            <button className="delete-photo" onClick={this.handleDelete}>Delete Photo</button>
+                            {deleteButton}
 
                             <div>
                                 <h3 className="tag-header">Tags</h3>

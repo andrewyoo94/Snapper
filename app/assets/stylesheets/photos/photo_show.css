@@ -66,3 +66,18 @@
     padding-top: 15px;
     padding-right: 8px;
 }
+
+.delete-photo{ 
+    margin-top: 10px;
+    transition: background-color .15s ease-in-out;
+    min-width: 100px;
+    padding: 5px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: #0091dc;
+    color: #fff;
+    border-color: transparent;
+    border-radius: 3px;
+    margin-right: -21px;
+}
