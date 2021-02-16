@@ -137,7 +137,7 @@ class PhotoShow extends React.Component {
 
         let titleEdit = this.state.editable ? <input className="photo-show-title-edit" type='text' ref={this.titleEdit} defaultValue={title} /> 
                                                 : <h1 className="photo-show-title">{title}</h1>;
-        let descriptionEdit = this.state.editable ? <input className="photo-show-description-edit" type='text' ref={this.descriptionEdit} defaultValue={description} /> 
+        let descriptionEdit = this.state.editable ? <textarea className="photo-show-description-edit" type='text' ref={this.descriptionEdit} defaultValue={description} /> 
                                                 : <p className="photo-show-description">{description}</p>;
 
 
