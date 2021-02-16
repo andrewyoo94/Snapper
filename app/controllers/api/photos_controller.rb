@@ -30,10 +30,10 @@ class Api::PhotosController < ApplicationController
     end 
 
     def update
-        @photo = Photo.find(params[:id])
-        # debugger
-
+        @photo = Photo.find(photo_params[:id])
+        
         if @photo.update(photo_params)
+            # debugger
             render :show
         else
             render json: @photo.errors.full_messages, status: 404

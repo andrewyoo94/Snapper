@@ -18,6 +18,7 @@ class PhotoShow extends React.Component {
         this.descriptionEdit = React.createRef();
         this.handleDelete = this.handleDelete.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
+        this.toggleEditable = this.toggleEditable.bind(this);
     }
     
     componentDidMount() {
@@ -36,6 +37,10 @@ class PhotoShow extends React.Component {
         }
     }
 
+    toggleEditable() {
+        this.setState({ editable: !this.state.editable });
+    }
+
     handleEdit(e) {
         e.preventDefault();
 
@@ -51,17 +56,21 @@ class PhotoShow extends React.Component {
         // let editedPhoto = this.props.photo;
         // let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription, photographer_id: this.props.photo.photographer_id, photoUrl: this.props.photo.photoUrl }
 
-        // let editedPhoto = { photo: { id: this.props.photoId, title: newTitle, description: newDescription} };
-        let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription };
+        let editedPhoto = { 
+            photo: { id: this.props.photoId, title: newTitle, description: newDescription},
+            id: this.props.photoId
+        };
+        // let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription };
 
-        const photo = Object.assign({}, editedPhoto);
+        // const photo = Object.assign({}, editedPhoto);
 
         // let editedPhoto = { title: newTitle, description: newDescription }
 
-        debugger
+        // debugger
 
-        this.props.updatePhoto(photo)
-            .then(() => this.props.history.push("/photos/${photo.id}"))
+        this.props.updatePhoto(editedPhoto)
+            // .then(() => this.props.history.push(`/photos/${editedPhoto.id}`))
+            .then(() => this.props.fetchPhoto(this.props.photoId))
     }
 
     handleDelete(e) {
@@ -83,6 +92,7 @@ class PhotoShow extends React.Component {
             
         let tagCreateContainer;
         let editButton;
+        let submitButton;
         let deleteButton;
         if (this.props.currentUserId === photographer_id) {
             tagCreateContainer = (
@@ -92,7 +102,11 @@ class PhotoShow extends React.Component {
             )
 
             editButton = (
-                <button className="edit-photo-button" onClick={this.handleEdit}> {this.state.editable ? "Submit" : "Edit"} </button>
+                <button className="edit-photo-button" onClick={this.toggleEditable}>Edit</button>
+            )
+
+            submitButton = (
+                <button className="edit-photo-button" onClick={this.handleEdit}>Submit</button>
             )
 
             deleteButton = (
@@ -147,7 +161,7 @@ class PhotoShow extends React.Component {
                     <div className="photo-show-info-top">
                         <div className="photo-show-info-container">
 
-                            {editButton}
+                            {this.state.editable === false ? editButton : submitButton}
 
                             <h1 className="photo-show-photographer">{photographer}</h1>
                             {titleEdit}
