@@ -3,7 +3,7 @@ class Api::PhotosController < ApplicationController
     # protect_from_forgery with: :null_session
     skip_before_action :verify_authenticity_token
     
-    before_action :ensure_logged_in, only: [:create]
+    before_action :ensure_logged_in, only: [:create, :update, :destroy]
 
     def index
         @photos = Photo.all
@@ -51,7 +51,7 @@ class Api::PhotosController < ApplicationController
     private
 
     def photo_params
-        params.require(:photo).permit(:title, :description)
+        params.require(:photo).permit(:title, :description, :id)
     end 
     
 end

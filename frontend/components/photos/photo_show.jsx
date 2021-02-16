@@ -51,13 +51,16 @@ class PhotoShow extends React.Component {
         // let editedPhoto = this.props.photo;
         // let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription, photographer_id: this.props.photo.photographer_id, photoUrl: this.props.photo.photoUrl }
 
-        let editedPhoto = { photo: { id: this.props.photoId, title: newTitle, description: newDescription} };
-        // const photo = Object.assign({}, editedPhoto);
+        // let editedPhoto = { photo: { id: this.props.photoId, title: newTitle, description: newDescription} };
+        let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription };
+
+        const photo = Object.assign({}, editedPhoto);
 
         // let editedPhoto = { title: newTitle, description: newDescription }
 
+        debugger
 
-        this.props.updatePhoto(editedPhoto)
+        this.props.updatePhoto(photo)
             .then(() => this.props.history.push("/photos/${photo.id}"))
     }
 
@@ -79,13 +82,17 @@ class PhotoShow extends React.Component {
         });
             
         let tagCreateContainer;
-        // let editButton;
+        let editButton;
         let deleteButton;
         if (this.props.currentUserId === photographer_id) {
             tagCreateContainer = (
                 <div>
                     <TagCreateContainer />
                 </div>
+            )
+
+            editButton = (
+                <button className="edit-photo-button" onClick={this.handleEdit}> {this.state.editable ? "Submit" : "Edit"} </button>
             )
 
             deleteButton = (
@@ -140,8 +147,7 @@ class PhotoShow extends React.Component {
                     <div className="photo-show-info-top">
                         <div className="photo-show-info-container">
 
-
-                            <button className="edit-photo-button" onClick={this.handleEdit}> {this.state.editable ? "Submit" : "Edit"} </button>
+                            {editButton}
 
                             <h1 className="photo-show-photographer">{photographer}</h1>
                             {titleEdit}
