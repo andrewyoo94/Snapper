@@ -28,7 +28,7 @@ const Greeting = ({ currentUser, logout, url }) => {
             <header className={url}>
                 <Link className="logo" to="/explore">snapper</Link>
 
-                <div className="online-presence-header">
+                {/* <div className="online-presence-header">
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewyoo94">
                         <img className="github-logo" src={window.images.github} />
                     </a>
@@ -36,7 +36,11 @@ const Greeting = ({ currentUser, logout, url }) => {
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
                         <img className="linkedin-logo" src={window.images.linkedin} />
                     </a>
-                </div>
+
+                    <a target="_blank" rel="noopener noreferrer" href="https://angel.co/u/andrew-yoo">
+                        <img className="linkedin-logo" src={window.images.angellist} />
+                    </a>
+                </div> */}
                 
                 <nav className="login-signup">
                     <Link className="login" to="/login">Log In</Link>
