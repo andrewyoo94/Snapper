@@ -40,6 +40,19 @@ const App = () => (
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
                 LinkedIn
             </a>
+
+            <a target="_blank" rel="noopener noreferrer" href="https://angel.co/u/andrew-yoo">
+                AngelList
+            </a>
+
+            <a target="_blank" rel="noopener noreferrer" href="https://andrewyoo94.github.io/">
+                Portfolio
+            </a>
+
+
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewyoo94/Snapper">
+                Repo
+            </a>
         </footer>
 
     </div>
