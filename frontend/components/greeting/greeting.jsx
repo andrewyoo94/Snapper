@@ -41,8 +41,8 @@ const Greeting = ({ currentUser, logout, url }) => {
                         <img className="linkedin-logo" src={window.images.angellist} />
                     </a>
                 </div>
-                 
-                <nav className="login-signup">
+                
+                <nav className="login-signup"> 
                     <Link className="login" to="/login">Log In</Link>
 
                     <Link className="signup" to="/signup">Sign Up</Link>
