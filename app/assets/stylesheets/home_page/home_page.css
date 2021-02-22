@@ -45,18 +45,22 @@
 }
 
 .online-presence-header {
-    text-align: center;
-    margin-left: 110px;
+    padding-left: 100px;
+    width: 194px;
+    height: 100%;
 }
 
 .linkedin-logo {
-    max-width: 6%;
-    height: auto;
+    padding-right: 5px;
+    max-height: 85%;
+}
+
+.angellist-logo {
+    max-height: 92%;
 }
 
 .github-logo {
-    max-width: 5.5%;
-    height: auto;
+    max-height: 85%;
     padding-right: 25px;
     padding-top: 5px;
 }

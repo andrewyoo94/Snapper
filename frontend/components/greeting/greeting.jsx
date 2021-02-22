@@ -38,7 +38,7 @@ const Greeting = ({ currentUser, logout, url }) => {
                     </a>
 
                     <a target="_blank" rel="noopener noreferrer" href="https://angel.co/u/andrew-yoo">
-                        <img className="linkedin-logo" src={window.images.angellist} />
+                        <img className="angellist-logo" src={window.images.angellist} />
                     </a>
                 </div>
                 
@@ -73,9 +73,26 @@ const Greeting = ({ currentUser, logout, url }) => {
                 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
                     <img className="linkedin-logo" src={window.images.linkedin} />
                 </a>
+
+                <a target="_blank" rel="noopener noreferrer" href="https://angel.co/u/andrew-yoo">
+                    <img className="angellist-logo" src={window.images.angellist} />
+                </a>
             </div>
             
             <hgroup className="header-group">
+                {/* <div className="online-presence-header"> */}
+                    {/* <a target="_blank" rel="noopener noreferrer" href="https://github.com/andrewyoo94">
+                        <img className="github-logo" src={icon} />
+                    </a>
+
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrewyoo94/">
+                        <img className="linkedin-logo" src={window.images.linkedin} />
+                    </a>
+
+                    <a target="_blank" rel="noopener noreferrer" href="https://angel.co/u/andrew-yoo">
+                        <img className="angellist-logo" src={window.images.angellist} />
+                    </a> */}
+                {/* </div> */}
                 <h2 className="header-name">Hello, {currentUser.username}!</h2>
 
                 <Link className="header-upload" to="/upload">
