@@ -66,7 +66,6 @@ class PhotoShow extends React.Component {
 
         // let editedPhoto = { title: newTitle, description: newDescription }
 
-        // debugger
 
         this.props.updatePhoto(editedPhoto)
             // .then(() => this.props.history.push(`/photos/${editedPhoto.id}`))

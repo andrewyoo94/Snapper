@@ -29,9 +29,6 @@ const receivePhotoErrors = errors => {
 }
 
 const editPhoto = photo => {
-
-    // debugger 
-
     return ({
         type: UPDATE_PHOTO,
         photo: photo
@@ -52,7 +49,6 @@ export const fetchAllPhotos = () => dispatch => {
 }
 
 export const fetchPhoto = (id) => dispatch => {
-    // debugger
     return (
         PhotoAPIUtil.fetchPhoto(id)
             .then((photo) => dispatch(receivePhoto(photo)))
@@ -69,7 +65,6 @@ export const createPhoto = (photo) => dispatch => {
 }
 
 export const updatePhoto = (photo) => dispatch => {
-    // debugger
     return (
         PhotoAPIUtil.updatePhoto(photo)
             .then((photo) => dispatch(editPhoto(photo)))
