@@ -12,6 +12,9 @@ Snapper is a clone of flickr, a social image hosting website. Allowing users to 
 * Rails Active Storage with Amazon's S3
 
 ## Editing Photo Info
+
+![](snapper-edit.gif)
+
 ```
     handleEdit(e) {
         e.preventDefault();
