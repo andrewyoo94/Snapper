@@ -11,39 +11,65 @@ Snapper is a clone of flickr, a social image hosting website. Allowing users to 
 * PostgreSQL
 * Rails Active Storage with Amazon's S3
 
+
+## Photo Index
+
+![](snapper-index.png)
+
+```
+.photos-index {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photos-index-item {
+    flex-grow: 1;
+    position: relative;
+    margin-right: 7px;
+    margin-bottom: 2px;
+}
+
+.photo-img {
+    height: 250px;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+```
+
+
 ## Editing Photo Info
 
 ![](snapper-edit.gif)
 
+
 ```
-    handleEdit(e) {
-        e.preventDefault();
+let titleEdit = this.state.editable ? <input className="photo-show-title-edit" type='text' ref={this.titleEdit} defaultValue={title} /> : 
+                                      <h1 className="photo-show-title">{title}</h1>;
+                                      
+let descriptionEdit = this.state.editable ? <textarea className="photo-show-description-edit" type='text' ref={this.descriptionEdit} defaultValue={description} /> :
+                                            <p className="photo-show-description">{description}</p>;
+```
 
-        let newTitle;
-        let newDescription;
+```
+handleEdit(e) {
+    e.preventDefault();
 
-        if (this.state.editable) {
-            newTitle = this.titleEdit.current.value;
-            newDescription = this.descriptionEdit.current.value;
-        }
-        this.setState({ editable: !this.state.editable })
+    let newTitle;
+    let newDescription;
 
-        // let editedPhoto = this.props.photo;
-        // let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription, photographer_id: this.props.photo.photographer_id, photoUrl: this.props.photo.photoUrl }
-
-        let editedPhoto = { 
-            photo: { id: this.props.photoId, title: newTitle, description: newDescription},
-            id: this.props.photoId
-        };
-        // let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription };
-
-        // const photo = Object.assign({}, editedPhoto);
-
-        // let editedPhoto = { title: newTitle, description: newDescription }
-
-
-        this.props.updatePhoto(editedPhoto)
-            // .then(() => this.props.history.push(`/photos/${editedPhoto.id}`))
-            .then(() => this.props.fetchPhoto(this.props.photoId))
+    if (this.state.editable) {
+        newTitle = this.titleEdit.current.value;
+        newDescription = this.descriptionEdit.current.value;
     }
+    this.setState({ editable: !this.state.editable })
+
+    let editedPhoto = { 
+        photo: { id: this.props.photoId, title: newTitle, description: newDescription},
+        id: this.props.photoId
+    };
+
+    this.props.updatePhoto(editedPhoto)
+        .then(() => this.props.fetchPhoto(this.props.photoId))
+}
 ```
