@@ -53,22 +53,12 @@ class PhotoShow extends React.Component {
         }
         this.setState({ editable: !this.state.editable })
 
-        // let editedPhoto = this.props.photo;
-        // let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription, photographer_id: this.props.photo.photographer_id, photoUrl: this.props.photo.photoUrl }
-
         let editedPhoto = { 
             photo: { id: this.props.photoId, title: newTitle, description: newDescription},
             id: this.props.photoId
         };
-        // let editedPhoto = { id: this.props.photoId, title: newTitle, description: newDescription };
-
-        // const photo = Object.assign({}, editedPhoto);
-
-        // let editedPhoto = { title: newTitle, description: newDescription }
-
 
         this.props.updatePhoto(editedPhoto)
-            // .then(() => this.props.history.push(`/photos/${editedPhoto.id}`))
             .then(() => this.props.fetchPhoto(this.props.photoId))
     }
 
