@@ -16,6 +16,8 @@ Snapper is a clone of flickr, a social image hosting website. Allowing users to 
 
 ![](snapper-index.png)
 
+The explore page displays all photos in the database from every user. Due to the fact that each photo is a different size, I encountered a challenge trying to fit the photos nicely into a box. I was able to solve this by dynamically resizing and formatting the photos using flex-wrap.
+
 ```
 .photos-index {
     display: flex;
@@ -41,6 +43,8 @@ Snapper is a clone of flickr, a social image hosting website. Allowing users to 
 ## Editing Photo Info
 
 ![](snapper-edit.gif)
+
+Users are able to edit their title and/or description of a photo instead of deleting and reuploading. To make the edit functionality visually appealing I opted to render the edit component in place of the title/description only when this.state.editable is true(when the edit button is clicked). The function handleEdit(e) takes the edited title/description and creates a new object that gets passed to the backend.   
 
 
 ```
@@ -73,3 +77,7 @@ handleEdit(e) {
         .then(() => this.props.fetchPhoto(this.props.photoId))
 }
 ```
+
+## Possible Future Features
+* User's album
+* Search bar
