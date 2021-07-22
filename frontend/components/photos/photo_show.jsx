@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { Link } from "react-router-dom";
 import CommentCreateContainer from '../comments/comment_create_container';
 import CommentIndexContainer from '../comments/comment_index_container';
